@@ -1,0 +1,93 @@
+/* establish global settings ------- start */
+:root {
+	--base-size: 1em;
+	--type-scale: 1.1;
+
+	--h5: calc(var(--base-size) * var(--type-scale));
+	--h4: calc(var(--h5) * var(--type-scale));
+	--h3: calc(var(--h4) * var(--type-scale));
+	--h2: calc(var(--h3) * var(--type-scale));
+	--h1: calc(var(--h2) * var(--type-scale));
+	--heading-font: Verdana, Geneva, sans-serif;
+	--paragraph-font: Tahoma, Geneva, sans-serif;
+}
+h1 {
+	font-size: var(--h1);
+	font-family: var(--heading-font);
+}
+
+h2 {
+	font-size: var(--h2);
+	font-family: var(--heading-font);
+}
+
+h3 {
+	font-size: var(--h3);
+	font-family: var(--heading-font);
+}
+
+h4 {
+	font-size: var(--h4);
+	font-family: var(--heading-font);
+}
+
+h5 {
+	font-size: var(--h5);
+	font-family: var(--heading-font);
+}
+
+p {
+	font-size: var(--base-size);
+	font-family: var(--paragraph-font);
+}
+
+small,
+.text_small {
+	font-size: calc(var(--base-size) / var(--type-scale));
+}
+
+/* Start Box Model Fix - first documented by Paul Irish - Start */
+
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* End Box Model Fix - End */
+/* establish global settings ---------  End */
+/* header footer and images ---------- Start */
+header,
+footer {
+	background-color: navy;
+	padding: 1rem;
+	color: #ffffff;
+}
+header h1 {
+	text-align: center;
+}
+footer {
+	text-align: center;
+}
+img {
+	max-width: 100%;
+}
+/* header footer and images ---------- End */
+
+/* Home Page specific Design --------- Start */
+
+#assignments h2 {
+	border-bottom: 1px solid black;
+}
+#myphoto {
+	float: right;
+	z-index: 100;
+	margin-top: -100px;
+	border-radius: 5px;
+	max-width: 100px;
+}
+
+/* Home Page specific Design --------- Start */

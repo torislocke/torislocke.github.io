@@ -1,0 +1,32 @@
+body {
+	font-size: 18px;
+	line-height: 1.5;
+}
+header,
+nav,
+main,
+footer {
+	margin: 1.25rem auto;
+	max-width: 760px;
+}
+header,
+footer {
+	background-color: navy;
+	color: #ffffff;
+	text-align: center;
+	padding: 1.5rem;
+}
+nav ul {
+	display: flex;
+}
+nav ul li {
+	list-style-type: none;
+}
+nav ul li a {
+	padding: 1rem;
+}
+p img {
+	float: right;
+	margin: 10px;
+	border: 1px solid #000000;
+}
