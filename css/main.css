@@ -98,5 +98,8 @@ img {
 	border-radius: 5px;
 	max-width: 100px;
 }
+main {
+	height: 65vh;
+}
 
 /* Home Page specific Design --------- Start */
