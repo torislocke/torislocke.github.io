@@ -58,6 +58,12 @@ html {
 }
 
 /* End Box Model Fix - End */
+body {
+	margin: 0;
+}
+img {
+	max-width: 100%;
+}
 /* establish global settings ---------  End */
 /* header footer and images ---------- Start */
 header,
@@ -65,6 +71,8 @@ footer {
 	background-color: navy;
 	padding: 1rem;
 	color: #ffffff;
+	width: 100vw;
+	margin: 0;
 }
 header h1 {
 	text-align: center;
@@ -81,13 +89,14 @@ footer a:hover {
 	text-decoration: underline;
 	color: gold;
 }
-img {
-	max-width: 100%;
-}
+
 /* header footer and images ---------- End */
 
 /* Home Page specific Design --------- Start */
-
+#assignments {
+	margin: auto;
+	max-width: 90vw;
+}
 #assignments h2 {
 	border-bottom: 1px solid black;
 }
@@ -103,3 +112,13 @@ main {
 }
 
 /* Home Page specific Design --------- Start */
+@media print {
+	#myphoto {
+		display: none;
+	}
+	footer a[href]::after {
+		display: block;
+		content: ' (' attr(href) ')';
+		font-size: var(--base-size);
+	}
+}
