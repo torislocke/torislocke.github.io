@@ -96,6 +96,7 @@ footer a:hover {
 #assignments {
 	margin: auto;
 	max-width: 90vw;
+	height: 60vh;
 }
 #assignments h2 {
 	border-bottom: 1px solid black;
@@ -105,14 +106,32 @@ footer a:hover {
 	border-radius: 5px;
 	max-width: 100px;
 }
-main {
-	height: 65vh;
+#assignments ul li a {
+	text-decoration: none;
 }
+.link {
+	color: blue;
+}
+.link:hover {
+	text-decoration: underline;
+}
+
 @media screen and (min-width: 390px) {
 	#myphoto {
 		float: right;
 		z-index: 100;
 		margin-top: -100px;
+	}
+}
+@media screen and (min-width: 900px) {
+	#assignments {
+		max-width: 80vw;
+	}
+	header,
+	footer {
+		width: 80vw;
+		margin: auto;
+		border-radius: 1em;
 	}
 }
 /* Home Page specific Design --------- Start */
