@@ -89,6 +89,9 @@ footer a:hover {
 	text-decoration: underline;
 	color: gold;
 }
+#updated {
+	color: white;
+}
 
 /* header footer and images ---------- End */
 
