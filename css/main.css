@@ -2,7 +2,6 @@
 :root {
 	--base-size: 1em;
 	--type-scale: 1.1;
-
 	--h5: calc(var(--base-size) * var(--type-scale));
 	--h4: calc(var(--h5) * var(--type-scale));
 	--h3: calc(var(--h4) * var(--type-scale));
@@ -41,8 +40,7 @@ p {
 	font-family: var(--paragraph-font);
 }
 
-small,
-.text_small {
+small {
 	font-size: calc(var(--base-size) / var(--type-scale));
 }
 
@@ -52,8 +50,8 @@ html {
 	box-sizing: border-box;
 }
 *,
-*:before,
-*:after {
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
