@@ -1,47 +1,27 @@
 /* establish global settings ------- start */
 :root {
-	--base-size: 1em;
-	--type-scale: 1.1;
-	--h5: calc(var(--base-size) * var(--type-scale));
-	--h4: calc(var(--h5) * var(--type-scale));
-	--h3: calc(var(--h4) * var(--type-scale));
-	--h2: calc(var(--h3) * var(--type-scale));
-	--h1: calc(var(--h2) * var(--type-scale));
-	--heading-font: Verdana, Geneva, sans-serif;
+	--heading-font: 'Frank Ruhl Libre', 'Open-Sans', serif;
 	--paragraph-font: Tahoma, Geneva, sans-serif;
 }
-h1 {
-	font-size: var(--h1);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: var(--heading-font);
 }
-
-h2 {
-	font-size: var(--h2);
-	font-family: var(--heading-font);
-}
-
-h3 {
-	font-size: var(--h3);
-	font-family: var(--heading-font);
-}
-
-h4 {
-	font-size: var(--h4);
-	font-family: var(--heading-font);
-}
-
-h5 {
-	font-size: var(--h5);
-	font-family: var(--heading-font);
-}
-
 p {
-	font-size: var(--base-size);
 	font-family: var(--paragraph-font);
 }
-
+h1 {
+	font-size: 1.5rem;
+}
+h2 {
+	font-size: 1rem;
+}
 small {
-	font-size: calc(var(--base-size) / var(--type-scale));
+	font-size: 0.8rem;
 }
 
 /* Start Box Model Fix - first documented by Paul Irish - Start */
@@ -50,20 +30,26 @@ html {
 	box-sizing: border-box;
 }
 *,
-*::before,
-*::after {
+*:before,
+*:after {
 	box-sizing: inherit;
 }
 
 /* End Box Model Fix - End */
 body {
 	margin: 0;
+	height: 100%;
+	line-height: 1.5;
+	font-size: 16px;
 }
 img {
 	max-width: 100%;
 }
 /* establish global settings ---------  End */
 /* header footer and images ---------- Start */
+header {
+	margin-top: 10px;
+}
 header,
 footer {
 	background-color: navy;
@@ -72,7 +58,7 @@ footer {
 	width: 100vw;
 	margin: 0;
 }
-header h1 {
+header {
 	text-align: center;
 }
 footer {
@@ -97,15 +83,14 @@ footer a:hover {
 #assignments {
 	margin: auto;
 	max-width: 90vw;
-	height: 60vh;
 }
 #assignments h2 {
 	border-bottom: 1px solid black;
 }
 #myphoto {
 	margin-top: 1rem;
-	border-radius: 5px;
-	max-width: 100px;
+	width: 200px;
+	height: auto;
 }
 #assignments ul li a {
 	text-decoration: none;
@@ -117,24 +102,6 @@ footer a:hover {
 	text-decoration: underline;
 }
 
-@media screen and (min-width: 390px) {
-	#myphoto {
-		float: right;
-		z-index: 100;
-		margin-top: -100px;
-	}
-}
-@media screen and (min-width: 900px) {
-	#assignments {
-		max-width: 80vw;
-	}
-	header,
-	footer {
-		width: 80vw;
-		margin: auto;
-		border-radius: 1em;
-	}
-}
 /* Home Page specific Design --------- Start */
 @media print {
 	#myphoto {
