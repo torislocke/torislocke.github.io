@@ -1,0 +1,9 @@
+.lessonHeader nav ul li {
+	list-style-type: none;
+	display: flex;
+}
+.lessonHeader nav ul li a {
+	color: white;
+	display: block;
+	text-decoration: none;
+}

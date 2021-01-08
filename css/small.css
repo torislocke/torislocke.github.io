@@ -103,6 +103,7 @@ footer a:hover {
 }
 
 /* Home Page specific Design --------- Start */
+
 @media print {
 	#myphoto {
 		display: none;
