@@ -2,7 +2,13 @@
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
-
+h2 a {
+	text-decoration: none;
+	color: #ffffff;
+}
+h2 a:hover {
+	color: gold;
+}
 .box {
 	border: 1px solid #bbb;
 	border-top-left-radius: 10px;
