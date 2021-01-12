@@ -5,30 +5,43 @@
 
 .box {
 	border: 1px solid #bbb;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 	margin: 0.5rem;
 	padding: 0 1rem;
 	background-color: #eee;
 }
-.box {
+/* .box {
 	text-align: center;
-}
+} */
 .box h3 {
-	margin: 0 -2rem;
-	border: none;
-	outline: 0;
-	display: inline-block;
+	margin-top: 0px;
+	margin-left: -15px;
+	margin-right: 0px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	height: 3rem;
+	padding: 1rem;
 	color: white;
 	background-color: #000;
-	width: 110%;
+	width: 108%;
 	font-size: 18px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .box h4 {
 	text-align: left;
 	margin: auto;
+	font-family: serif;
 }
 .box p {
 	margin: auto;
 	text-align: left;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding-bottom: 0.5rem;
+}
+header,
+footer {
+	border-radius: 0;
 }
 /* ------------------ Tablet views --------------- */
 @media only screen and (min-width: 32.5em) {
@@ -37,10 +50,16 @@
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto;
 	}
+	.box h3 {
+		width: 118%;
+	}
 }
 /* ------------------ Desktop views --------------- */
 @media only screen and (min-width: 64em) {
 	.design-grid {
 		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.box h3 {
+		width: 113%;
 	}
 }
