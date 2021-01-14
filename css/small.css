@@ -52,7 +52,7 @@ img {
 	max-width: 100%;
 }
 /* establish global settings ---------  End */
-/* header footer and images ---------- Start */
+/* header and footer ---------- Start */
 header {
 	margin-top: 10px;
 }
@@ -83,20 +83,21 @@ footer a:hover {
 	color: white;
 }
 
-/* header footer and images ---------- End */
+/* header and footer ---------- End */
 
 /* Home Page specific Design --------- Start */
 #assignments {
 	margin: auto;
-	max-width: 90vw;
+	max-width: 90%;
+	height: 40vh;
 }
 #assignments h2 {
 	border-bottom: 1px solid black;
 }
 #myphoto {
 	margin-top: 1rem;
-	width: 200px;
-	height: auto;
+	width: 120px;
+	height: 120px;
 }
 #assignments ul li a {
 	text-decoration: none;
@@ -108,7 +109,7 @@ footer a:hover {
 	text-decoration: underline;
 }
 
-/* Home Page specific Design --------- Start */
+/* Home Page specific Design --------- End */
 
 @media print {
 	#myphoto {
