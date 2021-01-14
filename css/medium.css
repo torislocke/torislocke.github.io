@@ -1,3 +1,5 @@
+/* ------------------ Tablet views --------------- */
+
 @media only screen and (min-width: 32.5em) {
 	header,
 	footer,
@@ -25,5 +27,13 @@
 	#myPhoto {
 		border-radius: 0 10px 0 0;
 		box-shadow: 0 0 30px #444;
+	}
+	.design-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+	}
+	.box h3 {
+		width: 118%;
 	}
 }

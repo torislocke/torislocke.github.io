@@ -1,3 +1,4 @@
+/* ------------------ Desktop views --------------- */
 @media only screen and (min-width: 64em) {
 	#assignments {
 		max-width: 80vw;
@@ -7,5 +8,11 @@
 		width: 80vw;
 		margin: auto;
 		border-radius: 1em;
+	}
+	.design-grid {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.box h3 {
+		width: 113%;
 	}
 }
