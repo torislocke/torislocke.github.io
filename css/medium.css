@@ -33,9 +33,7 @@
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto;
 	}
-	.box h3 {
-		width: 118%;
-	}
+
 	.box {
 		height: 98%;
 	}

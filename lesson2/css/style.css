@@ -10,43 +10,38 @@ h2 a:hover {
 	color: gold;
 }
 .box {
-	border: 1px solid #bbb;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	margin: 0.5rem;
-	padding: 0 1rem;
-	background-color: #eee;
+	background-color: #ecedf1;
+	margin: 15px;
+	width: auto;
+	border-radius: 15px 15px 0 0;
 }
 
 .box h3 {
-	margin-top: 0px;
-	margin-left: -15px;
-	margin-right: 0px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	height: 3rem;
-	padding: 1rem;
+	background-color: navy;
 	color: white;
-	background-color: #000;
-	width: 108%;
-	font-size: 18px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 15px 15px 0 0;
+	margin: 0;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .box h4 {
 	text-align: left;
-	margin: auto;
+	margin: 10px 0px 2px 5px;
 	font-family: serif;
+	font-size: 1.2em;
+}
+.box picture img {
+	max-width: 90%;
+	margin: 5%;
 }
 .box p {
-	margin: auto;
+	margin: 0px 0px 0px 5px;
 	text-align: left;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	padding-bottom: 0.5rem;
+	padding: 0.5rem;
 }
 header,
 footer {
 	border-radius: 0;
 }
-
-
-

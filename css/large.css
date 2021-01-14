@@ -12,8 +12,4 @@
 	.design-grid {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-	.box h3 {
-		width: 113%;
-	}
-
 }
