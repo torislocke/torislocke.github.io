@@ -1,0 +1,151 @@
+/* START ---- establish global settings Mobile First Design  -------  */
+
+:root {
+	/* Tetradic color scheme of two couple of complementary colors with 
+    #3a648d as the dominant color */
+	--primary-color: #3a648d; /*medium blue */
+	--secondary-color: #658c3b; /*medium green - tetradic to blue */
+	--accent1-color: #8c623b; /* light brown - tetradic & complementary to blue */
+	--accent2-color: #623b8c; /* purple - tetradic & complementary to blue */
+	--charcoal: #3a3a3a; /* text color to reduce eye strain */
+	--white: #f7f8fc; /* off-white color to reduce eye strain */
+	--heading-font: 'EB Garamond', serif;
+	--paragraph-font: Tahoma, sans-serif;
+}
+h1,
+h2,
+h3 {
+	font-family: var(--heading-font);
+	line-height: 1.5em;
+}
+h1 {
+	font-size: 1.4em;
+}
+h2 {
+	font-size: 1.25em;
+}
+h3 {
+	font-size: 1.1em;
+}
+p,
+button {
+	font-size: 1em;
+	font-family: var(--paragraph-font);
+	line-height: 1.5em;
+	color: var(--charcoal);
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+header {
+	text-align: center;
+}
+.logo {
+	z-index: 1;
+}
+main {
+	padding: 0em 1em;
+}
+/* responsive images that may scale down but not larger than original image */
+img {
+	max-width: 100%;
+	height: auto;
+}
+footer {
+	text-align: center;
+	padding: 1em;
+}
+/* END ---- establish global settings Mobile First Design  -------  */
+
+/* START --- Page Navigation styling ----------------  */
+
+/* the CSS Clipping technique allows you to hide elements visually 
+and allow content to be read out to screen readers.  */
+.hidden {
+	border: 0;
+	/* The first ‘clip’ accommodates older versions of Internet Explorer. */
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+nav {
+	margin: 0px;
+}
+nav ul {
+	background-color: var(--primary-color);
+	margin: 0;
+	display: flex;
+	flex-flow: column wrap;
+	list-style: none;
+	margin-block-start: 0;
+	padding-inline-start: 0;
+}
+nav ul li {
+	text-align: center;
+}
+
+nav > ul > li a {
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	padding-top: 0.8em;
+	padding-bottom: 0.8em;
+	color: var(--white);
+}
+
+nav > ul > li a:hover {
+	background-color: var(--secondary-color);
+}
+
+.current {
+	text-decoration: underline;
+}
+/* END  --- Page Navigation styling ----------------  */
+/* START  ------ styling for color-scheme page ------  */
+.colors {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+.colors th {
+	background-color: var(--charcoal);
+	color: var(--white);
+}
+.colors td {
+	width: 25%;
+	height: 3em;
+}
+
+.primary {
+	background-color: var(--primary-color);
+	color: var(--white);
+}
+.secondary {
+	background-color: var(--secondary-color);
+	color: var(--white);
+}
+.accent1 {
+	background-color: var(--accent1-color);
+	color: var(--white);
+}
+.accent2 {
+	background-color: var(--accent2-color);
+	color: var(--white);
+}
+.charcoal {
+	background-color: var(--charcoal);
+	color: var(--white);
+}
+.white {
+	background-color: --white;
+	color: var(--charcoal);
+}
+
+/* END ------ styling for color-scheme page ------  */

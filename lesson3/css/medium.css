@@ -1,0 +1,26 @@
+/* Design changes based on screen sizes --------- Start */
+@media screen and (min-width: 32.5em) {
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 0em 1em;
+	}
+
+	nav ul {
+		flex-flow: row;
+	}
+	nav ul li {
+		align-self: flex-start;
+	}
+	nav ul li a {
+		padding: 1em;
+	}
+	main {
+		max-width: 57.5em;
+		margin: auto;
+	}
+	
+
+}
