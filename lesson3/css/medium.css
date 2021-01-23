@@ -5,11 +5,11 @@
 		align-items: center;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		margin: 0em 1em;
 	}
 
 	nav ul {
-		flex-flow: row;
+		display: flex;
+		margin: 0;
 	}
 	nav ul li {
 		align-self: flex-start;
@@ -17,10 +17,4 @@
 	nav ul li a {
 		padding: 1em;
 	}
-	main {
-		max-width: 57.5em;
-		margin: auto;
-	}
-	
-
 }

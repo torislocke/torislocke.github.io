@@ -35,8 +35,9 @@ button {
 	color: var(--charcoal);
 }
 body {
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
+	max-width: 57.5em;
 }
 header {
 	text-align: center;
@@ -77,15 +78,14 @@ and allow content to be read out to screen readers.  */
 
 nav {
 	margin: 0px;
+	display: block;
 }
 nav ul {
 	background-color: var(--primary-color);
 	margin: 0;
-	display: flex;
-	flex-flow: column wrap;
+	padding: 0;
+	overflow: hidden;
 	list-style: none;
-	margin-block-start: 0;
-	padding-inline-start: 0;
 }
 nav ul li {
 	text-align: center;
