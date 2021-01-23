@@ -63,13 +63,9 @@ footer {
 	color: #ffffff;
 	width: 100vw;
 	margin: 0;
-}
-header {
 	text-align: center;
 }
-footer {
-	text-align: center;
-}
+
 footer a {
 	color: white;
 	text-decoration: none;

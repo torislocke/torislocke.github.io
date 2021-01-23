@@ -34,6 +34,9 @@ button {
 	line-height: 1.5em;
 	color: var(--charcoal);
 }
+.center {
+	text-align: center;
+}
 body {
 	margin: 0;
 	padding: 0;
