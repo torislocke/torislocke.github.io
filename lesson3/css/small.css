@@ -24,12 +24,14 @@ h1 {
 h2 {
 	font-size: 1.25em;
 }
-h3 {
+h3,
+h4 {
 	font-size: 1.1em;
 }
 p,
-button {
-	font-size: 1em;
+button,
+ul {
+	font-size: 0.9em;
 	font-family: var(--paragraph-font);
 	line-height: 1.5em;
 	color: var(--charcoal);
@@ -148,3 +150,9 @@ nav > ul > li a:hover {
 }
 
 /* END ------ styling for color-scheme page ------  */
+/* START  ------ styling for audience page ------  */
+
+.profile_photo {
+	width: 20vw;
+	height: auto;
+}
