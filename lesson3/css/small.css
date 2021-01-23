@@ -35,16 +35,14 @@ button {
 	color: var(--charcoal);
 }
 body {
-	margin: 0 auto;
+	margin: 0;
 	padding: 0;
-	max-width: 57.5em;
 }
-header {
+header,
+footer {
 	text-align: center;
 }
-.logo {
-	z-index: 1;
-}
+
 main {
 	padding: 0em 1em;
 }
@@ -54,7 +52,6 @@ img {
 	height: auto;
 }
 footer {
-	text-align: center;
 	padding: 1em;
 }
 /* END ---- establish global settings Mobile First Design  -------  */
@@ -78,7 +75,6 @@ and allow content to be read out to screen readers.  */
 
 nav {
 	margin: 0px;
-	display: block;
 }
 nav ul {
 	background-color: var(--primary-color);
@@ -129,7 +125,7 @@ nav > ul > li a:hover {
 }
 .secondary {
 	background-color: var(--secondary-color);
-	color: white;
+	color: var(--white);
 }
 .accent1 {
 	background-color: var(--accent1-color);
