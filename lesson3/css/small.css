@@ -4,7 +4,7 @@
 	/* Tetradic color scheme of two couple of complementary colors with 
     #3a648d as the dominant color */
 	--primary-color: #3a648d; /*medium blue */
-	--secondary-color: #658c3b; /*medium green - tetradic to blue */
+	--secondary-color: #3e6811; /*medium green - tetradic to blue */
 	--accent1-color: #8c623b; /* light brown - tetradic & complementary to blue */
 	--accent2-color: #623b8c; /* purple - tetradic & complementary to blue */
 	--charcoal: #3a3a3a; /* text color to reduce eye strain */
@@ -129,7 +129,7 @@ nav > ul > li a:hover {
 }
 .secondary {
 	background-color: var(--secondary-color);
-	color: var(--white);
+	color: white;
 }
 .accent1 {
 	background-color: var(--accent1-color);
