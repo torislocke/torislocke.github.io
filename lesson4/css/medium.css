@@ -1,0 +1,25 @@
+@media only screen and (min-width: 32.5em) {
+	.logo-img {
+		width: 120px;
+	}
+	.heading h1 {
+		font-size: 1.8em;
+	}
+	.top-nav {
+		justify-content: center;
+	}
+	.item {
+		display: block;
+		width: auto;
+	}
+	.toggle {
+		display: none;
+	}
+	main section,
+	main article,
+	main aside {
+		background-color: var(--accent2-color);
+		padding: 1em;
+		border: 2px dotted var(--charcoal);
+	}
+}

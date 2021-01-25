@@ -1,0 +1,163 @@
+/* START ---- establish global settings Mobile First Design  -------  */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+:root {
+	/* Tetradic color scheme of two couple of complementary colors with 
+    #3a648d as the dominant color */
+	--primary-color: #3a648d; /*medium blue */
+	--secondary-color: #3e6811; /*medium green - tetradic to blue */
+	--accent1-color: #8c623b; /* light brown - tetradic & complementary to blue */
+	--accent2-color: #623b8c; /* purple - tetradic & complementary to blue */
+	--charcoal: #3a3a3a; /* text color to reduce eye strain */
+	--white: #f7f8fc; /* off-white color to reduce eye strain */
+	--heading-font: 'EB Garamond', serif;
+	--paragraph-font: Tahoma, sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--heading-font);
+	line-height: 1.6em;
+}
+h1 {
+	font-size: 1.4em;
+}
+h2 {
+	font-size: 1.25em;
+}
+h3,
+h4 {
+	font-size: 1.1em;
+}
+p {
+	font-size: 0.9em;
+	font-family: var(--paragraph-font);
+	line-height: 1.5em;
+	color: var(--charcoal);
+}
+.center {
+	text-align: center;
+}
+body {
+	background-color: var(--white);
+}
+/* responsive images that may scale down but not larger than original image */
+img {
+	max-width: 100%;
+	height: auto;
+}
+.main-header,
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px 0;
+}
+.logo-img {
+	width: 80px;
+	height: auto;
+}
+.heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.heading h1 {
+	font-size: 1.4rem;
+	margin: 0 0 0 17px;
+}
+.heading div {
+	margin: 0 0 0 17px;
+	color: var(--secondary-color);
+	font-weight: bold;
+	font-style: italic;
+}
+/* ------------ Start Top Navigation Style Section ----------  */
+nav {
+	background-color: var(--primary-color);
+}
+nav ul {
+	list-style: none; /*remove bullets on list */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+nav ul li {
+	font-size: 1em;
+}
+nav > ul > li a {
+	text-decoration: none; /*remove underline */
+	color: var(--white);
+	display: block;
+	padding: 1em;
+	position: relative;
+}
+nav > ul > li a:hover {
+	background-color: var(--secondary-color);
+}
+
+.active {
+	text-decoration: underline; /* places an underline on active page */
+}
+
+/* ------------ Hamburger Menu Style in Top Navigation ------------ */
+/* Set class for JavaScript to display the mobile navigation when Icon clicked */
+/* move hamburger icon in front of list items through flex order */
+.toggle {
+	cursor: pointer;
+	order: 1;
+	margin-right: 10px;
+}
+.item {
+	text-align: center;
+	order: 2;
+	width: 100%;
+	display: none;
+}
+.show {
+	display: block;
+}
+.bars {
+	background-color: var(--white);
+	display: inline-block;
+	height: 2px;
+	position: relative;
+	width: 1.5em;
+}
+.bars::before,
+.bars::after {
+	background-color: var(--white);
+	content: ''; /*required on pseduo elements */
+	display: inline-block;
+	height: 2px;
+	position: absolute;
+	width: 1.5em;
+}
+.bars::before {
+	top: 5px;
+}
+.bars::after {
+	top: -5px;
+}
+
+/* ------------ End Top Navigation Style Section ----------  */
+main section,
+main article,
+main aside {
+	background-color: var(--accent1-color);
+	display: flex;
+	margin: 0.5em;
+	padding: 0.3em;
+	border: 2px dotted var(--charcoal);
+}
+main section p,
+main article p,
+main aside p {
+	color: var(--white);
+}
