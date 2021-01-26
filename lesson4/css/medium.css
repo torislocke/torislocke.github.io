@@ -1,20 +1,31 @@
-@media only screen and (min-width: 32.5em) {
+@media only screen and (min-width: 35em) {
 	.logo-img {
 		width: 120px;
 	}
 	.heading h1 {
 		font-size: 1.8em;
 	}
-	.top-nav {
-		justify-content: center;
-	}
-	.item {
-		display: block;
-		width: auto;
-	}
-	.toggle {
+	/* navigation style for tablet screen size */
+	nav button {
 		display: none;
 	}
+	nav ul.hide {
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	nav ul {
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	nav ul li a {
+		padding: 0.8em 1.2em;
+		font-size: 1em;
+	}
+
 	main section,
 	main article,
 	main aside {

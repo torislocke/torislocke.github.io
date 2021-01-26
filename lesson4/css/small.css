@@ -1,9 +1,17 @@
-/* START ---- establish global settings Mobile First Design  -------  */
+html {
+	--webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 }
+
+/* START ---- establish global settings Mobile First Design  -------  */
+
 :root {
 	/* Tetradic color scheme of two couple of complementary colors with 
     #3a648d as the dominant color */
@@ -77,73 +85,38 @@ footer {
 	font-weight: bold;
 	font-style: italic;
 }
-/* ------------ Start Top Navigation Style Section ----------  */
+/* ------------ Start Top Navigation Style Section Mobile Frist design ----------  */
 nav {
 	background-color: var(--primary-color);
 }
+nav button {
+	margin: 0.2rem 2%;
+	background-color: transparent;
+	border: none;
+	font-size: 1.6rem; /*Apple recomends buttons be set to 44px for accessability */
+	color: var(--white);
+}
 nav ul {
 	list-style: none; /*remove bullets on list */
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
+	padding: 0;
+	margin: 0;
 }
-nav ul li {
-	font-size: 1em;
-}
-nav > ul > li a {
-	text-decoration: none; /*remove underline */
-	color: var(--white);
-	display: block;
-	padding: 1em;
-	position: relative;
-}
-nav > ul > li a:hover {
-	background-color: var(--secondary-color);
-}
-
-.active {
-	text-decoration: underline; /* places an underline on active page */
-}
-
-/* ------------ Hamburger Menu Style in Top Navigation ------------ */
-/* Set class for JavaScript to display the mobile navigation when Icon clicked */
-/* move hamburger icon in front of list items through flex order */
-.toggle {
-	cursor: pointer;
-	order: 1;
-	margin-right: 10px;
-}
-.item {
-	text-align: center;
-	order: 2;
-	width: 100%;
+nav ul.hide {
 	display: none;
 }
-.show {
+nav ul li a {
 	display: block;
+	padding: 0.8rem 2%;
+	text-decoration: none;
+	color: var(--white);
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
-.bars {
-	background-color: var(--white);
-	display: inline-block;
-	height: 2px;
-	position: relative;
-	width: 1.5em;
+nav ul li.active a {
+	background-color: rgba(0, 0, 0, 0.2);
+	color: #f5cca6;
 }
-.bars::before,
-.bars::after {
-	background-color: var(--white);
-	content: ''; /*required on pseduo elements */
-	display: inline-block;
-	height: 2px;
-	position: absolute;
-	width: 1.5em;
-}
-.bars::before {
-	top: 5px;
-}
-.bars::after {
-	top: -5px;
+nav ul li a:hover {
+	background-color: rgba(0, 0, 0, 0.4);
 }
 
 /* ------------ End Top Navigation Style Section ----------  */
