@@ -26,9 +26,7 @@
 		font-size: 1em;
 	}
 
-	main section,
-	main article,
-	main aside {
+	main div {
 		background-color: var(--accent2-color);
 		padding: 1em;
 		border: 2px dotted var(--charcoal);

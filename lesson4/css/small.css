@@ -120,17 +120,13 @@ nav ul li a:hover {
 }
 
 /* ------------ End Top Navigation Style Section ----------  */
-main section,
-main article,
-main aside {
+main div {
 	background-color: var(--accent1-color);
 	display: flex;
 	margin: 0.5em;
 	padding: 0.3em;
 	border: 2px dotted var(--charcoal);
 }
-main section p,
-main article p,
-main aside p {
+main div p {
 	color: var(--white);
 }
