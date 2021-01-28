@@ -16,9 +16,9 @@ html {
 	/* Tetradic color scheme of two couple of complementary colors with 
     #3a648d as the dominant color */
 	--primary-color: #1e5388; /*medium blue */
-	--secondary-color: #3e6811; /*medium green - tetradic to blue */
-	--accent1-color: #ccff00; /* light brown - tetradic & complementary to blue */
-	--accent2-color: #529e3c; /* purple - tetradic & complementary to blue */
+	--secondary-color: #32550e; /*medium green - tetradic to blue */
+	--accent1-color: #ccff00; /* light yellow - tetradic & complementary to blue */
+	--accent2-color: #336325; /* dark green - tetradic & complementary to blue */
 	--charcoal: #3a3a3a; /* text color to reduce eye strain */
 	--white: #f7f8fc; /* off-white color to reduce eye strain */
 	--heading-font: 'EB Garamond', serif;
@@ -81,7 +81,7 @@ footer {
 }
 .heading div {
 	margin: 0 0 0 17px;
-	color: var(--secondary-color);
+	color: var(--accent2-color);
 	font-weight: bold;
 	font-style: italic;
 }
