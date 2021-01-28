@@ -130,3 +130,9 @@ main div {
 main div p {
 	color: var(--white);
 }
+main h2 {
+	margin-top: 1em;
+}
+footer {
+	margin-top: 1em;
+}
