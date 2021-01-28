@@ -4,4 +4,8 @@
 		max-width: 60em;
 		margin: auto;
 	}
+	.hero {
+		background-image: url('../images/cache_valley_900x323.jpg');
+		height: 323px;
+	}
 }

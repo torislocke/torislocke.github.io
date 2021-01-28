@@ -31,4 +31,11 @@
 		padding: 1em;
 		border: 2px dotted var(--charcoal);
 	}
+	main div p {
+		color: var(--white);
+	}
+	.hero {
+		background-image: url('../images/cache_valley_602x236.jpg');
+		height: 236px;
+	}
 }
