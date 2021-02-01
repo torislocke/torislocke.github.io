@@ -1,0 +1,261 @@
+html {
+	--webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/* START ---- establish global settings Mobile First Design  -------  */
+
+:root {
+	/* Tetradic color scheme of two couple of complementary colors with 
+    #3a648d as the dominant color */
+	--primary-color: #1e5388; /*medium blue */
+	--secondary-color: #32550e; /*medium green - tetradic to blue */
+	--accent1-color: #ccff00; /* light yellow - tetradic & complementary to blue */
+	--accent2-color: #336325; /* dark green - tetradic & complementary to blue */
+	--charcoal: #3a3a3a; /* text color to reduce eye strain */
+	--white: #f7f8fc; /* off-white color to reduce eye strain */
+	--heading-font: 'EB Garamond', serif;
+	--paragraph-font: Tahoma, sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--heading-font);
+	line-height: 1.6em;
+}
+h1 {
+	font-size: 1.4em;
+}
+h2 {
+	font-size: 1.25em;
+}
+h3,
+h4 {
+	font-size: 1.1em;
+}
+p {
+	font-size: 0.9em;
+	font-family: var(--paragraph-font);
+	line-height: 1.5em;
+	color: var(--charcoal);
+}
+.center {
+	text-align: center;
+}
+body {
+	background-color: var(--white);
+}
+/* responsive images that may scale down but not larger than original image */
+img {
+	max-width: 100%;
+	height: auto;
+}
+.main-header,
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px 0;
+}
+footer {
+	background-color: var(--primary-color);
+	color: var(--white);
+	text-align: center;
+}
+.logo-img {
+	width: 80px;
+	height: auto;
+}
+.heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.heading h1 {
+	font-size: 1.4rem;
+	margin: 0 0 0 17px;
+}
+.heading div {
+	margin: 0 0 0 17px;
+	color: var(--accent2-color);
+	font-weight: bold;
+	font-style: italic;
+}
+/* ------------ Start Top Navigation Style Section Mobile Frist design ----------  */
+nav {
+	background-color: var(--primary-color);
+}
+nav button {
+	margin: 0.2rem 2%;
+	background-color: transparent;
+	border: none;
+	font-size: 1.6rem; /*Apple recomends buttons be set to 44px for accessability */
+	color: var(--white);
+}
+nav ul {
+	list-style: none; /*remove bullets on list */
+	padding: 0;
+	margin: 0;
+}
+nav ul.hide {
+	display: none;
+}
+nav ul li a {
+	display: block;
+	padding: 0.8rem 2%;
+	text-decoration: none;
+	color: var(--white);
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+nav ul li.active a {
+	background-color: rgba(0, 0, 0, 0.2);
+	color: var(--accent1-color);
+}
+nav ul li a:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ------------ End Top Navigation Style Section ----------  */
+
+/* Local Page style */
+.topic {
+	padding: 0.3em;
+}
+.topic p {
+	color: var(--charcoal);
+}
+.town h2 {
+	margin-top: 1em;
+}
+.hero-container {
+	/* margin: 10px auto; */
+	position: relative;
+}
+.hero-image {
+	margin: 0 auto;
+	background-image: url('../images/cache_valley_400x150.jpg');
+	width: 100%;
+	height: 250px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.weathersummary {
+	position: absolute;
+	display: grid;
+	grid-template-columns: 100px 80px;
+	margin-top: -180px;
+	margin-left: 30px;
+	color: var(--white);
+	background-color: rgba(42, 110, 44, 0.8);
+
+	padding: 0.5em 3em;
+	box-shadow: 0 0 30px #777;
+	grid-template-areas:
+		'wheader wheader'
+		'col1-1 col2-1'
+		'col1-2 col2-2'
+		'col1-3 col2-3'
+		'col1-4 col2-4'
+		'col1-5 col2-5';
+}
+.wheader {
+	grid-area: wheader;
+	align-self: center;
+	margin: auto;
+}
+.col1-1 {
+	grid-area: col1-1;
+	justify-self: end;
+}
+.col1-2 {
+	grid-area: col1-2;
+	justify-self: end;
+}
+.col1-3 {
+	grid-area: col1-3;
+	justify-self: end;
+}
+.col1-4 {
+	grid-area: col1-4;
+	justify-self: end;
+}
+.col1-5 {
+	grid-area: col1-5;
+	justify-self: end;
+}
+.col2-1 {
+	grid-area: col2-1;
+	margin-left: 8px;
+}
+.col2-2 {
+	grid-area: col2-2;
+	margin-left: 8px;
+}
+.col2-3 {
+	grid-area: col2-3;
+	margin-left: 8px;
+}
+.col2-4 {
+	grid-area: col2-4;
+	margin-left: 8px;
+}
+.col2-5 {
+	grid-area: col2-5;
+	margin-left: 8px;
+}
+.weathersummary p {
+	color: var(--white);
+}
+.forecast {
+	display: none;
+}
+article h3 {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+article h4 {
+	font-style: italic;
+	color: var(--secondary-color);
+	margin-bottom: 0.8em;
+	font-size: 0.9em;
+}
+article img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	width: 80%;
+	box-shadow: 0 0 30px #777;
+}
+.link-hold {
+	text-decoration: underline;
+	font-size: 0.7em;
+	color: purple;
+}
+.contact {
+	text-align: center;
+	background-color: rgba(37, 122, 51, 0.2);
+}
+.hidden {
+	display: none;
+}
+.contact h3,
+.contact p {
+	color: var(--charcoal);
+}
+#friday {
+	display: none;
+}
+.fab {
+	color: var(--charcoal);
+}

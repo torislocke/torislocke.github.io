@@ -1,0 +1,14 @@
+@media screen and (min-width: 64em) {
+	main,
+	footer {
+		max-width: 60em;
+		margin: auto;
+	}
+	.hero-image {
+		background-image: url('../images/cache_valley_900x323.jpg');
+		height: 323px;
+	}
+	article img {
+		width: 30%;
+	}
+}

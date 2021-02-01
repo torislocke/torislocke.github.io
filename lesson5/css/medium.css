@@ -1,0 +1,87 @@
+@media only screen and (min-width: 35em) {
+	.logo-img {
+		width: 120px;
+	}
+	.heading h1 {
+		font-size: 1.8em;
+	}
+	/* navigation style for tablet screen size */
+	nav button {
+		display: none;
+	}
+	nav ul.hide {
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	nav ul {
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	nav ul li a {
+		padding: 0.8em 1.2em;
+		font-size: 1em;
+	}
+	/* end navigation for tablet */
+	/* town page style for tablet */
+	.topic {
+		padding: 1em;
+	}
+	.forecast {
+		display: block;
+	}
+	article {
+		background-color: rgba(37, 122, 51, 0.4);
+		margin-bottom: 10px;
+	}
+	article p {
+		color: var(--charcoal);
+	}
+	article img {
+		float: right;
+		width: 40%;
+		margin: 1em;
+	}
+	.hero-image {
+		background-image: url('../images/cache_valley_602x236.jpg');
+		height: 236px;
+	}
+	.link-hold {
+		font-size: 1em;
+	}
+	.forecast {
+		display: block;
+		width: 25em;
+		margin: auto;
+	}
+	.forecast h3 {
+		text-align: center;
+		font-size: 1.3em;
+	}
+	.daily {
+		display: grid;
+		grid-gap: 1px;
+		grid-template-columns: repeat(5, 1fr);
+	}
+	.daily > div {
+		background-color: rgba(255, 255, 255, 0.8);
+		text-align: center;
+		margin: 0;
+		display: block;
+		border: 1px solid black;
+	}
+	.daily-header {
+		background-color: var(--primary-color);
+		margin: 0;
+	}
+	.grid-item h4 {
+		color: white;
+		font-size: 0.9em;
+	}
+	.grid-item img {
+		margin-top: 5px;
+	}
+}
