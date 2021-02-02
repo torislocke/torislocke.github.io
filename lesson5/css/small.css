@@ -149,6 +149,8 @@ nav ul li a:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+/* Start - Weather Summary within hero image on town page */
 .weathersummary {
 	position: absolute;
 	display: grid;
@@ -157,7 +159,6 @@ nav ul li a:hover {
 	margin-left: 30px;
 	color: var(--white);
 	background-color: rgba(42, 110, 44, 0.8);
-
 	padding: 0.5em 3em;
 	box-shadow: 0 0 30px #777;
 	grid-template-areas:
@@ -216,9 +217,14 @@ nav ul li a:hover {
 .weathersummary p {
 	color: var(--white);
 }
+/* End - Weather Summary within hero image on town page */
+
+/* Five 5 Day Forecast - hide on mobile devices */
 .forecast {
 	display: none;
 }
+
+/* Start Town Page Main Article */
 article h3 {
 	font-weight: bold;
 	font-size: 1.2em;
@@ -242,6 +248,9 @@ article img {
 	font-size: 0.7em;
 	color: purple;
 }
+/* End Town Page Main Article */
+
+/* Start Contact Section of Town Page */
 .contact {
 	text-align: center;
 	background-color: rgba(37, 122, 51, 0.2);
@@ -253,9 +262,19 @@ article img {
 .contact p {
 	color: var(--charcoal);
 }
-#friday {
-	display: none;
-}
+
 .fab {
 	color: var(--charcoal);
+}
+/* announcement at top of page in aside hidden unless Friday */
+.hide {
+	display: none;
+}
+#friday {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 300px;
+	border: 3px solid black;
+	background-color: yellow;
 }
