@@ -1,9 +1,18 @@
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 32.5em) {
 	.logo-img {
 		width: 120px;
 	}
-	.heading h1 {
-		font-size: 1.8em;
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.7em;
+	}
+	h3 {
+		font-size: 1.4em;
+	}
+	p {
+		font-size: 1em;
 	}
 	/* navigation style for tablet screen size */
 	nav button {
@@ -49,17 +58,23 @@
 		background-image: url('../images/cache_valley_602x236.jpg');
 		height: 236px;
 	}
+
+	.weathersummary {
+		margin-top: -200px;
+		width: 45%;
+		grid-template-columns: 180px 100px;
+		padding: 0.5em 1.2em;
+	}
 	.link-hold {
 		font-size: 1em;
 	}
 	.forecast {
 		display: block;
-		width: 25em;
+		width: 30em;
 		margin: auto;
 	}
 	.forecast h3 {
 		text-align: center;
-		font-size: 1.3em;
 	}
 	.daily {
 		display: grid;
@@ -79,9 +94,27 @@
 	}
 	.grid-item h4 {
 		color: white;
-		font-size: 0.9em;
 	}
 	.grid-item img {
 		margin-top: 5px;
+	}
+	#map {
+		width: 200px;
+		height: 200px;
+		margin-left: 32px;
+	}
+	#contact {
+		display: grid;
+		grid-template-columns: 250px 350px;
+		grid-template-areas: 'map contact-info';
+	}
+	#map {
+		grid-area: map;
+	}
+	.contact-info {
+		grid-area: contact-info;
+	}
+	#friday {
+		width: 280px;
 	}
 }
