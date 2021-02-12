@@ -1,0 +1,34 @@
+@media screen and (min-width: 64em) {
+	.hero-container,
+	article {
+		max-width: 60em;
+		margin: auto;
+	}
+	nav ul li a {
+		padding: 0.8em 1.4em;
+		font-size: 1.2em;
+	}
+	article img {
+		width: 30%;
+	}
+
+	h1 {
+		font-size: 2.4em;
+	}
+	h2 {
+		font-size: 2em;
+	}
+	.weathersummary {
+		font-size: 17px;
+	}
+	.topic {
+		margin-top: 20px;
+	}
+	#contact {
+		grid-template-columns: 550px 450px;
+	}
+	#map {
+		width: 300px;
+		margin-left: 200px;
+	}
+}
