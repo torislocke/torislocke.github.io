@@ -1,0 +1,16 @@
+[data-src] {
+	min-width: 50px;
+	min-height: 50px;
+	margin: auto;
+}
+
+img {
+	display: block;
+	border: 1px solid green;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+h1 {
+	text-align: center;
+}
