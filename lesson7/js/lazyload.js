@@ -1,4 +1,5 @@
-// Retrieve images with data-src attribute
+// Another version of using the IntersectionObserver API
+//Retrieve images with data - src attribute
 const imagesToLoad = document.querySelectorAll('img[data-src]');
 
 // Establish optional paramenters for the InsectionalObserver

@@ -1,0 +1,329 @@
+html {
+	--webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/* START ---- establish global settings Mobile First Design  -------  */
+
+:root {
+	/* Tetradic color scheme of two couple of complementary colors with 
+    #3a648d as the dominant color */
+	--primary-color: #1e5388; /*medium blue */
+	--secondary-color: #32550e; /*medium green - tetradic to blue */
+	--accent1-color: #ccff00; /* light yellow - tetradic & complementary to blue */
+	--accent2-color: #336325; /* dark green - tetradic & complementary to blue */
+	--charcoal: #3a3a3a; /* text color to reduce eye strain */
+	--white: #f7f8fc; /* off-white color to reduce eye strain */
+	--heading-font: 'EB Garamond', serif;
+	--paragraph-font: Tahoma, sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--heading-font);
+	line-height: 1.6em;
+}
+h1 {
+	font-size: 1.3em;
+}
+h2 {
+	font-size: 1.25em;
+}
+h3,
+h4 {
+	font-size: 1.1em;
+}
+p {
+	font-size: 16px;
+	font-family: var(--paragraph-font);
+	line-height: 1.5em;
+	color: var(--charcoal);
+}
+.center {
+	text-align: center;
+}
+body {
+	background-color: var(--white);
+}
+/* responsive images that may scale down but not larger than original image */
+img {
+	max-width: 100%;
+	height: auto;
+}
+.main-header,
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px 0;
+}
+.main-header {
+	margin-top: 45px;
+}
+footer {
+	background-color: var(--primary-color);
+	color: var(--white);
+	text-align: center;
+	width: 100%;
+}
+.logo-img {
+	width: 80px;
+	height: auto;
+}
+.heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.heading h1 {
+	margin: 0 0 0 17px;
+}
+.heading div {
+	margin: 0 0 0 17px;
+	color: var(--accent2-color);
+	font-weight: bold;
+	font-style: italic;
+}
+/* ------------ Start Top Navigation Style Section Mobile Frist design ----------  */
+nav {
+	background-color: var(--primary-color);
+}
+nav button {
+	margin: 0.2rem 2%;
+	background-color: transparent;
+	border: none;
+	font-size: 1.6rem; /*Apple recomends buttons be set to 44px for accessability */
+	color: var(--white);
+}
+nav ul {
+	list-style: none; /*remove bullets on list */
+	padding: 0;
+	margin: 0;
+}
+nav ul.hide {
+	display: none;
+}
+nav ul li a {
+	display: block;
+	padding: 0.8rem 2%;
+	text-decoration: none;
+	color: var(--white);
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+nav ul li.active a {
+	background-color: rgba(0, 0, 0, 0.2);
+	color: var(--accent1-color);
+}
+nav ul li a:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ------------ End Top Navigation Style Section ----------  */
+
+/* Local Page style */
+
+.topic {
+	padding: 0.3em;
+}
+
+.town h2 {
+	margin-top: 1em;
+}
+
+.hero-img {
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Start - Weather Summary within hero image on town page */
+.weathersummary {
+	display: grid;
+	grid-template-columns: 90px 80px;
+	min-width: 190px;
+	max-width: 210px;
+	margin: auto;
+	background-color: rgba(42, 110, 44, 0.8);
+	padding: 0.5em;
+	box-shadow: 0 0 30px #777;
+	grid-template-areas:
+		'wheader wheader'
+		'col1-1 col2-1'
+		'col1-2 col2-2'
+		'col1-6 col2-6'
+		'col1-3 col2-3'
+		'col1-4 col2-4'
+		'col1-5 col2-5';
+}
+.wheader {
+	grid-area: wheader;
+	align-self: center;
+	margin: auto;
+}
+.col1-1 {
+	grid-area: col1-1;
+	justify-self: start;
+}
+.col1-2 {
+	grid-area: col1-2;
+	justify-self: start;
+}
+.col1-3 {
+	grid-area: col1-3;
+	justify-self: start;
+}
+.col1-4 {
+	grid-area: col1-4;
+	justify-self: start;
+}
+.col1-5 {
+	grid-area: col1-5;
+	justify-self: start;
+}
+.col1-6 {
+	grid-area: col1-6;
+	justify-self: start;
+}
+.col2-1 {
+	grid-area: col2-1;
+	margin-left: 20px;
+}
+.col2-2 {
+	grid-area: col2-2;
+	margin-left: 20px;
+}
+.col2-3 {
+	grid-area: col2-3;
+	margin-left: 20px;
+}
+.col2-4 {
+	grid-area: col2-4;
+	margin-left: 20px;
+}
+.col2-5 {
+	grid-area: col2-5;
+	margin-left: 20px;
+}
+.col2-6 {
+	grid-area: col2-6;
+	margin-left: 20px;
+}
+.weathersummary p {
+	color: var(--white);
+	font-size: 14px;
+}
+.weathersummary h3 {
+	color: var(--white);
+	font-size: 16px;
+}
+/* End - Weather Summary within hero image on town page */
+
+/* Five 5 Day Forecast - hide on mobile devices */
+.forecast {
+	display: none;
+}
+
+/* Start Town Page Main Article */
+article h3 {
+	font-weight: bold;
+}
+article h4 {
+	font-style: italic;
+	color: var(--secondary-color);
+	margin-bottom: 0.8em;
+}
+article img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	width: 80%;
+	box-shadow: 0 0 30px #777;
+}
+.link-hold {
+	text-decoration: underline;
+	font-size: 0.7em;
+	color: purple;
+}
+/* End Town Page Main Article */
+
+/* Start Contact Section of Town Page */
+.contact {
+	text-align: center;
+	background-color: rgba(37, 122, 51, 0.2);
+	width: 100%;
+	padding: 1em;
+	margin: auto;
+}
+.hidden {
+	display: none;
+}
+.contact-info {
+	display: block;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 8px;
+}
+.contact-info h3,
+.contact-info p {
+	color: var(--charcoal);
+}
+#map {
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	margin-bottom: 2px;
+}
+
+.grey {
+	color: var(--charcoal);
+}
+/* announcement at top of page in aside hidden unless Friday */
+.hide {
+	display: none;
+}
+#friday {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border: 3px solid black;
+	background-color: rgba(120, 167, 127, 0.4);
+	padding-left: 1em;
+	font-size: 13px;
+}
+
+/* Weather Gallery Page Styling */
+.image-gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1em;
+	margin: auto;
+	padding: 1em;
+}
+.featured-image {
+	border: 1px solid black;
+	justify-self: center;
+	padding: 0.5em;
+	filter: blur(0em);
+	transition: filter 0.5s;
+}
+.image-caption {
+	text-align: center;
+}
+img[data-src] {
+	filter: blur(0.2em);
+}

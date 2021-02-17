@@ -4,33 +4,48 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Lazy Load Example</title>
+		<title>Lazy Loading Example</title>
 		<link rel="stylesheet" href="css/lazyload.css" />
 	</head>
 	<body>
 		<header>
-			<h1>Lazy Load Example</h1>
+			<h1>Lazy Loading Example</h1>
 		</header>
 		<main>
-			<picture>
-				<img src="images/placeholder_img.png" data-src="images/path.jpg" alt="Barn Path" />
+			<strong id="warning" hidden
+				>IntersectionObserver is not supported by your browser, so you can't see the effect. Check its browser
+				support <a href="https://caniuse.com/#feat=intersectionobserver" target="_blank">here</a>.</strong
+			>
+			<noscript>⚠️ JAVASCRIPT IS DISABLED IN YOUR BROWSER!</noscript>
+			<picture class="slow">
+				<img src="images/placeholder_img.png" data-src="images/path.jpg" alt="Barn Path" loading="lazy" />
 			</picture>
-			<picture>
-				<img src="images/placeholder_img.png" data-src="images/purple.jpg" alt="May flower" />
+			<picture class="slow">
+				<img src="images/placeholder_img.png" data-src="images/purple.jpg" alt="May flower" loading="lazy" />
 			</picture>
-			<picture>
-				<img src="images/placeholder_img.png" data-src="images/sidewalk.jpg" alt="Terraced Garden" />
+			<picture class="slow">
+				<img
+					src="images/placeholder_img.png"
+					data-src="images/sidewalk.jpg"
+					alt="Terraced Garden"
+					loading="lazy"
+				/>
 			</picture>
-			<picture>
-				<img src="images/placeholder_img.png" data-src="images/fall_color.jpg" alt="Fall Color" />
+			<picture class="slow">
+				<img
+					src="images/placeholder_img.png"
+					data-src="images/fall_color.jpg"
+					alt="Fall Color"
+					loading="lazy"
+				/>
 			</picture>
-			<picture>
-				<img src="images/placeholder_img.png" data-src="images/blue.jpg" alt="Hydrangea" />
+			<picture class="slow">
+				<img src="images/placeholder_img.png" data-src="images/blue.jpg" alt="Hydrangea" loading="lazy" />
 			</picture>
-			<picture>
+			<picture class="slow">
 				<img src="images/placeholder_img.png" data-src="images/blackeye_susan.jpg" alt="Blackeyed Susan" />
 			</picture>
 		</main>
-		<script src="js/lazyload.js"></script>
+		<script src="js/lazy-load.js"></script>
 	</body>
 </html>
