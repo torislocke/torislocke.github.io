@@ -5,27 +5,14 @@
 	margin: auto;
 	padding: 1em;
 }
-
-[data-src] {
-	min-width: 50px;
-	min-height: 50px;
-	margin: auto;
-}
-
 img {
 	display: block;
 	border: 1px solid green;
 	margin: auto;
 	margin-bottom: 1em;
 }
-
 h1 {
 	text-align: center;
-}
-#warning {
-	padding: 10px;
-	color: beige;
-	background-color: red;
 }
 img[data-src] {
 	filter: blur(0.2em);
