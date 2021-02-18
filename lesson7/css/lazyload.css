@@ -1,3 +1,11 @@
+.image-gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1em;
+	margin: auto;
+	padding: 1em;
+}
+
 [data-src] {
 	min-width: 50px;
 	min-height: 50px;

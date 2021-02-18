@@ -4,7 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Lazy Loading Example</title>
+		<meta name="author" content="Tori Locke" />
+		<meta
+			name="description"
+			content="Example of using an instance of the IntersectionObserver() JavaScript object. "
+		/>
+		<title>Lazy Loading</title>
+		<link rel="stylesheet" href="../css/normalize.css" />
 		<link rel="stylesheet" href="css/lazyload.css" />
 	</head>
 	<body>
@@ -12,39 +18,41 @@
 			<h1>Lazy Loading Example</h1>
 		</header>
 		<main>
-			<strong id="warning" hidden
-				>IntersectionObserver is not supported by your browser, so you can't see the effect. Check its browser
-				support <a href="https://caniuse.com/#feat=intersectionobserver" target="_blank">here</a>.</strong
-			>
-			<noscript>⚠️ JAVASCRIPT IS DISABLED IN YOUR BROWSER!</noscript>
-			<picture class="slow">
-				<img src="images/placeholder_img.png" data-src="images/path.jpg" alt="Barn Path" loading="lazy" />
-			</picture>
-			<picture class="slow">
-				<img src="images/placeholder_img.png" data-src="images/purple.jpg" alt="May flower" loading="lazy" />
-			</picture>
-			<picture class="slow">
-				<img
-					src="images/placeholder_img.png"
-					data-src="images/sidewalk.jpg"
-					alt="Terraced Garden"
-					loading="lazy"
-				/>
-			</picture>
-			<picture class="slow">
-				<img
-					src="images/placeholder_img.png"
-					data-src="images/fall_color.jpg"
-					alt="Fall Color"
-					loading="lazy"
-				/>
-			</picture>
-			<picture class="slow">
-				<img src="images/placeholder_img.png" data-src="images/blue.jpg" alt="Hydrangea" loading="lazy" />
-			</picture>
-			<picture class="slow">
-				<img src="images/placeholder_img.png" data-src="images/blackeye_susan.jpg" alt="Blackeyed Susan" />
-			</picture>
+			<div class="image-gallery">
+				<picture class="slow">
+					<img src="images/placeholder_img.png" data-src="images/path.jpg" alt="Barn Path" loading="lazy" />
+				</picture>
+				<picture class="slow">
+					<img
+						src="images/placeholder_img.png"
+						data-src="images/purple.jpg"
+						alt="May flower"
+						loading="lazy"
+					/>
+				</picture>
+				<picture class="slow">
+					<img
+						src="images/placeholder_img.png"
+						data-src="images/sidewalk.jpg"
+						alt="Terraced Garden"
+						loading="lazy"
+					/>
+				</picture>
+				<picture class="slow">
+					<img
+						src="images/placeholder_img.png"
+						data-src="images/fall_color.jpg"
+						alt="Fall Color"
+						loading="lazy"
+					/>
+				</picture>
+				<picture class="slow">
+					<img src="images/placeholder_img.png" data-src="images/blue.jpg" alt="Hydrangea" loading="lazy" />
+				</picture>
+				<picture class="slow">
+					<img src="images/placeholder_img.png" data-src="images/blackeye_susan.jpg" alt="Blackeyed Susan" />
+				</picture>
+			</div>
 		</main>
 		<script src="js/lazy-load.js"></script>
 	</body>
