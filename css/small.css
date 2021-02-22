@@ -82,13 +82,10 @@ footer a:hover {
 /* header and footer ---------- End */
 
 /* Home Page specific Design --------- Start */
-#assignments {
-	margin: auto;
-	max-width: 90%;
-	height: 40vh;
-}
+
 #assignments h2 {
 	border-bottom: 1px solid black;
+	margin-left: .5em;
 }
 #myphoto {
 	margin-top: 1rem;

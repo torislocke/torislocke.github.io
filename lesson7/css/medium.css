@@ -123,4 +123,7 @@
 	.image-gallery {
 		grid-template-columns: repeat(2, 1fr);
 	}
+	#assignments {
+		height: 900px;
+	}
 }
