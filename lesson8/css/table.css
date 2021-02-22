@@ -1,0 +1,41 @@
+/* The font-family is Ubuntu, sans-serif. */
+/* Use a maximum of one class or id selector. */
+/* Use one instance of the first-child or nth:child() pseudo classes. */
+/* The color scheme includes #e7f0ed, #e7ffed (data rows) 
+and #628ca6, #7fb9c2 along with standard white and black. */
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+}
+table,
+th,
+td {
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin-bottom: 1em;
+	padding: 0.5em;
+}
+
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+tr {
+	background-color: #e7f0ed;
+}
+tr:nth-child(odd) {
+	background-color: #e7ffed;
+}
+.dark {
+	background-color: #628ca6;
+	color: white;
+}
+tfoot tr td,
+caption {
+	background-color: #7fb9c2;
+	font-weight: bold;
+}
+tfoot tr td {
+	font-size: 12px;
+}
