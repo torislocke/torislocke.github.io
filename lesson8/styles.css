@@ -1,8 +1,12 @@
+body {
+	margin: 5px;
+	padding: 1em;
+}
 /* Style inputs with type="text", select elements and textareas */
 input[type='text'],
 select,
 textarea {
-	width: 100%; /* Full width */
+	width: 95%; /* Full width */
 	padding: 12px; /* Some padding */
 	border: 1px solid #ccc; /* Gray border */
 	border-radius: 4px; /* Rounded borders */
@@ -35,7 +39,13 @@ form {
 }
 fieldset input[type='text'],
 fieldset input[type='password'] {
-	width: 30%;
+	width: 25%;
 	padding: 8px; /* Some padding */
 	margin: auto;
+}
+#pin {
+	width: 20%;
+}
+#country_code {
+	width: 20%;
 }

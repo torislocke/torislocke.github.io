@@ -14,10 +14,10 @@
         <!-- When autocomplete is on, the browser automatically complete values based on values that the user has entered before. -->
         <form autocomplete="on">
             <!-- these fields are not required or validated -->
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="fname">First Name</label><br>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
             <!-- this field is not required, but it will pop up a message if the pattern is not followed -->
             <label for="country_code">Country code:</label>
             <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}"
@@ -27,7 +27,7 @@
             <input type="text" id="pin" name="pin" maxlength="4"><br>
 
             <!-- the Quantity between field is not required by will provide a specified range -->
-            <label for="quantity">Quantity (between 1 and 5):</label>
+            <label for="quantity">Quantity (between 1 and 5):</label><br>
             <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
             
             <!-- The two fields within the fieldset are "required" and will block the form from submitting unless filled in -->
@@ -40,8 +40,8 @@
                     title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
             </fieldset>
             <br>
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+            <label for="subject">Subject</label><br>
+            <textarea id="subject" name="subject" placeholder="Write something.."></textarea><br>
 
             <input type="submit" value="Submit">
 
