@@ -43,6 +43,10 @@ fieldset input[type='password'] {
 	padding: 8px; /* Some padding */
 	margin: auto;
 }
+/* required area */
+fieldset {
+	background: pink;
+}
 #pin {
 	width: 20%;
 }
