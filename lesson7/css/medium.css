@@ -126,4 +126,9 @@
 	#assignments {
 		height: 900px;
 	}
+	/* Storm Center page style */
+	.storm {
+		width: 70%;
+		padding: 1em;
+	}
 }

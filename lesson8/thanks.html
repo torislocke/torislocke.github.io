@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Tori Locke" />
+		<meta
+			name="description"
+			content="The Storm Center form helps track Weather Information South East (WISE) provding Idahoians in the SE current information on weather and events."
+		/>
+		<title>WISE Storm Center</title>
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="../lesson7/css/small.css" />
+		<link rel="stylesheet" href="../lesson7/css/medium.css" />
+		<link rel="stylesheet" href="../lesson7/css/large.css" />
+	</head>
+
+	<body>
+		<header></header>
+		<nav>
+			<button onclick="toggleMenu()">&#9776; Menu</button>
+			<ul id="topnav" class="hide">
+				<li class="item"><a href="../lesson7/index.html">Home</a></li>
+				<li class="item"><a href="../lesson7/preston-7.html">Preston</a></li>
+				<li class="item"><a href="/">Soda Springs</a></li>
+				<li class="item"><a href="/">Fish Haven</a></li>
+				<li class="item active"><a href="stormcenter.html">Storm Center</a></li>
+				<li class="item"><a href="../lesson7/gallery-7.html">Gallery</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div class="thanks-content">
+				<h1 class="center">Thank you!</h1>
+				<p class="center">We appreciate you taking the time to send us the storm information - Stay Safe!</p>
+			</div>
+		</main>
+		<footer>
+			<small
+				>&copy; <span id="currentYear"></span> Weather Information South East | Attributions | Tori Locke
+
+				<br /><span id="currentDate"></span>
+			</small>
+		</footer>
+		<script src="js/currentDates.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/lazyload.js"></script>
+	</body>
+</html>
