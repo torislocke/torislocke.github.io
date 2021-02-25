@@ -19,8 +19,9 @@ table {
 	text-align: center;
 	margin: auto;
 	margin-bottom: 1em;
+	box-shadow: 5px 5px 18px #628ca6;
 }
-thead tr th {
+tr th {
 	background-color: #628ca6;
 	color: white;
 }
@@ -31,15 +32,25 @@ tr {
 tr:nth-child(odd) {
 	background-color: #e7ffed;
 }
-.dark-italic td {
+.dark {
 	background-color: #628ca6;
 	color: white;
+}
+.italic {
 	font-style: italic;
 }
+td {
+	font-size: 0.8em;
+}
+th {
+	font-size: 0.9em;
+}
 tfoot tr td,
-caption {
+thead tr th {
 	background-color: #7fb9c2;
+	font-size: 1.5em;
 	font-weight: bold;
+	color: black;
 }
 tfoot tr td {
 	font-size: 12px;
