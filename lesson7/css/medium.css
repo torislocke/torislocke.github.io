@@ -131,4 +131,10 @@
 		width: 70%;
 		padding: 1em;
 	}
+	.stormrating input {
+		width: 70%;
+	}
+	.stormText {
+		margin-left: 4em;
+	}
 }

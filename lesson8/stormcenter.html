@@ -92,9 +92,37 @@
 							<option value="Tornado"></option>
 						</datalist>
 
-						<label class="stormSeverity" for="stormSeverity">Storm Severity value from 1 to 10:</label>
+						<!-- <label class="stormSeverity" for="stormSeverity">Storm Severity value from 1 to 10:</label>
 						<br />
-						<input type="range" id="stormSeverity" value="5" min="1" max="10" step="1" /><br /><br />
+						<input type="range" id="stormSeverity" value="5" min="1" max="10" step="1" /><br /><br /> -->
+						<label class="stormrating"
+							>Storm Severity Rating: <span id="ratingvalue">5</span>
+							<input
+								type="range"
+								id="rating"
+								value="5"
+								min="1"
+								max="10"
+								step="1"
+								list="tickmarks"
+								oninput="adjustRating(this.value)"
+								onchange="adjustRating(this.value)"
+							/>
+							<datalist id="tickmarks">
+								<option value="0"></option>
+								<option value="1"></option>
+								<option value="2"></option>
+								<option value="3"></option>
+								<option value="4"></option>
+								<option value="5"></option>
+								<option value="6"></option>
+								<option value="7"></option>
+								<option value="8"></option>
+								<option value="9"></option>
+								<option value="10"></option>
+							</datalist>
+							<small class="stormText">Range between 1 and 10</small> </label
+						><br />
 
 						<label for="stormRegion">Storm Region:</label><br />
 						<select id="stormRegion" name="stormRegion">
@@ -133,5 +161,6 @@
 		<script src="js/currentDates.js"></script>
 		<script src="js/menu.js"></script>
 		<script src="js/lazyload.js"></script>
+		<script src="js/stormcenter.js"></script>
 	</body>
 </html>
