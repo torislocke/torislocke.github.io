@@ -365,6 +365,11 @@ input[list] {
 	width: 70%;
 	padding: 0.5em;
 }
+input[type='range'] {
+	color: blue;
+	background: blue;
+}
+
 
 /* Style inputs with textara,  */
 textarea {
