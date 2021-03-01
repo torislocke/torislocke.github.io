@@ -21,7 +21,7 @@ main {
 section {
 	display: block;
 	background-color: #b9b9cc;
-	border: 1px solid black;
+	border: 1px solid #4d4d96;
 	margin: 5px;
 }
 h2 {
