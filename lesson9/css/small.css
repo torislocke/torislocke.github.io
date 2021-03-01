@@ -258,6 +258,9 @@ article img {
 	width: 80%;
 	box-shadow: 0 0 30px #777;
 }
+article p {
+	padding: 0.5em;
+}
 .link-hold {
 	text-decoration: underline;
 	font-size: 0.7em;
@@ -275,6 +278,9 @@ article img {
 }
 .hidden {
 	display: none;
+}
+#contact {
+	margin: 1em 0;
 }
 .contact-info {
 	display: block;
@@ -369,7 +375,6 @@ input[type='range'] {
 	color: blue;
 	background: blue;
 }
-
 
 /* Style inputs with textara,  */
 textarea {
