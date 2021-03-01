@@ -1,0 +1,52 @@
+header h1 {
+	text-align: center;
+	color: #4d4d96;
+	font-weight: bold;
+}
+
+main {
+	background-color: #dddddd;
+	box-shadow: 0px 0px 50px rgb(100 96 96);
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 0.1em;
+	padding: 10px;
+	text-align: center;
+	margin: auto;
+}
+
+section {
+	display: block;
+	background-color: #b9b9cc;
+	border: 1px solid black;
+	margin: 5px;
+}
+h2 {
+	color: #4d4d96;
+	margin-bottom: 3px;
+}
+.cards img {
+	display: block;
+	margin: 15px auto;
+	max-width: 50%;
+	box-shadow: 0px 0px 25px rgb(63 61 61);
+}
+p {
+	line-height: 16px;
+	margin: 3px 1px;
+}
+
+@media only screen and (min-width: 32.5em) {
+	.cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media only screen and (min-width: 64em) {
+	.cards {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
