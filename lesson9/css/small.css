@@ -274,13 +274,16 @@ article p {
 	color: purple;
 }
 /* ----------------- Home Page JASON driven section styling ---- */
-
+.cards {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 10px;
+}
 .cards > section {
 	display: grid;
 	grid-template-columns: 1fr;
 	border: 1px solid #bbb;
 	background-color: rgb(223, 236, 247);
-	margin: 10px;
 }
 .cards > section img {
 	grid-column: 2;
@@ -310,8 +313,8 @@ article p {
 	height: auto;
 	padding: 3px;
 }
-.cards > section:nth-child(odd) {
-}
+/* .cards > section:nth-child(odd) {
+} */
 /* ------------------ Contact Section of Town Page ------------ */
 .contact {
 	text-align: center;
