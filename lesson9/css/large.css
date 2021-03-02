@@ -21,9 +21,7 @@
 	.weathersummary {
 		font-size: 17px;
 	}
-	.topic {
-		margin-top: 20px;
-	}
+
 	#contact {
 		grid-template-columns: 550px 450px;
 	}

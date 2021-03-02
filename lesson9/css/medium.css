@@ -36,12 +36,10 @@
 	}
 	/* end navigation for tablet */
 	/* town page style for tablet */
-	.forecast {
-		display: block;
-	}
 	article {
 		background-color: rgba(37, 122, 51, 0.4);
 		margin-bottom: 10px;
+		margin-top: 2em;
 	}
 	/* article p {
 		color: var(--charcoal);
@@ -72,6 +70,7 @@
 		display: block;
 		width: 30em;
 		margin: auto;
+		margin-bottom: 1em;
 	}
 	.forecast h3 {
 		text-align: center;
