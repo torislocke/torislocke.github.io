@@ -298,6 +298,10 @@ article p {
 .contact-info p {
 	color: var(--charcoal);
 }
+.socialIcon {
+	width: 30px;
+	height: 30px;
+}
 #map {
 	display: block;
 	width: 200px;
