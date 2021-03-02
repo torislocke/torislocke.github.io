@@ -282,36 +282,23 @@ article p {
 .cards > section {
 	display: grid;
 	grid-template-columns: 1fr;
+	grid-template-rows: 28px 28px 25px 25px 25px 100px;
 	border: 1px solid #bbb;
+	padding: 0 1em;
 	background-color: rgb(223, 236, 247);
-}
-.cards > section img {
-	grid-column: 2;
-	padding: 5px;
-	border: 1px solid black;
-}
-
-.cards > section p,
-.cards > section h2,
-.cards > section h3 {
-	grid-column: 1;
-	text-align: center;
-	margin: 0;
-}
-.cards > section:nth-child(even) p,
-.cards > section:nth-child(even) h2,
-.cards > section:nth-child(even) h3 {
-	grid-column: 2;
-}
-.cards > section:nth-child(even) img {
-	grid-column: 1;
-	padding: 5px;
-	border: 1px solid black;
 }
 .cards > img {
 	width: 100%;
-	height: auto;
+	height: 100px;
 	padding: 3px;
+}
+.cards h3 {
+	font-size: 15px;
+	font-style: italic;
+	font-weight: bold;
+}
+.cards p {
+	font-size: 16px;
 }
 /* .cards > section:nth-child(odd) {
 } */

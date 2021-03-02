@@ -34,6 +34,48 @@
 		padding: 0.8em 1.2em;
 		font-size: 1em;
 	}
+	/* ----------------- Home Page JASON driven section styling ---- */
+	.cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+	.cards > section {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 28px 28px 25px 25px 25px;
+		border: 1px solid #bbb;
+		background-color: rgb(223, 236, 247);
+	}
+	.cards > section img {
+		grid-column: 2;
+		padding: 5px;
+		border: 1px solid black;
+	}
+
+	.cards > section p,
+	.cards > section h2,
+	.cards > section h3 {
+		grid-column: 1;
+		text-align: center;
+		margin: 0;
+	}
+	.cards > section:nth-child(even) p,
+	.cards > section:nth-child(even) h2,
+	.cards > section:nth-child(even) h3 {
+		grid-column: 2;
+	}
+	.cards > section:nth-child(even) img {
+		grid-column: 1;
+		padding: 5px;
+		border: 1px solid black;
+	}
+	.cards > h3 {
+		font-size: 16px;
+	}
+	.cards p {
+		font-size: 17px;
+	}
 
 	/* town page style for tablet */
 	article {
@@ -99,7 +141,7 @@
 	/* ------ Adjust contact section for larger screens -------- */
 	#contact {
 		display: grid;
-		grid-template-columns: 250px 350px;
+		grid-template-columns: 1fr 1fr;
 		grid-template-areas: 'map contact-info';
 	}
 	#map {
@@ -111,8 +153,11 @@
 	.contact-info {
 		grid-area: contact-info;
 	}
+	.contact-info h3 {
+		font-size: 18px;
+	}
 	.contact-info p {
-		font-size: 20px;
+		font-size: 17px;
 	}
 	.socialIcon {
 		width: 40px;
