@@ -58,6 +58,16 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
+/* ---------------- lazy load image effects ---------------------- */
+img[data-src] {
+	filter: blur(0.2em);
+}
+.slow img {
+	filter: blur(0em);
+	transition: filter 0.5s;
+}
+/* ------ Consistent style across all pages header and footer section -----  */
 .main-header,
 footer {
 	display: flex;
@@ -128,18 +138,13 @@ nav ul li a:hover {
 	background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Assignment page styling */
+/* ******************** Assignment page styling***************  */
 #assignments {
 	height: 95vh;
 	margin-bottom: 1em;
 }
-/* ------------ End Top Navigation Style Section ----------  */
 
-/* Local Page style */
-
-.topic {
-	padding: 0.3em;
-}
+/* ******************* Local Town Page style******************  */
 
 .town h2 {
 	margin-top: 1em;
@@ -234,14 +239,14 @@ nav ul li a:hover {
 	color: var(--white);
 	font-size: 16px;
 }
-/* End - Weather Summary within hero image on town page */
 
-/* Five 5 Day Forecast - hide on mobile devices */
+/* ----------- Five 5 Day Forecast - hide on mobile device -------------- */
 .forecast {
 	display: none;
 }
 
-/* Start Town Page Main Article */
+/* --------------- Town Page Main Article ------------ */
+
 article h3 {
 	font-weight: bold;
 }
@@ -266,9 +271,8 @@ article p {
 	font-size: 0.7em;
 	color: purple;
 }
-/* End Town Page Main Article */
 
-/* Start Contact Section of Town Page */
+/* ------------------ Contact Section of Town Page ------------ */
 .contact {
 	text-align: center;
 	background-color: rgba(37, 122, 51, 0.2);
@@ -299,11 +303,10 @@ article p {
 	margin: auto;
 	margin-bottom: 2px;
 }
-
 .grey {
 	color: var(--charcoal);
 }
-/* announcement at top of page in aside hidden unless Friday */
+/* ----------- announcement at top of page in aside hidden unless Friday ----- */
 .hide {
 	display: none;
 }
@@ -318,7 +321,7 @@ article p {
 	font-size: 13px;
 }
 
-/* Weather Gallery Page Styling */
+/*  -------------------- Weather Gallery Page Styling ------------  */
 .image-gallery {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -333,13 +336,14 @@ article p {
 	filter: blur(0em);
 	transition: filter 0.5s;
 }
+.featured-image img {
+	width: 80vw;
+}
 .image-caption {
 	text-align: center;
 }
-img[data-src] {
-	filter: blur(0.2em);
-}
-/* Storm Center page style */
+
+/* ---------------- Storm Center page Form style ---------------  */
 .storm {
 	display: block;
 	margin: auto;
@@ -375,8 +379,16 @@ input[type='range'] {
 	color: blue;
 	background: blue;
 }
-
-/* Style inputs with textara,  */
+.stormrating input {
+	display: block;
+	padding: 0.5em;
+	width: 80%;
+}
+.stormText {
+	display: block;
+	margin-top: 0.5em;
+	margin-left: 2em;
+}
 textarea {
 	width: 95%; /* Full width */
 	padding: 1em; /* Some padding */
@@ -401,22 +413,12 @@ input[type='submit'] {
 input[type='submit']:hover {
 	background-color: #45a049;
 }
+/* ---------------- Thank you page after submitting storm information ---- */
 .thanks-content {
 	margin-top: 5em;
 	margin-bottom: 5em;
 }
-
-.stormrating input {
-	display: block;
-	padding: 0.5em;
-	width: 80%;
-}
-.stormText {
-	display: block;
-	margin-top: 0.5em;
-	margin-left: 2em;
-}
-
+/* ---- remove my photo if page is printed & display link info in footer ---------  */
 @media print {
 	#myphoto {
 		display: none;

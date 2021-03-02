@@ -1,12 +1,6 @@
 // Another version of using the IntersectionObserver API
 //Retrieve images with data - src attribute
-const imagesToLoad = document.querySelectorAll('img[data-src]');
-
-// Establish optional paramenters for the InsectionalObserver
-const imgOptions = {
-	threshold: 1, // delays the load the higher the number
-	rootMargin: '0px 0px 50px 0px',
-};
+let imagesToLoad = document.querySelectorAll('img[data-src]');
 
 const loadImages = (image) => {
 	image.setAttribute('src', image.getAttribute('data-src'));
@@ -15,7 +9,6 @@ const loadImages = (image) => {
 	};
 };
 
-//verify if intersection Observer is supported
 if ('IntersectionObserver' in window) {
 	const observer = new IntersectionObserver((items, observer) => {
 		items.forEach((item) => {

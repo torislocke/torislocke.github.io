@@ -36,9 +36,6 @@
 	}
 	/* end navigation for tablet */
 	/* town page style for tablet */
-	.topic {
-		padding: 1em;
-	}
 	.forecast {
 		display: block;
 	}
@@ -119,6 +116,9 @@
 	}
 	#friday {
 		width: 280px;
+	}
+	.featured-image img {
+		width: 400px;
 	}
 	.image-gallery {
 		grid-template-columns: repeat(2, 1fr);
