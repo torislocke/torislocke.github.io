@@ -27,7 +27,6 @@
 	}
 	#map {
 		width: 300px;
-		margin-left: 200px;
 	}
 	.image-gallery {
 		grid-template-columns: repeat(3, 1fr);
@@ -38,4 +37,13 @@
 	.storm {
 		width: 50%;
 	}
+	/* Home page style for tablet */
+	.cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.cards > section {
+		display: block;
+	}
+
 }

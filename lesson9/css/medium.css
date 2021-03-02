@@ -34,7 +34,7 @@
 		padding: 0.8em 1.2em;
 		font-size: 1em;
 	}
-	/* end navigation for tablet */
+
 	/* town page style for tablet */
 	article {
 		background-color: rgba(37, 122, 51, 0.4);
@@ -105,11 +105,18 @@
 	#map {
 		width: 200px;
 		height: 200px;
-		margin-left: 32px;
+		margin: auto;
 		grid-area: map;
 	}
 	.contact-info {
 		grid-area: contact-info;
+	}
+	.contact-info p {
+		font-size: 20px;
+	}
+	.socialIcon {
+		width: 40px;
+		height: 40px;
 	}
 	#friday {
 		width: 280px;

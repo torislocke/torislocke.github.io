@@ -26,7 +26,7 @@ fetch(requestURL)
 			image.setAttribute('src', towns[i].photo);
 			image.setAttribute('alt', towns[i].name + ' - ' + towns[i].order);
 			image.setAttribute('title', towns[i].name + ' - ' + towns[i].order);
-			if (towns[i].name == 'Springfield' || towns[i].name == 'Fish Haven' || towns[i].name == 'Preston') {
+			if (towns[i].name == 'Soda Springs' || towns[i].name == 'Fish Haven' || towns[i].name == 'Preston') {
 				card.appendChild(h2);
 				card.appendChild(motto);
 				card.appendChild(founded);

@@ -273,11 +273,49 @@ article p {
 	font-size: 0.7em;
 	color: purple;
 }
+/* ----------------- Home Page JASON driven section styling ---- */
 
+.cards > section {
+	display: grid;
+	grid-template-columns: 1fr;
+	border: 1px solid #bbb;
+	background-color: rgb(223, 236, 247);
+	margin: 10px;
+}
+.cards > section img {
+	grid-column: 2;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+.cards > section p,
+.cards > section h2,
+.cards > section h3 {
+	grid-column: 1;
+	text-align: center;
+	margin: 0;
+}
+.cards > section:nth-child(even) p,
+.cards > section:nth-child(even) h2,
+.cards > section:nth-child(even) h3 {
+	grid-column: 2;
+}
+.cards > section:nth-child(even) img {
+	grid-column: 1;
+	padding: 5px;
+	border: 1px solid black;
+}
+.cards > img {
+	width: 100%;
+	height: auto;
+	padding: 3px;
+}
+.cards > section:nth-child(odd) {
+}
 /* ------------------ Contact Section of Town Page ------------ */
 .contact {
 	text-align: center;
-	background-color: rgba(37, 122, 51, 0.2);
+	background-color: rgba(174, 243, 185, 0.2);
 	width: 100%;
 	padding: 1em;
 	margin: auto;
