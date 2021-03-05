@@ -322,8 +322,7 @@ article p {
 .cards p:nth-of-type(2) {
 	grid-area: p2;
 }
-/* .cards > section:nth-child(odd) {
-} */
+
 /* ------------------ Contact Section of Town Page ------------ */
 .contact {
 	text-align: center;
@@ -477,6 +476,20 @@ input[type='submit']:hover {
 	margin-top: 5em;
 	margin-bottom: 5em;
 }
+
+/* --------------- Wire-frame page style ---------------------- */
+.small-wireframe,
+.tablet-wireframe {
+	width: 50%;
+	margin: 10px auto;
+	border: 1px solid black;
+}
+.small-wireframe h3,
+.tablet-wireframe h3 {
+	display: block;
+	background-color: lightgray;
+}
+
 /* ---- remove my photo if page is printed & display link info in footer ---------  */
 @media print {
 	#myphoto {
