@@ -10,105 +10,89 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="../css/normalize.css" />
-		<link rel="stylesheet" href="../lesson7/css/small.css" />
-		<link rel="stylesheet" href="../lesson7/css/medium.css" />
+		<link rel="stylesheet" href="../lesson9/css/small.css" />
+		<link rel="stylesheet" href="../lesson9/css/medium.css" />
 		<link rel="stylesheet" href="css/table.css" />
 	</head>
 	<body>
-		<header></header>
+		<header class="main-header">
+			<figure class="logo">
+				<img
+					src="../lesson9/images/logo_300_317.png"
+					alt="WISE Logo"
+					srcset="
+						../lesson9/images/logo1.png 1x,
+						../lesson9/images/logo2.png 2x,
+						../lesson9/images/logo3.png 3x
+					"
+				/>
+			</figure>
+			<section class="heading">
+				<h1>Weather-Information-South-East</h1>
+				<div class="moto">Idahoans seeking WISE(dom)</div>
+			</section>
+		</header>
+		<!-- Website top level navigation -->
 		<nav>
 			<button onclick="toggleMenu()">&#9776; Menu</button>
 			<ul id="topnav" class="hide">
-				<li class="item"><a href="../lesson7/index.html">Home</a></li>
-				<li class="item"><a href="../lesson7/preston-7.html">Preston</a></li>
-				<li class="item"><a href="/">Soda Springs</a></li>
-				<li class="item"><a href="/">Fish Haven</a></li>
-				<li class="item"><a href="/">Storm Center</a></li>
-				<li class="item"><a href="../lesson7/gallery-7.html">Gallery</a></li>
-				<li class="item active"><a href="tablebuild.html">Table</a></li>
+				<li class="item"><a href="../lesson9/index.html">Home</a></li>
+				<li class="item"><a href="../lesson9/preston-9.html">Preston</a></li>
+				<li class="item"><a href="../lesson9/soda.html">Soda Springs</a></li>
+				<li class="item"><a href="fishHaven.html">Fish Haven</a></li>
+				<li class="item"><a href="../lesson9/stormcenter.html">Storm Center</a></li>
+				<li class="item"><a href="../lesson9/gallery-9.html">Gallery</a></li>
+				<li class="item active"><a href="tablebuild.html">Table Exercise</a></li>
 			</ul>
 		</nav>
 		<main>
-			<h1 class="hide">Table Example</h1>
-
 			<!-- Use the thead, tbody, and tfoot tags in your table structure. -->
-
 			<table>
-				 
 				<thead>
 					<tr>
 						<th colspan="3">ACME Wildwest</th>
 					</tr>
 				</thead>
-				 
 				<tbody>
 					<tr>
-						   
-						<th>Period</th>
-						   
-						<th>Sales</th>
-						   
-						<th>Sales Goal</th>
-						 
+						<td>Period</td>
+						<td>Sales</td>
+						<td>Sales Goal</td>
 					</tr>
 					<tr>
-						   
 						<td>August</td>
-						   
 						<td>$3,590</td>
-						   
 						<td>$4,000</td>
-						 
 					</tr>
-					 
 					<tr>
-						   
 						<td>September</td>
-						   
 						<td>$4,420</td>
-						   
 						<td>$5,000</td>
-						 
 					</tr>
-					 
 					<tr>
-						   
 						<td>October</td>
-						   
 						<td>$4,870</td>
-						   
 						<td>$5,000</td>
-						 
 					</tr>
 					<tr>
-						   
 						<td>November</td>
-						   
 						<td>$8,610</td>
-						   
 						<td class="dark">$7,500</td>
-						 
 					</tr>
 					<tr>
-						   
-						<td class="italic">Black Friday</td>
-						   
+						<td><em>Black Friday</em></td>
 						<td colspan="2">$3,200</td>
-						     
 					</tr>
 					<tr>
-						   
 						<td>December</td>
-						   
 						<td>$6,820</td>
-						   
 						<td>$7,500</td>
-						 
 					</tr>
 				</tbody>
+
 				<tfoot>
 					<tr>
-						<td colspan="3">Complied 12.20.2020 by bRauls</td>
+						<td colspan="3">Compiled 12.20.2020 by bRauls</td>
 					</tr>
 				</tfoot>
 			</table>

@@ -4,6 +4,16 @@
 /* The color scheme includes #e7f0ed, #e7ffed (data rows) 
 and #628ca6, #7fb9c2 along with standard white and black. */
 
+/* second method to retrieve font */
+@font-face {
+	font-family: 'Ubuntu';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoCxCvTtw.ttf) format('truetype');
+}
+
+/* set font for entire page */
 body {
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -17,7 +27,7 @@ td {
 }
 table {
 	text-align: center;
-	margin: auto;
+	margin: 2em auto;
 	margin-bottom: 1em;
 	box-shadow: 5px 5px 18px #628ca6;
 }
@@ -29,15 +39,14 @@ tr th {
 tr {
 	background-color: #e7f0ed;
 }
+/* use one nth-child requirement */
 tr:nth-child(odd) {
 	background-color: #e7ffed;
 }
+/* use one class requirement */
 .dark {
 	background-color: #628ca6;
 	color: white;
-}
-.italic {
-	font-style: italic;
 }
 td {
 	font-size: 0.8em;
@@ -49,7 +58,7 @@ tfoot tr td,
 thead tr th {
 	background-color: #7fb9c2;
 	font-size: 1.5em;
-	font-weight: bold;
+	font-weight: 700;
 	color: black;
 }
 tfoot tr td {
