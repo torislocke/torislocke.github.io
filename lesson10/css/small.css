@@ -1,0 +1,502 @@
+html {
+	--webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+/* START ---- establish global settings Mobile First Design  -------  */
+
+:root {
+	/* Tetradic color scheme of two couple of complementary colors with 
+    #3a648d as the dominant color */
+	--primary-color: #1e5388; /*medium blue */
+	--secondary-color: #32550e; /*medium green - tetradic to blue */
+	--accent1-color: #ccff00; /* light yellow - tetradic & complementary to blue */
+	--accent2-color: #336325; /* dark green - tetradic & complementary to blue */
+	--charcoal: #3a3a3a; /* text color to reduce eye strain */
+	--white: #f7f8fc; /* off-white color to reduce eye strain */
+	--heading-font: 'EB Garamond', serif;
+	--paragraph-font: Tahoma, sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--heading-font);
+	line-height: 1.6em;
+}
+h1 {
+	font-size: 1.3em;
+}
+h2 {
+	font-size: 1.25em;
+}
+h3,
+h4 {
+	font-size: 1.1em;
+}
+p {
+	font-size: 16px;
+	font-family: var(--paragraph-font);
+	line-height: 1.5em;
+	color: var(--charcoal);
+}
+.center {
+	text-align: center;
+}
+body {
+	background-color: var(--white);
+}
+/* responsive images that may scale down but not larger than original image */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* ---------------- lazy load image effects ---------------------- */
+img[data-src] {
+	filter: blur(0.2em);
+}
+.slow img {
+	filter: blur(0em);
+	transition: filter 0.5s;
+}
+/* ------ Consistent style across all pages header and footer section -----  */
+.main-header,
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px 0;
+}
+.main-header {
+	margin-top: 45px;
+}
+footer {
+	background-color: var(--primary-color);
+	color: var(--white);
+	text-align: center;
+	width: 100%;
+	height: 3em;
+}
+.logo-img {
+	width: 80px;
+	height: auto;
+}
+.heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.heading h1 {
+	margin: 0 0 0 17px;
+}
+.heading div {
+	margin: 0 0 0 17px;
+	color: var(--accent2-color);
+	font-weight: bold;
+	font-style: italic;
+}
+/* ------------ Start Top Navigation Style Section Mobile Frist design ----------  */
+nav {
+	background-color: var(--primary-color);
+}
+nav button {
+	margin: 0.2rem 2%;
+	background-color: transparent;
+	border: none;
+	font-size: 1.6rem; /*Apple recomends buttons be set to 44px for accessability */
+	color: var(--white);
+}
+nav ul {
+	list-style: none; /*remove bullets on list */
+	padding: 0;
+	margin: 0;
+}
+nav ul.hide {
+	display: none;
+}
+nav ul li a {
+	display: block;
+	padding: 0.8rem 2%;
+	text-decoration: none;
+	color: var(--white);
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+nav ul li.active a {
+	background-color: rgba(0, 0, 0, 0.2);
+	color: var(--accent1-color);
+}
+nav ul li a:hover {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ******************** Assignment page styling***************  */
+#assignments {
+	height: 95vh;
+	margin-bottom: 1em;
+}
+
+/* ******************* Local Town Page style******************  */
+
+.town h2 {
+	margin-top: 1em;
+}
+
+.hero-img {
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* Start - Weather Summary within hero image on town page */
+.weathersummary {
+	display: grid;
+	grid-template-columns: 90px 80px;
+	min-width: 190px;
+	max-width: 210px;
+	margin: auto;
+	background-color: rgba(42, 110, 44, 0.8);
+	padding: 0.5em;
+	box-shadow: 0 0 30px #777;
+	grid-template-areas:
+		'wheader wheader'
+		'col1-1 col2-1'
+		'col1-2 col2-2'
+		'col1-6 col2-6'
+		'col1-3 col2-3'
+		'col1-4 col2-4'
+		'col1-5 col2-5';
+}
+.wheader {
+	grid-area: wheader;
+	align-self: center;
+	margin: auto;
+}
+.col1-1 {
+	grid-area: col1-1;
+	justify-self: start;
+}
+.col1-2 {
+	grid-area: col1-2;
+	justify-self: start;
+}
+.col1-3 {
+	grid-area: col1-3;
+	justify-self: start;
+}
+.col1-4 {
+	grid-area: col1-4;
+	justify-self: start;
+}
+.col1-5 {
+	grid-area: col1-5;
+	justify-self: start;
+}
+.col1-6 {
+	grid-area: col1-6;
+	justify-self: start;
+}
+.col2-1 {
+	grid-area: col2-1;
+	margin-left: 20px;
+}
+.col2-2 {
+	grid-area: col2-2;
+	margin-left: 20px;
+}
+.col2-3 {
+	grid-area: col2-3;
+	margin-left: 20px;
+}
+.col2-4 {
+	grid-area: col2-4;
+	margin-left: 20px;
+}
+.col2-5 {
+	grid-area: col2-5;
+	margin-left: 20px;
+}
+.col2-6 {
+	grid-area: col2-6;
+	margin-left: 20px;
+}
+.weathersummary p {
+	color: var(--white);
+	font-size: 14px;
+}
+.weathersummary h3 {
+	color: var(--white);
+	font-size: 16px;
+}
+
+/* ----------- Five 5 Day Forecast - hide on mobile device -------------- */
+.forecast {
+	display: none;
+}
+
+/* --------------- Town Page Main Article ------------ */
+article {
+	padding: 0.5em;
+}
+article h3 {
+	font-weight: bold;
+}
+article h4 {
+	font-style: italic;
+	color: var(--secondary-color);
+	margin-bottom: 0.8em;
+}
+article img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	width: 80%;
+	box-shadow: 0 0 30px #777;
+}
+article p {
+	padding: 0.5em;
+}
+.link-hold {
+	text-decoration: underline;
+	font-size: 0.7em;
+	color: purple;
+}
+/* ----------------- Home Page JASON driven section styling ---- */
+.cards {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 10px;
+}
+.cards > section {
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		'h2'
+		'h3'
+		'p'
+		'p1'
+		'p2'
+		'img'
+		'img'
+		'img';
+	border: 1px solid #bbb;
+	padding: 0 1em;
+	background-color: rgb(223, 236, 247);
+}
+
+.cards > img {
+	width: 100%;
+	height: auto;
+	padding: 3px;
+	grid-area: img;
+}
+.cards h3 {
+	font-size: 15px;
+	font-style: italic;
+	font-weight: bold;
+	grid-area: h3;
+}
+.cards h2 {
+	grid-area: h2;
+}
+.cards p {
+	font-size: 16px;
+	grid-area: p;
+}
+.cards p:nth-of-type(1) {
+	grid-area: p1;
+}
+.cards p:nth-of-type(2) {
+	grid-area: p2;
+}
+
+/* ------------------ Contact Section of Town Page ------------ */
+.contact {
+	text-align: center;
+	background-color: rgba(174, 243, 185, 0.2);
+	width: 100%;
+	padding: 1em;
+	margin: auto;
+}
+.contact-info a {
+	text-decoration: none;
+}
+.hidden {
+	display: none;
+}
+#contact {
+	margin: 1em 0;
+}
+.contact-info {
+	display: block;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 8px;
+}
+.contact-info h3,
+.contact-info p {
+	color: var(--charcoal);
+}
+.socialIcon {
+	width: 30px;
+	height: 30px;
+}
+#map {
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	margin-bottom: 2px;
+}
+.grey {
+	color: var(--charcoal);
+}
+/* ----------- announcement at top of page in aside hidden unless Friday ----- */
+.hide {
+	display: none;
+}
+#friday {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border: 3px solid black;
+	background-color: rgba(120, 167, 127, 0.4);
+	padding-left: 1em;
+	font-size: 13px;
+}
+
+/*  -------------------- Weather Gallery Page Styling ------------  */
+.image-gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1em;
+	margin: auto;
+	padding: 1em;
+}
+.featured-image {
+	border: 1px solid black;
+	justify-self: center;
+	padding: 0.5em;
+	filter: blur(0em);
+	transition: filter 0.5s;
+}
+.featured-image img {
+	width: 80vw;
+}
+.image-caption {
+	text-align: center;
+}
+
+/* ---------------- Storm Center page Form style ---------------  */
+.storm {
+	display: block;
+	margin: auto;
+	padding: 0.5em;
+	width: 95%;
+}
+fieldset {
+	margin-bottom: 1em;
+}
+legend {
+	font-size: 1.5em;
+	margin-bottom: 0.8em;
+}
+label {
+	display: block;
+}
+.red {
+	color: red;
+}
+.right {
+	text-align: right;
+}
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='number'],
+select,
+input[list] {
+	width: 70%;
+	padding: 0.5em;
+}
+input[type='range'] {
+	color: blue;
+	background: blue;
+}
+.stormrating input {
+	display: block;
+	padding: 0.5em;
+	width: 80%;
+}
+.stormText {
+	display: block;
+	margin-top: 0.5em;
+	margin-left: 2em;
+}
+textarea {
+	width: 95%; /* Full width */
+	padding: 1em; /* Some padding */
+	border: 1px solid #ccc; /* Gray border */
+	border-radius: 4px; /* Rounded borders */
+	box-sizing: border-box; /* Make sure that padding and width stays in place */
+	margin-top: 0.5em; /* Add a top margin */
+	margin-bottom: 1em; /* Bottom margin */
+	resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+/* Style the submit button with a specific background color etc */
+input[type='submit'] {
+	background-color: var(--accent2-color);
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type='submit']:hover {
+	background-color: #45a049;
+}
+/* ---------------- Thank you page after submitting storm information ---- */
+.thanks-content {
+	margin-top: 5em;
+	margin-bottom: 5em;
+}
+
+/* --------------- Wire-frame page style ---------------------- */
+.small-wireframe,
+.tablet-wireframe {
+	width: 50%;
+	margin: 10px auto;
+	border: 1px solid black;
+}
+.small-wireframe h3,
+.tablet-wireframe h3 {
+	display: block;
+	background-color: lightgray;
+}
+
+/* ---- remove my photo if page is printed & display link info in footer ---------  */
+@media print {
+	#myphoto {
+		display: none;
+	}
+	footer a[href]::after {
+		display: block;
+		content: ' (' attr(href) ')';
+	}
+}

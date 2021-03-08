@@ -1,0 +1,23 @@
+.image-gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 1em;
+	margin: auto;
+	padding: 1em;
+}
+img {
+	display: block;
+	border: 1px solid green;
+	margin: auto;
+	margin-bottom: 1em;
+}
+h1 {
+	text-align: center;
+}
+img[data-src] {
+	filter: blur(0.2em);
+}
+.slow img {
+	filter: blur(0em);
+	transition: filter 0.5s;
+}
