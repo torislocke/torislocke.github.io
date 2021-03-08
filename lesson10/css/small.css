@@ -166,7 +166,7 @@ nav ul li a:hover {
 	min-width: 190px;
 	max-width: 210px;
 	margin: auto;
-	background-color: rgba(42, 110, 44, 0.8);
+	background-color: rgba(42, 110, 44, 0.9);
 	padding: 0.5em;
 	box-shadow: 0 0 30px #777;
 	grid-template-areas:

@@ -1,54 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Tori Locke" />
+		<meta name="description" content="Test of OpenWeatherMap API connection" />
+		<title>API Test</title>
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="css/small.css" />
+		<link rel="stylesheet" href="css/medium.css" />
+		<link rel="stylesheet" href="css/large.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Tori Locke" />
-    <meta name="description" content="Weather and Information for Fish Haven Idaho" />
-    <title>Fish Haven Idaho</title>
-    <script src="https://kit.fontawesome.com/4ef3fb5402.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/normalize.css" />
-    <link rel="stylesheet" href="css/small.css" />
-    <link rel="stylesheet" href="css/medium.css" />
-    <link rel="stylesheet" href="css/large.css" />
-</head>
+	<body>
+		<header class="main-header">
+			<figure class="logo">
+				<img
+					src="images/logo_300_317.png"
+					alt="WISE Logo"
+					srcset="images/logo1.png 1x, images/logo2.png 2x, images/logo3.png 3x"
+				/>
+			</figure>
+			<section class="heading">
+				<h1>Weather-Information-South-East</h1>
+				<div class="moto">Idahoans seeking WISE(dom)</div>
+			</section>
+		</header>
+		<!-- Website top level navigation -->
+		<nav>
+			<button onclick="toggleMenu()">&#9776; Menu</button>
+			<ul id="topnav" class="hide">
+				<li class="item"><a href="index.html">Home</a></li>
+				<li class="item"><a href="preston-10.html">Preston</a></li>
+				<li class="item"><a href="soda.html">Soda Springs</a></li>
+				<li class="item"><a href="fishHaven.html">Fish Haven</a></li>
+				<li class="item"><a href="stormcenter.html">Storm Center</a></li>
+				<li class="item"><a href="gallery-9.html">Gallery</a></li>
+				<li class="item active"><a href="api-test.html">API Test</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1>OpenWeatherMap.org API Test</h1>
+			<p>The current temperature in Preston, Idaho is <span id="current-temp"></span>&deg; F</p>
+			<hr />
+			<p>Image Icon Path Test: <span id="imagesrc"></span> &nbsp; <img src="" alt="" id="icon" /></p>
+		</main>
+		<footer>
+			<small
+				>&copy; <span id="currentYear"></span> Weather Information South East | Attributions | Tori Locke
 
-<body>
-    <header class="main-header">
-        <figure class="logo">
-            <img src="images/logo_300_317.png" alt="WISE Logo"
-                srcset="images/logo1.png 1x, images/logo2.png 2x, images/logo3.png 3x" />
-        </figure>
-        <section class="heading">
-            <h1>Weather-Information-South-East</h1>
-            <div class="moto">Idahoans seeking WISE(dom)</div>
-        </section>
-    </header>
-    <!-- Website top level navigation -->
-    <nav>
-        <button onclick="toggleMenu()">&#9776; Menu</button>
-        <ul id="topnav" class="hide">
-            <li class="item"><a href="index.html">Home</a></li>
-            <li class="item"><a href="preston-9.html">Preston</a></li>
-            <li class="item"><a href="soda.html">Soda Springs</a></li>
-            <li class="item active"><a href="fishHaven.html">Fish Haven</a></li>
-            <li class="item"><a href="stormcenter.html">Storm Center</a></li>
-            <li class="item"><a href="gallery-9.html">Gallery</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h1>OpenWeatherMap.org API Test</h1>
-        <p>The current temperature in Preston, Idaho is <span id="current-temp"></span>&deg; F</p>
-        <hr />
-        <p>Image Icon Path Test: <span id="imagesrc"></span> &nbsp; <img src="" alt="" id="icon" /></p>
-    </main>
-    <footer>
-        <small>&copy; <span id="currentYear"></span> Weather Information South East | Attributions | Tori Locke
-
-            <br /><span id="currentDate"></span>
-        </small>
-    </footer>
-    <script src="js/weatherapi.js"></script>
-</body>
+				<br /><span id="currentDate"></span>
+			</small>
+		</footer>
+		<script src="js/weatherapi.js"></script>
+		<script src="js/currentDates.js"></script>
+		<script src="js/menu.js"></script>
+	</body>
 </html>
