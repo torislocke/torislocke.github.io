@@ -151,7 +151,7 @@ nav ul li a:hover {
 }
 
 .hero-img {
-	margin: 0 auto;
+	margin: 1em auto;
 	width: 100%;
 	height: auto;
 	background-position: center;
@@ -160,12 +160,12 @@ nav ul li a:hover {
 }
 
 /* Start - Weather Summary within hero image on town page */
+
 .weathersummary {
+	width: 250px;
 	display: grid;
-	grid-template-columns: 90px 80px;
-	min-width: 190px;
-	max-width: 210px;
-	margin: auto;
+	grid-template-columns: 1fr 1fr;
+	margin: 1em auto;
 	background-color: rgba(42, 110, 44, 0.9);
 	padding: 0.5em;
 	box-shadow: 0 0 30px #777;
@@ -238,6 +238,7 @@ nav ul li a:hover {
 .weathersummary h3 {
 	color: var(--white);
 	font-size: 16px;
+	text-align: center;
 }
 
 /* ----------- Five 5 Day Forecast - hide on mobile device -------------- */

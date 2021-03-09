@@ -48,52 +48,57 @@
 						<source media="(max-width:1600px)" srcset="images/small_town_1600.jpg" />
 						<img src="images/small_town_original_1920.jpg" alt="Preston City Photo" />
 					</picture>
+					<small calss="license">Weather Information provided by OpenWeatherMap</small>
 				</div>
 				<section class="weathersummary">
 					<h3 class="wheader">Weather Summary</h3>
 					<p class="col1-1">Currently:</p>
-					<p class="col2-1">Sunny</p>
+					<p class="col2-1"><span id="descript"></span></p>
 					<p class="col1-2">Temperature:</p>
-					<p class="col2-2"><span id="temp">42</span> &#8457;</p>
+					<p class="col2-2"><span id="current-temp"></span> &#8457;</p>
 					<p class="col1-3">Humidity:</p>
-					<p class="col2-3">69%</p>
-					<p class="col1-4">Precipitation:</p>
-					<p class="col2-4">0 inches</p>
+					<p class="col2-3"><span id="humidity"></span> &#37;</p>
 					<p class="col1-5">Wind Speed:</p>
-					<p class="col2-5"><span id="windSpeed">10</span> mph</p>
+					<p class="col2-5"><span id="windSpeed"></span> mph</p>
 					<p class="col1-6">Wind Chill:</p>
 					<p class="col2-6"><span id="windChill"></span> &#8457;</p>
 				</section>
-
+	
 				<section class="forecast">
 					<h3>5 Day Forecast</h3>
-					<div class="daily">
-						<div class="grid-item">
-							<h4 class="daily-header">Wed</h4>
-							<img src="images/sun-25x25.png" alt="first image of sun" />
-							<p>79&#8457;</p>
-						</div>
-						<div class="grid-item">
-							<h4 class="daily-header">Thu</h4>
-							<img src="images/sun-25x25.png" alt="second image of sun" />
-							<p>70&#8457;</p>
-						</div>
-						<div class="grid-item">
-							<h4 class="daily-header">Fri</h4>
-							<img src="images/cloud-25x21.png" alt="first image of clouds" />
-							<p>65&#8457;</p>
-						</div>
-						<div class="grid-item">
-							<h4 class="daily-header">Sat</h4>
-							<img src="images/sun-25x25.png" alt="third image of sun" />
-							<p>83&#8457;</p>
-						</div>
-						<div class="grid-item">
-							<h4 class="daily-header">Sun</h4>
-							<img src="images/sun-25x25.png" alt="final image of sun" />
-							<p>80&#8457;</p>
-						</div>
-					</div>
+					<table>
+						<tr>
+							<th><span id="day1" class="fiveDayName"></span></th>
+							<th><span id="day2" class="fiveDayName"></span></th>
+							<th><span id="day3" class="fiveDayName"></span></th>
+							<th><span id="day4" class="fiveDayName"></span></th>
+							<th><span id="day5" class="fiveDayName"></span></th>
+						</tr>
+						<tr class="fivedayIcon">
+							<td><img id="icon1"
+									src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+									alt="unknown" /></td>
+							<td><img id="icon2"
+									src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+									alt="unknown" /></td>
+							<td><img id="icon3"
+									src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+									alt="unknown"></td>
+							<td><img id="icon4"
+									src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+									alt="unknown"></td>
+							<td><img id="icon5"
+									src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+									alt="unknown"></td>
+						</tr>
+						<tr class="fivedayIcon">
+							<td><span id="forecast1"></span>&#8457;</td>
+							<td><span id="forecast2"></span>&#8457;</td>
+							<td><span id="forecast3"></span>&#8457;</td>
+							<td><span id="forecast4"></span>&#8457;</td>
+							<td><span id="forecast5"></span>&#8457;</td>
+						</tr>
+					</table>
 				</section>
 
 				<article>
@@ -157,6 +162,7 @@
 				<br /><span id="currentDate"></span>
 			</small>
 		</footer>
+		<script src="js/prestonWeather.js"></script>
 		<script src="js/currentDates.js"></script>
 		<script src="js/menu.js"></script>
 		<script src="js/windchill.js"></script>

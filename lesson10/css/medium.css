@@ -100,9 +100,7 @@
 	.weathersummary {
 		position: absolute;
 		top: 15px;
-		left: 15px;
-		grid-template-columns: 100px 90px;
-		padding: 0 1em;
+		left: 15px;		
 	}
 	.link-hold {
 		font-size: 1em;
@@ -110,8 +108,8 @@
 	/* --------------- style 5 day forecast section on devices larger than mobile -- */
 	.forecast {
 		display: block;
-		width: 30em;
-		margin: auto;
+		max-width: 25em;
+		margin: 10px auto;
 		margin-bottom: 1em;
 	}
 	.forecast h3 {
