@@ -11,10 +11,10 @@ fetch(apiURL)
 	.then((jsObject) => {
 		console.log(jsObject);
 		document.getElementById('descript').textContent = jsObject.weather[0].description;
-		document.getElementById('current-temp').textContent = jsObject.main.temp;
+		document.getElementById('current-temp').textContent = Math.round(jsObject.main.temp);
 		document.getElementById('humidity').textContent = jsObject.main.humidity;
-		document.getElementById('windSpeed').textContent = jsObject.wind.speed;
-		document.getElementById('windChill').textContent = jsObject.main.feels_like;
+		document.getElementById('windSpeed').textContent = Math.round(jsObject.wind.speed);
+		document.getElementById('windChill').textContent = Math.round(jsObject.main.feels_like);
 		const imagesrc = 'https://openweathermap.org/img/w/' + jsObject.weather[0].icon + '.png'; // note the concatenation
 		const desc = jsObject.weather[0].description; //  weather array
 	});
