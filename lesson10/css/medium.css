@@ -42,7 +42,7 @@
 	}
 	.cards > section {
 		display: grid;
-		height: 30vh;
+		height: 15vh;
 		grid-template-columns: 1fr;
 		grid-template-rows: 28px 28px 25px 25px 25px;
 		border: 1px solid #bbb;
