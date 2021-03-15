@@ -1,0 +1,184 @@
+@media only screen and (min-width: 32.5em) {
+	.logo-img {
+		width: 120px;
+	}
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.7em;
+	}
+	h3 {
+		font-size: 1.4em;
+	}
+	p {
+		font-size: 1em;
+	}
+	/* navigation style for tablet screen size */
+	nav button {
+		display: none;
+	}
+	nav ul.hide {
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	nav ul {
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	nav ul li a {
+		padding: 0.8em 1.2em;
+		font-size: 1em;
+	}
+	/* ----------------- Home Page JASON driven section styling ---- */
+	.cards {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+	.cards > section {
+		display: grid;
+		height: 15vh;
+		grid-template-columns: 1fr;
+		grid-template-rows: 28px 28px 25px 25px 25px;
+		border: 1px solid #bbb;
+		background-color: rgb(223, 236, 247);
+	}
+	.cards > section img {
+		grid-column: 2;
+		width: 250px;
+		padding: 5px;
+		border: 1px solid black;
+	}
+
+	.cards > section p,
+	.cards > section h2,
+	.cards > section h3 {
+		grid-column: 1;
+		text-align: center;
+		margin: 0;
+	}
+	.cards > section:nth-child(even) p,
+	.cards > section:nth-child(even) h2,
+	.cards > section:nth-child(even) h3 {
+		grid-column: 2;
+	}
+	.cards > section:nth-child(even) img {
+		grid-column: 1;
+		padding: 5px;
+		border: 1px solid black;
+	}
+	.cards > h3 {
+		font-size: 16px;
+	}
+	.cards p {
+		font-size: 17px;
+	}
+
+	/* town page style for tablet */
+	article {
+		background-color: rgba(37, 122, 51, 0.4);
+		margin-bottom: 10px;
+		margin-top: 2em;
+	}
+	article img {
+		float: right;
+		width: 40%;
+		margin: 1em;
+	}
+	.hero-img img {
+		width: 100%;
+		height: auto;
+	}
+	.hero-container {
+		position: relative;
+	}
+	.weathersummary {
+		position: absolute;
+		top: 15px;
+		left: 15px;		
+	}
+	.link-hold {
+		font-size: 1em;
+	}
+	/* --------------- style 5 day forecast section on devices larger than mobile -- */
+	.forecast {
+		display: block;
+		max-width: 25em;
+		margin: 10px auto;
+		margin-bottom: 1em;
+	}
+	.forecast h3 {
+		text-align: center;
+	}
+	.forecast table,
+	th {
+		border: 1px solid black;
+		text-align: center;
+	}
+
+	.forecast table {
+		width: 100%;
+		border-collapse: collapse;
+		background-color: rgb(221, 220, 220);
+	}
+	.forecast table img {
+		width: 50%;
+	}
+	.forecast table th {
+		background-color: var(--primary-color);
+		color: white;
+	}
+
+	/* ------ Adjust contact section for larger screens -------- */
+	#contact {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 'map contact-info';
+	}
+	#map {
+		width: 200px;
+		height: 200px;
+		margin: auto;
+		grid-area: map;
+	}
+	.contact-info {
+		grid-area: contact-info;
+	}
+	.contact-info h3 {
+		font-size: 18px;
+	}
+	.contact-info p {
+		font-size: 17px;
+	}
+	.socialIcon {
+		width: 40px;
+		height: 40px;
+	}
+	#friday {
+		width: 280px;
+	}
+	/* ------ Adjust gallery page for larger screens -------- */
+	.image-gallery {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.featured-image img {
+		width: 400px;
+	}
+
+	/* ------ adjust Storm Center page for larger screens -----  */
+	.storm {
+		width: 70%;
+		padding: 1em;
+	}
+	.stormrating input {
+		width: 70%;
+	}
+	.stormText {
+		margin-left: 4em;
+	}
+}

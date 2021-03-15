@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Tori Locke" />
+		<meta name="description" content="Weather and Information for South East Idahoans" />
+		<title>WISE Home</title>
+		
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="css/small.css" />
+		<link rel="stylesheet" href="css/medium.css" />
+		<link rel="stylesheet" href="css/large.css" />
+	</head>
+
+	<body>
+		<header class="main-header">
+			<figure class="logo">
+				<img
+					src="images/logo_300_317.png"
+					alt="WISE Logo"
+					srcset="images/logo1.png 1x, images/logo2.png 2x, images/logo3.png 3x"
+				/>
+			</figure>
+			<section class="heading">
+				<h1>Weather-Information-South-East</h1>
+				<div class="moto">Idahoans seeking WISE(dom)</div>
+			</section>
+		</header>
+		<nav>
+			<button onclick="toggleMenu()">&#9776; Menu</button>
+			<ul id="topnav" class="hide">
+				<li class="item active"><a href="index.html">Home</a></li>
+				<li class="item"><a href="preston.html">Preston</a></li>
+				<li class="item"><a href="soda.html">Soda Springs</a></li>
+				<li class="item"><a href="fishHaven.html">Fish Haven</a></li>
+				<li class="item"><a href="stormcenter.html">Storm Center</a></li>
+				<li class="item"><a href="gallery.html">Gallery</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h2 class="center">WISE</h2>
+			<div class="hero-container">
+				<div class="hero-image">
+					<picture class="hero-img">
+						<source media="(max-width:521px)" srcset="images/hero_home_521.jpg" />
+						<source media="(max-width:1023px)" srcset="images/hero_home_1023.jpg" />
+						<source media="(max-width:1600px)" srcset="images/hero_home_1600.jpg" />
+						<img src="images/hero_home_1920.jpg" alt="SE Idaho Photo" />
+					</picture>
+				</div>
+
+				<div class="cards"></div>
+
+				<section id="contact">
+					<div class="contact-info">
+						<h3>Weather Information South East</h3>
+						<p><img class="socialIcon" alt="Map Pin" src="images/map_pin.png" /> 30 N 1st E.</p>
+						<p>Preston, ID 83263</p>
+						<br />
+
+						<p><img class="socialIcon" alt="Phone" src="images/phone.png" /> 999.999.9999</p>
+						<p><img class="socialIcon" alt="Send Mail" src="images/mail.png" /> info@wise.net</p>
+						<br />
+						<a href="https://facebook.com/" target="_blank">
+							<img class="socialIcon" alt="Facebook" src="images/fb.png" />
+						</a>
+						<a href="https://pinterest.com/" target="_blank">
+							<img class="socialIcon" alt="Pinterest" src="images/pinterest.png" />
+						</a>
+						<a href="https://twitter.com/" target="_blank">
+							<img class="socialIcon" alt="Twitter" src="images/twitter.png" />
+						</a>
+						<a href="https://snapchat.com/" target="_blank">
+							<img class="socialIcon" alt="Snapchat" src="images/snapchat.png" />
+						</a>
+					</div>
+					<iframe
+						id="map"
+						src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1480.2521575599364!2d-111.8761934419154!3d42.096668844801385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8754f7e967e1ebc7%3A0x14469667cfe31546!2s30%20N%201st%20E%2C%20Preston%2C%20ID%2083263!3m2!1d42.0970515!2d-111.8735809!4m5!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263!3m2!1d42.0963133!2d-111.87661729999999!5e0!3m2!1sen!2sus!4v1612565659720!5m2!1sen!2sus"
+						style="border: 0"
+						allowfullscreen=""
+						aria-hidden="false"
+						tabindex="0"
+					>
+					</iframe>
+				</section>
+			</div>
+		</main>
+		<footer>
+			<small
+				>&copy; <span id="currentYear"></span> Weather Information South East | Attributions | Tori Locke
+
+				<br /><span id="currentDate"></span>
+			</small>
+		</footer>
+		<script src="js/townData.js"></script>
+		<script src="js/currentDates.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/lazyload.js"></script>
+		<script src="js/stormcenter.js"></script>
+	</body>
+</html>

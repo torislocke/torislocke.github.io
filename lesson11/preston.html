@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Tori Locke" />
+	<meta name="description" content="Weather and Information for Preston Idaho" />
+	<title>Preston Idaho</title>
+
+	<link rel="stylesheet" href="../css/normalize.css" />
+	<link rel="stylesheet" href="css/small.css" />
+	<link rel="stylesheet" href="css/medium.css" />
+	<link rel="stylesheet" href="css/large.css" />
+</head>
+
+<body>
+	<header class="main-header">
+		<figure class="logo">
+			<img src="images/logo_300_317.png" alt="WISE Logo"
+				srcset="images/logo1.png 1x, images/logo2.png 2x, images/logo3.png 3x" />
+		</figure>
+		<section class="heading">
+			<h1>Weather-Information-South-East</h1>
+			<div class="moto">Idahoans seeking WISE(dom)</div>
+		</section>
+	</header>
+	<!-- Website top level navigation -->
+	<nav>
+		<button onclick="toggleMenu()">&#9776; Menu</button>
+		<ul id="topnav" class="hide">
+			<li class="item"><a href="index.html">Home</a></li>
+			<li class="item active"><a href="preston.html">Preston</a></li>
+			<li class="item"><a href="soda.html">Soda Springs</a></li>
+			<li class="item"><a href="fishHaven.html">Fish Haven</a></li>
+			<li class="item"><a href="stormcenter.html">Storm Center</a></li>
+			<li class="item"><a href="gallery.html">Gallery</a></li>
+		</ul>
+	</nav>
+	<main class="town">
+		<h2 class="center">Preston Idaho</h2>
+		<div class="hero-container">
+			<div class="hero-image">
+				<picture class="hero-img">
+					<source media="(max-width:520px)" srcset="images/small_town_521.jpg" />
+					<source media="(max-width:1023px)" srcset="images/small_town_1023.jpg" />
+					<source media="(max-width:1600px)" srcset="images/small_town_1600.jpg" />
+					<img src="images/small_town_1600.jpg" alt="Preston City Photo" />
+				</picture>
+				<small class="license">Weather Information provided by OpenWeatherMap</small>
+			</div>
+			<section class="weathersummary">
+				<h3 class="wheader">Weather Summary</h3>
+				<p class="col1-1">Currently:</p>
+				<p class="col2-1"><span id="descript"></span></p>
+				<p class="col1-2">Temperature:</p>
+				<p class="col2-2"><span id="current-temp"></span> &#8457;</p>
+				<p class="col1-3">Humidity:</p>
+				<p class="col2-3"><span id="humidity"></span> &#37;</p>
+				<p class="col1-5">Wind Speed:</p>
+				<p class="col2-5"><span id="windSpeed"></span> mph</p>
+				<p class="col1-6">Wind Chill:</p>
+				<p class="col2-6"><span id="windChill"></span> &#8457;</p>
+			</section>
+
+			<section class="forecast">
+				<h3>5 Day Forecast</h3>
+				<table>
+					<tr>
+						<th><span id="day1" class="fiveDayName"></span></th>
+						<th><span id="day2" class="fiveDayName"></span></th>
+						<th><span id="day3" class="fiveDayName"></span></th>
+						<th><span id="day4" class="fiveDayName"></span></th>
+						<th><span id="day5" class="fiveDayName"></span></th>
+					</tr>
+					<tr class="fivedayIcon">
+						<td><img id="icon1"
+								src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+								alt="unknown" /></td>
+						<td><img id="icon2"
+								src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+								alt="unknown" /></td>
+						<td><img id="icon3"
+								src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+								alt="unknown"></td>
+						<td><img id="icon4"
+								src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+								alt="unknown"></td>
+						<td><img id="icon5"
+								src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+								alt="unknown"></td>
+					</tr>
+					<tr class="fivedayIcon">
+						<td><span id="forecast1"></span>&#8457;</td>
+						<td><span id="forecast2"></span>&#8457;</td>
+						<td><span id="forecast3"></span>&#8457;</td>
+						<td><span id="forecast4"></span>&#8457;</td>
+						<td><span id="forecast5"></span>&#8457;</td>
+					</tr>
+				</table>
+			</section>
+			<article>
+				<img src="images/boys_299x192.jpg" alt="Photo of happy boys" />
+				<h3>Founders Day Fresco</h3>
+				<h4>by Janica Juarez</h4>
+				<p>
+					I was recently reflecting upon the founders day event held at Foundation Park each year. I have
+					been taking the festival for granted and have not been properly engaging in perhaps the most
+					popular community event of the year. In response, I contacted Ms. Sharon via email and expressed
+					my desire to serve on the event committee. Well, you guessed it, the phone rings almost
+					immediately and she promptly asks me to be the event committee chair. Literally, good grief! My
+					appreciation for the years of dedicated, generous service of volunteers and sponsors has
+					escalated beyond what I thought I could feel for such a thing and…
+				</p>
+				<p><span class="link-hold">continue to full article</span></p>
+			</article>
+			<section id="contact">
+				<div class="contact-info">
+					<h3>Weather Information South East</h3>
+					<p><img class="socialIcon" alt="Map Pin" src="images/map_pin.png" /> 30 N 1st E.</p>
+					<p>Preston, ID 83263</p>
+					<br />
+
+					<p><img class="socialIcon" alt="Phone" src="images/phone.png" /> 999.999.9999</p>
+					<p><img class="socialIcon" alt="Send Mail" src="images/mail.png" /> info@wise.net</p>
+					<br />
+					<a href="https://facebook.com/" target="_blank">
+						<img class="socialIcon" alt="Facebook" src="images/fb.png" />
+					</a>
+					<a href="https://pinterest.com/" target="_blank">
+						<img class="socialIcon" alt="Pinterest" src="images/pinterest.png" />
+					</a>
+					<a href="https://twitter.com/" target="_blank">
+						<img class="socialIcon" alt="Twitter" src="images/twitter.png" />
+					</a>
+					<a href="https://snapchat.com/" target="_blank">
+						<img class="socialIcon" alt="Snapchat" src="images/snapchat.png" />
+					</a>
+				</div>
+				<iframe id="map"
+					src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1480.2521575599364!2d-111.8761934419154!3d42.096668844801385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8754f7e967e1ebc7%3A0x14469667cfe31546!2s30%20N%201st%20E%2C%20Preston%2C%20ID%2083263!3m2!1d42.0970515!2d-111.8735809!4m5!1s0x8754f78c7cda6c31%3A0xf1b3b4fc465a4a3f!2sPreston%2C%20ID%2083263!3m2!1d42.0963133!2d-111.87661729999999!5e0!3m2!1sen!2sus!4v1612565659720!5m2!1sen!2sus"
+					style="border: 0" allowfullscreen="" aria-hidden="false" tabindex="0">
+				</iframe>
+			</section>
+			<aside id="friday" class="hide">
+				<h3 class="hidden">Annoucement</h3>
+				<p>Saturday = Preston Pancakes in the Park!</p>
+				<p>9:00 a.m. Saturday at the city park.</p>
+			</aside>
+		</div>
+	</main>
+	<footer>
+		<small>&copy; <span id="currentYear"></span> Weather Information South East | Attributions | Tori Locke
+
+			<br /><span id="currentDate"></span>
+		</small>
+	</footer>
+	<script src="js/prestonWeather.js"></script>
+	<script src="js/currentDates.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/lazyload.js"></script>
+
+</body>
+
+</html>

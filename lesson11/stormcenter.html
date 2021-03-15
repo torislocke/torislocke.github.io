@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Tori Locke" />
+		<meta
+			name="description"
+			content="The Storm Center form helps track Weather Information South East (WISE) provding Idahoians in the SE current information on weather and events."
+		/>
+		<title>WISE Storm Center</title>
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="css/small.css" />
+		<link rel="stylesheet" href="css/medium.css" />
+		<link rel="stylesheet" href="css/large.css" />
+	</head>
+
+	<body>
+		<header class="main-header">
+			<figure class="logo">
+				<img
+					src="images/logo_300_317.png"
+					alt="WISE Logo"
+					srcset="images/logo1.png 1x, images/logo2.png 2x, images/logo3.png 3x"
+				/>
+			</figure>
+			<section class="heading">
+				<h1>Weather-Information-South-East</h1>
+				<div class="moto">Idahoans seeking WISE(dom)</div>
+			</section>
+		</header>
+		<nav>
+			<button onclick="toggleMenu()">&#9776; Menu</button>
+			<ul id="topnav" class="hide">
+				<li class="item"><a href="index.html">Home</a></li>
+				<li class="item"><a href="preston.html">Preston</a></li>
+				<li class="item"><a href="soda.html">Soda Springs</a></li>
+				<li class="item"><a href="fishHaven.html">Fish Haven</a></li>
+				<li class="item active"><a href="stormcenter.html">Storm Center</a></li>
+				<li class="item"><a href="gallery.html">Gallery</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h2 class="center">Storm Center</h2>
+			<div class="storm">
+				<form method="get" action="thanks.html">
+					<p class="right"><span class="red">*</span> indicates required</p>
+					<fieldset>
+						<legend>Contact Information</legend>
+						<!-- required with pattern for 5 characters - alpha -->
+						<label for="fullName">Full Name <span class="red">*</span></label
+						><br />
+						<input
+							type="text"
+							id="fullName"
+							name="fullName"
+							placeholder="Your full name.."
+							required
+							pattern="[\sA-Za-z]{5,}"
+							title="Please enter your first and last name.  This field must contain only letters and be a minimum of 5 characters"
+						/><br /><br />
+
+						<!-- The email field is not required, but type email blocks none email formats. -->
+						<label for="email">Email:</label><br />
+						<input type="email" id="email" name="email" placeholder="example@mail.com" /><br /><br />
+
+						<!-- the telephone field is required and type tel -->
+						<label for="tel">Telephone Number:<span class="red">*</span></label
+						><br />
+						<input
+							type="tel"
+							id="tel"
+							name="tel"
+							required
+							title="Please enter a valid telephone number"
+						/><br /><br />
+
+						<!-- The zipCode is a number and required -->
+
+						<label for="zipCode">Zip Code:<span class="red">*</span></label
+						><br />
+						<input
+							type="number"
+							id="zipCode"
+							name="zipCode"
+							required
+							title="Please enter your zip code number"
+						/><br /><br />
+					</fieldset>
+
+					<fieldset>
+						<legend>Storm Information</legend>
+						<label for="stormDate">Storm Date:</label><br />
+						<input type="date" id="stormDate" name="stormDate" /><br /><br />
+
+						<label for="stormType">Storm Type:</label><br />
+						<input list="storm" id="stormType" /><br /><br />
+						<datalist id="storm">
+							<option value="Flash Flood"></option>
+							<option value="Hail"></option>
+							<option value="Hurrican"></option>
+							<option value="Thunderstorm"></option>
+							<option value="Tornado"></option>
+						</datalist>
+
+						<!-- <label class="stormSeverity" for="stormSeverity">Storm Severity value from 1 to 10:</label>
+						<br />
+						<input type="range" id="stormSeverity" value="5" min="1" max="10" step="1" /><br /><br /> -->
+						<label class="stormrating"
+							>Storm Severity Rating: <span id="ratingvalue">5</span>
+							<input
+								type="range"
+								id="rating"
+								value="5"
+								min="1"
+								max="10"
+								step="1"
+								list="tickmarks"
+								oninput="adjustRating(this.value)"
+								onchange="adjustRating(this.value)"
+							/>
+							<datalist id="tickmarks">
+								<option value="0"></option>
+								<option value="1"></option>
+								<option value="2"></option>
+								<option value="3"></option>
+								<option value="4"></option>
+								<option value="5"></option>
+								<option value="6"></option>
+								<option value="7"></option>
+								<option value="8"></option>
+								<option value="9"></option>
+								<option value="10"></option>
+							</datalist>
+							<small class="stormText">Range between 1 and 10</small> </label
+						><br />
+
+						<label for="stormRegion">Storm Region:</label><br />
+						<select id="stormRegion" name="stormRegion">
+							<option value="select" selected disabled>Select Region</option>
+							<option value="fishHaven">Fish Haven</option>
+							<option value="preston">Preston</option>
+							<option value="sodaSprings">Soda Springs</option></select
+						><br /><br />
+						<p>Are you in danger?:</p>
+						<input type="radio" id="yesdanger" name="danger" value="yes" />
+						<label for="yesdanger">Yes</label><br />
+						<input type="radio" id="nodanger" name="danger" value="no" />
+						<label for="nodanger">No</label><br />
+						<input type="radio" id="maybedanger" name="danger" value="maybe" />
+						<label for="maybedanger">Maybe</label><br /><br />
+
+						<label for="information">Additional Information or Comments</label><br />
+						<textarea
+							id="information"
+							name="information"
+							placeholder="Additional information or Comments.."
+						></textarea
+						><br />
+					</fieldset>
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+		</main>
+		<footer>
+			<small
+				>&copy; <span id="currentYear"></span> Weather Information South East | Attributions | Tori Locke
+
+				<br /><span id="currentDate"></span>
+			</small>
+		</footer>
+		<script src="js/currentDates.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/lazyload.js"></script>
+		<script src="js/stormcenter.js"></script>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Tori Locke" />
+		<meta
+			name="description"
+			content="The Storm Center form helps track Weather Information South East (WISE) provding Idahoians in the SE current information on weather and events."
+		/>
+		<title>WISE Storm Center</title>
+		<link rel="stylesheet" href="../css/normalize.css" />
+		<link rel="stylesheet" href="css/small.css" />
+		<link rel="stylesheet" href="css/medium.css" />
+		<link rel="stylesheet" href="css/large.css" />
+	</head>
+
+	<body>
+		<header class="main-header">
+			<figure class="logo">
+				<img
+					src="images/logo_300_317.png"
+					alt="WISE Logo"
+					srcset="images/logo1.png 1x, images/logo2.png 2x, images/logo3.png 3x"
+				/>
+			</figure>
+			<section class="heading">
+				<h1>Weather-Information-South-East</h1>
+				<div class="moto">Idahoans seeking WISE(dom)</div>
+			</section>
+		</header>
+		<nav>
+			<button onclick="toggleMenu()">&#9776; Menu</button>
+			<ul id="topnav" class="hide">
+				<li class="item"><a href="index.html">Home</a></li>
+				<li class="item"><a href="preston.html">Preston</a></li>
+				<li class="item"><a href="soda.html">Soda Springs</a></li>
+				<li class="item"><a href="fishHaven.html">Fish Haven</a></li>
+				<li class="item active"><a href="stormcenter.html">Storm Center</a></li>
+				<li class="item"><a href="gallery.html">Gallery</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div class="thanks-content">
+				<h1 class="center">Thank you!</h1>
+				<p class="center">We appreciate you taking the time to send us the storm information - Stay Safe!</p>
+			</div>
+		</main>
+		<footer>
+			<small
+				>&copy; <span id="currentYear"></span> Weather Information South East | Attributions | Tori Locke
+
+				<br /><span id="currentDate"></span>
+			</small>
+		</footer>
+		<script src="js/currentDates.js"></script>
+		<script src="js/menu.js"></script>
+	</body>
+</html>
