@@ -1,7 +1,7 @@
 // Fish Haven weather - pulls weather data from open weather map
 // windchill info is in open weather source file
 
-const cityId = 558501;
+const cityId = 5585010;
 
 // API KEY
 const key = 'f2526edae91a60e14b8f5c3aa225079d';

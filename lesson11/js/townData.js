@@ -38,3 +38,22 @@ fetch(requestURL)
 			}
 		}
 	});
+	fetch(requestURL)
+	.then(function (response) {
+		return response.json();
+	})
+	.then(function (jsonObject) {
+		const towns = jsonObject['towns'];
+
+		for (let i = 0; i < towns.length; i++) {
+			let card = document.createElement('section');
+			let p = document.createElement('p');
+			p.textContent = towns[i].events;
+						
+			if (towns[i].name == 'Soda Springs') {
+				card.appendChild(p);
+				
+				document.querySelector('div.events').appendChild(card);
+			}
+		}
+	});
