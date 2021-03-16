@@ -36,3 +36,26 @@ fetch(forecastURL)
 			document.getElementById(`icon${day + 1}`).setAttribute('alt', desc);
 		}
 	});
+
+	//pull twon data from json
+const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+
+fetch(requestURL)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (jsonObject) {
+    const towns = jsonObject['towns'];
+    
+    let p = document.createElement('p');
+
+    let text1 = towns[2].events[0];
+    let text2 = towns[2].events[1];
+    let text3 = towns[2].events[2];
+    let text4 = towns[2].events[3];
+    
+    p.innerHTML = text1 + "<p> </p> " + text2 + "<p></p>  " + text3 + "<p></p>  " + text4 + "<p> </p>  ";
+  
+    document.querySelector('.events').appendChild(p);    
+    
+  });

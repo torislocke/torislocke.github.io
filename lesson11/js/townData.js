@@ -49,7 +49,7 @@ fetch(requestURL)
 			let card = document.createElement('section');
 			let p = document.createElement('p');
 			p.textContent = towns[i].events;
-						
+									
 			if (towns[i].name == 'Soda Springs') {
 				card.appendChild(p);
 				
