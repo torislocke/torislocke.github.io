@@ -36,7 +36,7 @@ fetch(forecastURL)
 			document.getElementById(`icon${day + 1}`).setAttribute('alt', desc);
 		}
 	});
-//pull twon data from json
+///pull town data from json
 const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
 
 fetch(requestURL)
@@ -44,17 +44,15 @@ fetch(requestURL)
     return response.json();
   })
   .then(function (jsonObject) {
-    const towns = jsonObject['towns'];
-    
-    let p = document.createElement('p');
-
-    let text1 = towns[0].events[0];
-    let text2 = towns[0].events[1];
-    let text3 = towns[0].events[2];
-    
-    p.innerHTML = text1 + "<p class='red'> </p> " + text2 + "<p class='red'></p>  " + text3 + "<p class='red'></p>  ";
-
-
-    document.querySelector('.events').appendChild(p);    
-    
-  });
+      
+  const towns = jsonObject['towns'];
+  for (let i = 0; i < towns.length; i++ ) {
+	  if  (towns[i].name == 'Soda Springs'){
+		towns[i].events.forEach(element => {
+		  let p = document.createElement('p');
+		  p.textContent = element;
+		  document.querySelector('.events').appendChild(p);
+		}); 
+	}
+  }
+});

@@ -14,7 +14,6 @@ fetch(requestURL)
 			let founded = document.createElement('p');
 			let population = document.createElement('p');
 			let rainfall = document.createElement('p');
-
 			let image = document.createElement('img');
 
 			h2.textContent = towns[i].name;
@@ -35,25 +34,6 @@ fetch(requestURL)
 				card.appendChild(image);
 
 				document.querySelector('div.cards').appendChild(card);
-			}
-		}
-	});
-	fetch(requestURL)
-	.then(function (response) {
-		return response.json();
-	})
-	.then(function (jsonObject) {
-		const towns = jsonObject['towns'];
-
-		for (let i = 0; i < towns.length; i++) {
-			let card = document.createElement('section');
-			let p = document.createElement('p');
-			p.textContent = towns[i].events;
-									
-			if (towns[i].name == 'Soda Springs') {
-				card.appendChild(p);
-				
-				document.querySelector('div.events').appendChild(card);
 			}
 		}
 	});
