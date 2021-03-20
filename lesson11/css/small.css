@@ -47,8 +47,8 @@ p {
 	line-height: 1.5em;
 	color: var(--charcoal);
 }
-.events {
-	margin: 16px auto;
+aside {
+	margin: 16px;
 	color: var(--primary-color);
 }
 .center {

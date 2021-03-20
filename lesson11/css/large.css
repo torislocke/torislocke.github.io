@@ -45,25 +45,13 @@
 	}
 	/* Home page style for tablet */
 	.cards {
-		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		gap: 10px;
-		margin: 0;
 	}
 	.cards > section {
-		height: 35vh;
 		margin: 1em 0;
 		padding: 0;
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 40px 45px 25px 25px 25px 100px;
 	}
-	.cards > section > img {
-		display: block;
-		height: 150px;
-		margin: 10px 0 0 0;
-		background-color: rgb(27, 53, 65);
-	}
+
 	.cards > section:nth-child(even) p,
 	.cards > section:nth-child(even) h2,
 	.cards > section:nth-child(even) h3 {
