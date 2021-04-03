@@ -113,7 +113,8 @@
 
 					<input type="radio" id="bronze" name="level" value="bronze" />
 					<label for="bronze">Bronze</label>
-					<button class="seeDetails" onclick="seeDetails()">See Bronze Details</button><br />
+					<button class="seeDetails" id="bronzeMessage" onclick="seeBronze()">Hide Bronze Details</button
+					><br />
 					<p id="seeBronze">
 						Bronze membership includes: listing in Duvall Chamber Business Directory & Visitor Guide,
 						discounted rates on monthly Chamber meetings, online Business Directory presence, ability to
@@ -123,10 +124,14 @@
 					</p>
 
 					<input type="radio" id="silver" name="level" value="silver" />
-					<label for="silver">Silver</label>&nbsp; &nbsp;<button class="seeDetails" onclick="seeSilver()">
-						See Silver Details</button
+					<label for="silver">Silver</label>&nbsp; &nbsp;<button
+						id="silverMessage"
+						class="seeDetails"
+						onclick="seeSilver()"
+					>
+						Hide Silver Details</button
 					><br />
-					<p id="seeSilver">
+					<p id="seeSilver" class="hide">
 						Includes the same great benefits as our Bronze Member. Plus - ability to add your photos to our
 						gallery, additional links about your business, deals and coupons and your profile and Business
 						Card (logo or graphic) image added as a Premium Member appearing throughout the entire website
@@ -134,9 +139,9 @@
 					</p>
 
 					<input type="radio" id="gold" name="level" value="gold" />
-					<label for="gold">Gold</label>&nbsp; &nbsp; &nbsp;
-					<button class="seeDetails" onclick="seeGold()">See Gold Details</button><br />
-					<div id="seeGold">
+					<label for="gold">Gold</label>&nbsp; &nbsp;
+					<button id="goldMessage" class="seeDetails" onclick="seeGold()">Hide Gold Details</button><br />
+					<div id="seeGold" class="hide">
 						<p>
 							Includes the same great benefits as our Silver Member. Plus - Whether you have two employees
 							or more than 100, we can help you create a healthcare benefits program that attracts talent

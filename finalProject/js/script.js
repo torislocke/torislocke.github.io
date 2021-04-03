@@ -18,32 +18,39 @@ function weatherFunction() {
 	}
 }
 
-// function to open and close the current weather note
-function seeDetails() {
+// function to open and close the Bronze level membership description
+function seeBronze() {
 	var x = document.getElementById('seeBronze');
 	if (x.style.display === 'none') {
 		x.style.display = 'block';
+			document.getElementById('bronzeMessage').innerHTML = 'Hide Bronze Plan';
 	} else {
 		x.style.display = 'none';
+		document.getElementById('bronzeMessage').innerHTML = 'View Bronze Plan';
 	}
 }
-// function to open and close the current weather note
+
+// function to open and close the Silver level membership description
 function seeSilver() {
 	var x = document.getElementById('seeSilver');
 	if (x.style.display === 'none') {
 		x.style.display = 'block';
+			document.getElementById('silverMessage').innerHTML = 'Hide Silver Plan';
 	} else {
 		x.style.display = 'none';
+		document.getElementById('silverMessage').innerHTML = 'View Silver Plan';
 	}
 }
 
-// function to open and close the current weather note
+// function to open and close the Gold level membership description
 function seeGold() {
 	var x = document.getElementById('seeGold');
 	if (x.style.display === 'none') {
 		x.style.display = 'block';
+		document.getElementById('goldMessage').innerHTML = 'Hide Gold Plan';
 	} else {
 		x.style.display = 'none';
+		document.getElementById('goldMessage').innerHTML = 'View Gold Plan';
 	}
 }
 

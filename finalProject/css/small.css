@@ -151,6 +151,7 @@ textarea {
 .submitButton:hover {
 	background-color: var(--illuminating-emerald);
 }
+
 .seeDetails {
 	display: inline-block;
 	background-color: var(--hunter-green);
@@ -163,9 +164,19 @@ textarea {
 	transition: all 0.5s;
 	cursor: pointer;
 	margin: 5px;
+	width: 180px;
 }
 .seeDetails:hover {
 	background-color: var(--illuminating-emerald);
+}
+#seeBronze,
+#seeSilver,
+#seeGold {
+	border: 2px solid black;
+	border-radius: 10px;
+	border: 4px double #cccccc;
+	padding: 5px;
+	
 }
 
 /* -------------------- Footer Section ------------------- */
