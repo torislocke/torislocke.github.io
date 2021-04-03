@@ -1,0 +1,81 @@
+@media (min-width: 49.5em) {
+	body {
+		font-size: 17px;
+	}
+
+	.headerTitle {
+		margin-top: -120px;
+		text-align: center;
+	}
+	.moto {
+		text-align: center;
+	}
+	.home {
+		grid-template-columns: 1fr 2fr;
+		grid-template-areas:
+			'hero hero'
+			'businessHighlight purpose'
+			'weather becomeMember'
+			'events becomeMember';
+		gap: 10px;
+		padding: 2em;
+	}
+	.hero-container {
+		grid-area: hero;
+	}
+	.purpose {
+		grid-area: purpose;
+	}
+	.becomeMember {
+		grid-area: becomeMember;
+	}
+	.events {
+		grid-area: events;
+	}
+	.weather {
+		grid-area: weather;
+	}
+	.businessHighlight {
+		grid-area: businessHighlight;
+	}
+
+	/* navigation style for tablet screen size */
+	nav button {
+		display: none;
+	}
+	nav ul.hide {
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	nav ul {
+		margin: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	nav ul li a {
+		padding: 0.8em 1.2em;
+		font-size: 1em;
+	}
+
+	nav ul li.active a {
+		border-radius: 10px;
+		border: 4px double #cccccc;
+		color: #eeeeee;
+	}
+	nav ul li a:hover {
+		border-radius: 10px;
+		border: 4px double #cccccc;
+		color: #eeeeee;
+	}
+	footer small {
+		margin-top: 7px;
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-areas: 'copyRight address social-wrapper';
+	}
+	.social-wrapper h3 {
+		margin-top: -3px;
+	}
+}

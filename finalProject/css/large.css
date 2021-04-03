@@ -1,0 +1,12 @@
+@media (min-width: 62.5em) {
+	.headerTitle {
+		margin-top: -170px;
+	}
+	.home {
+		grid-template-columns: 1fr 2fr 1fr;
+		gap: 20px;
+		grid-template-areas:
+			'events purpose businessHighlight'
+			'weather becomeMember businessHighlight';
+	}
+}

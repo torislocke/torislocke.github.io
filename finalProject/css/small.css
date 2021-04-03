@@ -1,0 +1,257 @@
+/* apply a natural box layout model to all elements */
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* Establish global site settings of color and font size/selection */
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 1.5em;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+:root {
+	/* CSS HEX */
+	--dark-cornflower-blue: #27398a;
+	--yale-blue: #304d6dff;
+	--hunter-green: #28502eff;
+	--illuminating-emerald: #53917eff;
+	--gold-crayola: #f2c57cff;
+	--dark-sienna: #280003ff;
+	--cornsilk: #f5eccdff;
+}
+
+h1 {
+	font-size: 1.5em;
+	font-family: 'Cambria', 'Cochin', Georgia, Times, serif;
+}
+
+h2 {
+	font-size: 1.3em;
+	font-family: 'Cambria', 'Cochin', Georgia, Times, serif;
+}
+
+h3 {
+	font-size: 1.2em;
+	font-family: 'Cambria', 'Cochin', Georgia, Times, serif;
+}
+
+p,
+li {
+	font-size: 1em;
+	font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+}
+/* --------- Site Top Navigation Styling --------- */
+nav {
+	background-color: var(--hunter-green);
+}
+
+nav button {
+	margin: 0.2rem 2%;
+	background-color: transparent;
+	border: none;
+	font-size: 1.6rem; /*Apple recomends buttons be set to 44px for accessability */
+	color: white;
+}
+nav ul {
+	list-style: none; /*remove bullets on list */
+	padding: 0;
+	margin: 0;
+}
+nav ul.hide {
+	display: none;
+}
+nav ul li a {
+	display: block;
+	padding: 0.8rem 2%;
+	text-decoration: none;
+	color: white;
+	border-top: 1px solid rgba(245, 236, 205, 0.1);
+}
+nav ul li.active a {
+	background-color: var(--illuminating-emerald);
+}
+nav ul li a:hover {
+	background-color: rgba(245, 236, 205, 0.5);
+}
+/* --------- Site - Main Baseline Styling ------------ */
+.headerTitle {
+	z-index: 1;
+	margin-top: -100px;
+	margin-left: 50px;
+	color: white;
+	text-shadow: black 0.1em 0.1em 0.2em;
+}
+.moto {
+	z-index: 2;
+	margin-left: 50px;
+	margin-top: -10px;
+	color: white;
+	text-shadow: black 0.1em 0.1em 0.2em;
+}
+.home {
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 10px;
+}
+
+/* ------------------- Join Page Form Styling -------------------- */
+input[type='text'] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border-radius: 4px;
+	font-size: var(--base-size);
+	font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+}
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='tel']:focus,
+input[type='url']:focus,
+textarea:focus {
+	border: 3px solid var(--hunter-green);
+}
+input[type='text']:hover,
+input[type='email']:hover,
+input[type='tel']:hover,
+input[type='url']:hover,
+textarea:hover {
+	background-color: rgba(167, 165, 159, 0.5);
+}
+textarea {
+	width: 100%;
+	height: 150px;
+	padding: 1em;
+	box-sizing: border-box;
+	border-radius: 4px;
+	resize: none;
+	font-size: var(--base-size);
+	font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+}
+.submitButton {
+	display: inline-block;
+	background-color: var(--hunter-green);
+	border-radius: 10px;
+	border: 4px double #cccccc;
+	color: #eeeeee;
+	text-align: center;
+	font-size: 18px;
+	padding: 15px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.submitButton:hover {
+	background-color: var(--illuminating-emerald);
+}
+.seeDetails {
+	display: inline-block;
+	background-color: var(--hunter-green);
+	border-radius: 10px;
+	border: 4px double #cccccc;
+	color: #eeeeee;
+	text-align: center;
+	font-size: 18px;
+	padding: 15px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+.seeDetails:hover {
+	background-color: var(--illuminating-emerald);
+}
+
+/* -------------------- Footer Section ------------------- */
+footer small {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		'copyRight'
+		'address'
+		'social-wrapper';
+	width: 100%;
+	background-color: var(--hunter-green);
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+.copyRight {
+	grid-area: copyRight;
+	margin-top: 7px;
+	margin-left: 20px;
+}
+address {
+	grid-area: address;
+	margin-top: 7px;
+	text-align: center;
+}
+.social-wrapper {
+	grid-area: social-wrapper;
+	margin-top: 7px;
+	margin-left: 20px;
+}
+.socialIcon {
+	width: 30px;
+	height: 30px;
+}
+/* ------------- Weather Alert Section --------------- */
+.weatherButton {
+	display: inline-block;
+	background-color: var(--hunter-green);
+	border-radius: 10px;
+	border: 4px double #cccccc;
+	color: #eeeeee;
+	text-align: center;
+	font-size: 16px;
+	padding: 10px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.weatherButton:hover {
+	background-color: var(--illuminating-emerald);
+}
+/* ------------  Current Weather section ----------- */
+#weatherSummary {
+	border-radius: 10px;
+	border: 4px double #cccccc;
+	display: grid;
+	gap: 0px;
+	padding: 7px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		'header header'
+		'title1 data1'
+		'title2 data2'
+		'title3 data3';
+}
+.weatherHeader {
+	grid-area: header;
+	text-align: center;
+}
+.weatherTitle1 {
+	grid-area: title1;
+}
+.weatherTitle2 {
+	grid-area: title2;
+}
+.weatherTitle3 {
+	grid-area: title3;
+}
+.weatherData1 {
+	grid-area: data1;
+}
+.weatherData2 {
+	grid-area: data2;
+}
+.weatherData3 {
+	grid-area: data3;
+}

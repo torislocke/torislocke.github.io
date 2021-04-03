@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Tori Locke" />
+		<meta name="description" content="Information on the Duvall Washington Chamber of Commerce." />
+		<title>Home | Duvall Chamber of Commerce</title>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/small.css" />
+		<link rel="stylesheet" href="css/medium.css" />
+		<link rel="stylesheet" href="css/large.css" />
+	</head>
+	<!-- <header> - Defines a header for a document or a section
+    <nav> - Defines a set of navigation links
+    <section> - Defines a section in a document
+    <article> - Defines an independent, self-contained content
+    <aside> - Defines content aside from the content (like a sidebar)
+    <footer> - Defines a footer for a document or a section
+    <details> - Defines additional details that the user can open and close on demand
+    <summary> - Defines a heading for the <details> element -->
+
+	<body>
+		<header>
+			<nav>
+				<button onclick="toggleMenu()">&#9776; Menu</button>
+				<ul id="topnav" class="hide">
+					<li class="item active"><a href="index.html">Home</a></li>
+					<li class="item"><a href="about.html">About</a></li>
+					<li class="item"><a href="city.html">City</a></li>
+					<li class="item"><a href="contact.html">Contact</a></li>
+					<li class="item"><a href="directory.html">Directory</a></li>
+					<li class="item"><a href="join.html">Join</a></li>
+				</ul>
+			</nav>
+			<section class="heading">
+				<picture class="hero-img">
+					<source media="(max-width:521px)" srcset="images/duvall_header_522.jpg" />
+					<source media="(max-width:1023px)" srcset="images/duvall_header_1004.jpg" />
+					<source media="(max-width:1600px)" srcset="images/duvall_header_2560.jpg" />
+					<img src="images/duvall_header_2560.jpg" alt="Duvall Mountain View" />
+				</picture>
+
+				<h1 class="headerTitle">Duvall Chamber of Commerce</h1>
+				<div class="moto">Helping Local Business Succeed.</div>
+				<div>Alert: <span id="alert"></span></div>
+				<button class="weatherButton" onclick="weatherFunction()">Current Weather</button>
+			</section>
+		</header>
+		<main class="home">
+			<section class="purpose">
+				<h2>Duvall Chamber of Commerce Purpose</h2>
+				<p>
+					The Duvall Chamber promotes and supports our Member businesses and organizations, creating
+					opportunity, economic growth, and community prosperity. The Chamber partners with our Members to
+					support our Duvall and Valley business community and neighbors' prosperity through education,
+					connection, and community events and programs.
+				</p>
+			</section>
+			<section class="becomeMember">
+				<h2>
+					How to Become a Member <span>&nbsp; <button class="submitButton">Join Today</button></span>
+				</h2>
+
+				<p>
+					The Duvall Chamber of Commerce is successful because of the active investment of its membership
+					base. Our members receive access to discounted insurance plans, including healthcare, dental, and
+					vision, with life insurance options. We invite you to join us. Membership provides a brilliant
+					avenue for connecting with others across many different industries. Whether you are a new business
+					in the area, or an established pillar of our community, we work to ignite opportunities for
+					everyone.
+				</p>
+			</section>
+
+			<aside>
+				<div id="weatherSummary">
+					<h3 class="weatherHeader">Weather Summary</h3>
+					<div class="weatherTitle1">Currently:</div>
+					<div><span class="weatherData1" id="descript"></span></div>
+					<div class="weatherTitle2">Temperature:&nbsp;</div>
+					<div><span class="weatherData2" id="current-temp"></span> &#8457;</div>
+					<div class="weatherTitle3">Humidity:&nbsp;</div>
+					<div><span class="weatherData3" id="humidity"></span>&#37;</div>
+				</div>
+			</aside>
+
+			<aside class="events">
+				<h2>Events</h2>
+				<ul>
+					<li>1st Event</li>
+					<li>2nd Event</li>
+					<li>3rd Event</li>
+					<li>4th Event</li>
+				</ul>
+			</aside>
+			<aside class="businessHighlight">
+				<h2>Local Business</h2>
+			</aside>
+
+			<aside>
+				<h3>3 Day Forecast</h3>
+			</aside>
+		</main>
+
+		<footer>
+			<div class="copyRight">&copy; Copyright <span id="currentYear"></span></div>
+			<address>
+				Duvall Chamber of Commerce <br />
+				Mail: PO Box 581, Duvall, WA 98019 <br />
+				Visit: 15619 Main St NE, Duvall, WA 98019<br />
+				Telephone: (425) 788-9182
+			</address>
+			<div class="social-wrapper">
+				<h3>Let's Connect</h3>
+				<a target="_blank" href="http/www.facebook.com">
+					<img class="socialIcon" alt="Facebook" src="images/fb.png" />
+				</a>
+
+				<a target="_blank" href="http/www.twitter.com">
+					<img class="socialIcon" alt="Twitter" src="images/twitter.png" />
+				</a>
+			</div>
+		</footer>
+		<script src="js/script.js"></script>
+	</body>
+</html>

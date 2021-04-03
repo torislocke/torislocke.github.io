@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Tori Locke" />
+		<meta name="description" content="Application and Information on joining the Duvall Chamber of Commerce" />
+		<title>Join | Duvall Chamber of Commerce</title>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/small.css" />
+		<link rel="stylesheet" href="css/medium.css" />
+		<link rel="stylesheet" href="css/large.css" />
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<button onclick="toggleMenu()">&#9776; Menu</button>
+				<ul id="topnav" class="hide">
+					<li class="item"><a href="index.html">Home</a></li>
+					<li class="item"><a href="about.html">About</a></li>
+					<li class="item"><a href="city.html">City</a></li>
+					<li class="item"><a href="contact.html">Contact</a></li>
+					<li class="item"><a href="directory.html">Directory</a></li>
+					<li class="item active"><a href="join.html">Join</a></li>
+				</ul>
+			</nav>
+			<section class="heading">
+				<picture class="hero-img">
+					<source media="(max-width:521px)" srcset="images/duvall_header_522.jpg" />
+					<source media="(max-width:1023px)" srcset="images/duvall_header_1004.jpg" />
+					<source media="(max-width:1600px)" srcset="images/duvall_header_2560.jpg" />
+					<img src="images/duvall_header_2560.jpg" alt="Duvall Mountain View" />
+				</picture>
+
+				<h1 class="headerTitle">Duvall Chamber of Commerce</h1>
+				<div class="moto">Helping Local Business Succeed.</div>
+				<div>Alert: <span id="alert"></span></div>
+				<button class="weatherButton" onclick="weatherFunction()">Current Weather</button>
+			</section>
+		</header>
+		<main>
+			<section>
+				<h2>Benefits of Chamber Membership</h2>
+				<h3>Visibility:</h3>
+				<ul>
+					<li>
+						Your business or organization is listed in the upcoming printing and online postings of Duvall
+						Chambers Business Directory & Visitor Guide (delivered to over 11,000 area homes and businesses)
+						and distributed in Chamber Welcome Bags to every new Duvall homeowner.
+					</li>
+					<li>
+						Prospective customers can easily find you through your listing on the Duvall Chamber of Commerce
+						online business directory.
+					</li>
+					<li>
+						Welcome post (with your business Facebook tag, if applicable) on the Duvall Chamber Facebook
+						page.
+					</li>
+					<li>
+						You can promote your business or organization through participation in the Chamber's sponsorship
+						opportunities.
+					</li>
+					<li>
+						Your up-to-date business info is kept on file by the Chamber for responses to inquiries from
+						prospective customers.
+					</li>
+					<li>
+						Your business or organization is showcased on our Duvall Chamber Facebook Page throughout the
+						year and promoted when you post your Announcements or events on our Chamber Events/Announcements
+						Calendar as a Chamber Membership perk. Events area ALSO sent out through a weekly email blast,
+						to the 1500+ opted-in subscribers, for even more visibility to you!
+					</li>
+				</ul>
+			</section>
+			<form class="membership">
+				<fieldset>
+					<legend>Membership Application</legend>
+					<label for="firstName">First name:</label><br />
+					<input required type="text" id="firstName" name="firstName" /><br />
+
+					<label for="lastName">Last name:</label><br />
+					<input required type="text" id="lastName" name="lastName" /><br />
+
+					<label for="jobTitle">Job Title:</label><br />
+					<input type="text" id="jobTitle" name="jobTitle" /><br />
+
+					<label for="email">Email:</label><br />
+					<input required type="email" id="email" name="email" /><br />
+
+					<label for="cellPhone">Cell Phone:</label><br />
+					<input type="tel" id="cellPhone" name="cellPhone" /><br />
+
+					<label for="businessName">Business Name:</label><br />
+					<input required type="text" id="businessName" name="businessName" /><br />
+
+					<label for="businessAddress">Business Address:</label><br />
+					<input type="text" id="businessAddress" name="businessAddress" /><br />
+
+					<label for="businessWebsite">Business Website:</label><br />
+					<input type="url" id="businessWebsite" name="businessWebsite" /><br />
+
+					<label>Business Description:</label><br />
+					<textarea></textarea><br />
+
+					<input type="radio" id="nonProfit" name="level" value="nonProfit" />
+					<label for="nonProfit">Non-profit</label><br />
+					<p>
+						Nonprofit membership includes the same as the Bronze Membership but at a discounted Non-Profit
+						rate
+					</p>
+
+					<input type="radio" id="bronze" name="level" value="bronze" />
+					<label for="bronze">Bronze</label>
+					<button class="seeDetails" onclick="seeDetails()">See Bronze Details</button><br />
+					<p id="seeBronze">
+						Bronze membership includes: listing in Duvall Chamber Business Directory & Visitor Guide,
+						discounted rates on monthly Chamber meetings, online Business Directory presence, ability to
+						promote your business through Member participation and Chamber sponsorship opportunities, member
+						to member discounts, invites to Chamber functions, meetings and networking opportunities. Take
+						advantage of many opportunities to meet, connect, share and learn from your business peers.
+					</p>
+
+					<input type="radio" id="silver" name="level" value="silver" />
+					<label for="silver">Silver</label>&nbsp; &nbsp;<button class="seeDetails" onclick="seeSilver()">
+						See Silver Details</button
+					><br />
+					<p id="seeSilver">
+						Includes the same great benefits as our Bronze Member. Plus - ability to add your photos to our
+						gallery, additional links about your business, deals and coupons and your profile and Business
+						Card (logo or graphic) image added as a Premium Member appearing throughout the entire website
+						providing additional business exposure.
+					</p>
+
+					<input type="radio" id="gold" name="level" value="gold" />
+					<label for="gold">Gold</label>&nbsp; &nbsp; &nbsp;
+					<button class="seeDetails" onclick="seeGold()">See Gold Details</button><br />
+					<div id="seeGold">
+						<p>
+							Includes the same great benefits as our Silver Member. Plus - Whether you have two employees
+							or more than 100, we can help you create a healthcare benefits program that attracts talent
+							and keeps your employees healthy and productive — at a budget you can afford.
+						</p>
+						<p>
+							We offer exclusive choices from major carriers. Our comprehensive offerings give employers a
+							choice of over 40 affordable medical plans from some of the largest and most respected
+							carriers in the state, as well as a wide range of additional employee benefits.
+						</p>
+					</div>
+				</fieldset>
+
+				<input type="submit" value="Submit" class="submitButton" />
+			</form>
+		</main>
+		<footer>
+			<div class="copyRight">&copy; Copyright <span id="currentYear"></span></div>
+			<address>
+				Duvall Chamber of Commerce <br />
+				Mail: PO Box 581, Duvall, WA 98019 <br />
+				Visit: 15619 Main St NE, Duvall, WA 98019<br />
+				Telephone: (425) 788-9182
+			</address>
+			<div class="social-wrapper">
+				<h3>Let's Connect</h3>
+				<a target="_blank" href="http/www.facebook.com">
+					<img class="socialIcon" alt="Facebook" src="images/fb.png" />
+				</a>
+
+				<a target="_blank" href="http/www.twitter.com">
+					<img class="socialIcon" alt="Twitter" src="images/twitter.png" />
+				</a>
+			</div>
+		</footer>
+		<script src="js/script.js"></script>
+	</body>
+</html>
