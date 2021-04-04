@@ -23,7 +23,7 @@ function seeBronze() {
 	var x = document.getElementById('seeBronze');
 	if (x.style.display === 'none') {
 		x.style.display = 'block';
-			document.getElementById('bronzeMessage').innerHTML = 'Hide Bronze Plan';
+		document.getElementById('bronzeMessage').innerHTML = 'Hide Bronze Plan';
 	} else {
 		x.style.display = 'none';
 		document.getElementById('bronzeMessage').innerHTML = 'View Bronze Plan';
@@ -35,7 +35,7 @@ function seeSilver() {
 	var x = document.getElementById('seeSilver');
 	if (x.style.display === 'none') {
 		x.style.display = 'block';
-			document.getElementById('silverMessage').innerHTML = 'Hide Silver Plan';
+		document.getElementById('silverMessage').innerHTML = 'Hide Silver Plan';
 	} else {
 		x.style.display = 'none';
 		document.getElementById('silverMessage').innerHTML = 'View Silver Plan';
@@ -43,13 +43,23 @@ function seeSilver() {
 }
 
 // function to open and close the Gold level membership description
+// function seeGold() {
+// 	var x = document.getElementById('seeGold');
+// 	if (x.style.display === 'none') {
+// 		x.style.display = 'block';
+// 		document.getElementById('goldMessage').innerHTML = 'Hide Gold Plan';
+// 	} else {
+// 		x.style.display = 'none';
+// 		document.getElementById('goldMessage').innerHTML = 'View Gold Plan';
+// 	}
+// }
+
 function seeGold() {
-	var x = document.getElementById('seeGold');
-	if (x.style.display === 'none') {
-		x.style.display = 'block';
+	if (getElementbyId('seeGold' === 'hide')) {
+		document.getElementById('seeGold').classList.remove('hide');
 		document.getElementById('goldMessage').innerHTML = 'Hide Gold Plan';
 	} else {
-		x.style.display = 'none';
+		document.getElementById('seeGold').classList.add('hide');
 		document.getElementById('goldMessage').innerHTML = 'View Gold Plan';
 	}
 }
@@ -80,4 +90,48 @@ fetch(apiURL)
 		document.getElementById('humidity').textContent = jsObject.current.humidity;
 		document.getElementById('descript').textContent = jsObject.current.weather[0].description;
 		document.getElementById('alert').textContent = jsObject.alerts.description;
+	});
+
+// ------------  function to build business directory page
+const requestURL = '../data/directory.json';
+
+fetch(requestURL)
+	.then(function (response) {
+		return response.json();
+	})
+	.then(function (jsonObject) {
+		const business = jsonObject['business'];
+		for (let i = 0; i < business.length; i++) {
+			let card = document.createElement('section');
+			let h2 = document.createElement('h2');
+			let p = document.createElement('p');
+			let bp = document.createElement('p');
+			let cp = document.createElement('p');
+			let dp = document.createElement('p');
+			let ep = document.createElement('p');
+			let image = document.createElement('img');
+
+			h2.textContent = business[i].businessName;
+
+			p.textContent = 'Main Contact: ' + business[i].firstName + ' ' + business[i].lastName;
+
+			bp.textContent = 'Title: ' + business[i].jobTitle;
+			cp.textContent = 'Telephone: ' + business[i].cellPhone;
+			dp.textContent = 'Address: ' + business[i].businessAddress;
+			ep.textContent = 'Website: ' + business[i].businessWebsite;
+
+			image.setAttribute('src', business[i].imageurl);
+			image.setAttribute('alt', business[i].businessName);
+			image.setAttribute('title', business[i].businessName);
+
+			card.appendChild(h2);
+			card.appendChild(p);
+			card.appendChild(bp);
+			card.appendChild(cp);
+			card.appendChild(dp);
+			card.appendChild(ep);
+			card.appendChild(image);
+
+			document.querySelector('div.cards').appendChild(card);
+		}
 	});
