@@ -163,6 +163,7 @@
 	iframe {
 		width: 450px;
 		height: 400px;
+		border: 4px double #cccccc;
 	}
 	.boardMembers {
 		grid-template-columns: 1fr 1fr;
