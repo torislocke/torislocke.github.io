@@ -21,8 +21,6 @@ img {
 }
 :root {
 	/* CSS HEX */
-	--dark-cornflower-blue: #27398a;
-	--yale-blue: #304d6dff;
 	--hunter-green: #28502eff;
 	--illuminating-emerald: #53917eff;
 	--dark-sienna: #280003ff;
@@ -88,9 +86,9 @@ button:hover,
 }
 .navButton {
 	position: absolute;
-	top: 0.75rem;
-	right: 1rem;
-	font-size: 1.6rem; /*Apple recomends buttons be set to 44px for accessability */
+	top: 0.75em;
+	right: 1em;
+	font-size: 1.6em; /*Apple recomends buttons be set to 44px for accessability */
 }
 .navbar {
 	display: flex;
@@ -114,7 +112,7 @@ button:hover,
 }
 .navbar-links ul li a {
 	text-decoration: none;
-	padding: 0.5rem 1rem;
+	padding: 0.5em 1em;
 	display: block;
 	color: black;
 }
@@ -328,7 +326,7 @@ main {
 }
 .cityContact {
 	display: block;
-	padding: 0.8rem;
+	padding: 0.8em;
 }
 .cityContact ul {
 	list-style: none;
