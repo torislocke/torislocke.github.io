@@ -114,7 +114,7 @@ button:hover,
 	text-decoration: none;
 	padding: 0.5em 1em;
 	display: block;
-	color: black;
+	color: var(--dark-sienna);
 }
 .navbar-links ul li.active a {
 	background-color: var(--hunter-green);
@@ -135,7 +135,7 @@ button:hover,
 .weatherAlert {
 	margin: 20px 15px 0px 15px;
 	color: red;
-	border: 2px solid black;
+	border: 2px solid var(--dark-sienna);
 	padding: 20px;
 }
 #alertBtn {
@@ -153,14 +153,14 @@ main {
 	margin-top: -100px;
 	margin-left: 50px;
 	color: white;
-	text-shadow: black 0.1em 0.1em 0.2em;
+	text-shadow: var(--dark-sienna) 0.1em 0.1em 0.2em;
 }
 .moto {
 	z-index: 2;
 	margin-left: 50px;
 	margin-top: -10px;
 	color: white;
-	text-shadow: black 0.1em 0.1em 0.2em;
+	text-shadow: var(--dark-sienna) 0.1em 0.1em 0.2em;
 }
 
 /* -------------- Home Page Styling -------------------- */
@@ -423,7 +423,7 @@ textarea {
 .bronze,
 .non {
 	display: none;
-	border: 2px solid black;
+	border: 2px solid var(--dark-sienna);
 	border-radius: 10px;
 	border: 4px double #cccccc;
 	padding: 5px;
@@ -464,7 +464,7 @@ textarea {
 #myData div {
 	border-radius: 10px;
 	border: 4px double var(--hunter-green);
-	color: #2e2b2b;
+	color: var(--dark-sienna);
 }
 .containerBtn {
 	margin-top: 30px;
