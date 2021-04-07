@@ -5,20 +5,31 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Tori Locke" />
-		<meta
-			name="description"
-			content="Contact information for the Duvall Chamber of Commerce."
-		/>
+		<meta name="description" content="Contact information for the Duvall Chamber of Commerce." />
 		<title>Contact | Duvall Chamber of Commerce</title>
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/small.css" />
 		<link rel="stylesheet" href="css/medium.css" />
 		<link rel="stylesheet" href="css/large.css" />
 	</head>
-<body>
-<header>
-			<nav>
-				<button onclick="toggleMenu()">&#9776; Menu</button>
+
+	<body>
+		<nav class="navbar">
+			<div class="brand">
+				<figure>
+					<img
+						src="images/duvall_logo_300px.png"
+						alt="Duvall Chamber of Commerce Logo"
+						srcset="
+							images/duvall_logo_small.png  1x,
+							images/duvall_logo_medium.png 2x,
+							images/duvall_logo_large.png  3x
+						"
+					/>
+				</figure>
+			</div>
+			<button class="navButton toggle-button" onclick="toggleMenu()">&#9776; Menu</button>
+			<div class="navbar-links">
 				<ul id="topnav" class="hide">
 					<li class="item"><a href="index.html">Home</a></li>
 					<li class="item"><a href="about.html">About</a></li>
@@ -27,7 +38,10 @@
 					<li class="item"><a href="directory.html">Directory</a></li>
 					<li class="item"><a href="join.html">Join</a></li>
 				</ul>
-			</nav>
+			</div>
+		</nav>
+
+		<header>
 			<section class="heading">
 				<picture class="hero-img">
 					<source media="(max-width:521px)" srcset="images/duvall_header_522.jpg" />
@@ -35,16 +49,118 @@
 					<source media="(max-width:1600px)" srcset="images/duvall_header_2560.jpg" />
 					<img src="images/duvall_header_2560.jpg" alt="Duvall Mountain View" />
 				</picture>
-
-				<h1 class="headerTitle">Duvall Chamber of Commerce</h1>
-				<div class="moto">Helping Local Business Succeed.</div>
-				<div>Alert: <span id="alert"></span></div>
-				<button class="weatherButton" onclick="weatherFunction()">Current Weather</button>
+				<div class="duvall">
+					<h1 class="headerTitle">Duvall Chamber of Commerce</h1>
+					<div class="moto">Helping Local Business Succeed.</div>
+				</div>
 			</section>
 		</header>
-	<main>
-		<section></section>
-	</main>
+		<main class="contact">
+			<section>
+				<div class="board">
+					<h1>Board of Directors</h1>
+					<div class="boardMembers">
+						<div>
+							<h2>Josh Lowell</h2>
+							<p>President</p>
+							<p>Law Offices of Magnuson Lowell P.S.</p>
+						</div>
+						<div>
+							<h2>Jerry Sprute</h2>
+							<p>Vice President</p>
+							<p>Law Office of Gerald A Sprute</p>
+						</div>
+						<div>
+							<h2>Allison Elbahouty</h2>
+							<p>Secretary</p>
+							<p>Zazynia Mediterranean Grill</p>
+						</div>
+						<div>
+							<h2>Debbie Bredeweg</h2>
+							<p>Treasurer</p>
+							<p>Eastside Weight & Wellness</p>
+						</div>
+						<div>
+							<h2>Brittany Criss</h2>
+							<p>Director</p>
+							<p>Duvall Print & Post</p>
+						</div>
+						<div>
+							<h2>Jashar Rentz</h2>
+							<p>Director</p>
+							<p>Alpine Integrated Medicine</p>
+						</div>
+						<div>
+							<h2>Jennifer Dwyer</h2>
+							<p>Director</p>
+							<p>Hollyhock Farm</p>
+						</div>
+						<div>
+							<h2>Kass Holdeman</h2>
+							<p>Director</p>
+							<p>Kass Holdeman - RE/MAX Northwest</p>
+						</div>
+						<div>
+							<h2>Laura Smith</h2>
+							<p>Director</p>
+							<p>Empower Youth Network</p>
+						</div>
+						<div>
+							<h2>Lorna Bussing</h2>
+							<p>Director</p>
+							<p>Red Pepper Pizzeria & Pasta</p>
+						</div>
+						<div>
+							<h2>Megan Crawford</h2>
+							<p>Director</p>
+							<p>Acres of Diamonds</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<br />
+			<br />
+			<form>
+				<fieldset>
+					<legend>Contact Form</legend>
+					<div class="contactForm">
+						<p>
+							<label for="firstName">First name:</label><br />
+							<input required type="text" id="firstName" name="firstName" />
+							<br />
+						</p>
+						<p>
+							<label for="lastName">Last name:</label><br />
+							<input required type="text" id="lastName" name="lastName" /><br />
+						</p>
+						<p>
+							<label for="contactEmail">Email:</label><br />
+							<input required type="email" id="contactEmail" name="contactEmail" /><br />
+						</p>
+						<p>
+							<label for="phone">Phone:</label><br />
+							<input type="tel" id="phone" name="phone" /><br />
+						</p>
+						<p class="contactDescription">
+							<label>Comment</label><br />
+							<textarea></textarea><br />
+						</p>
+						<br />
+					</div>
+					<button class="submitButton white" onclick="window.location.href='thankyou.html';">Submit</button>
+				</fieldset>
+			</form>
+			<br />
+			<br />
+			<aside class="map">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42933.780831662865!2d-122.00571159623824!3d47.735644123335966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54900ac5c8d571df%3A0xc73986cc56f4c3fc!2sDuvall%2C%20WA%2098019!5e0!3m2!1sen!2sus!4v1617811141589!5m2!1sen!2sus"
+					allowfullscreen=""
+					loading="lazy"
+				></iframe>
+			</aside>
+		</main>
+
 		<footer>
 			<div class="copyRight">&copy; Copyright <span id="currentYear"></span></div>
 			<address>
@@ -55,16 +171,16 @@
 			</address>
 			<div class="social-wrapper">
 				<h3>Let's Connect</h3>
-				<a target="_blank" href="http/www.facebook.com">
+				<a target="_blank" href="http://www.facebook.com">
 					<img class="socialIcon" alt="Facebook" src="images/fb.png" />
 				</a>
 
-				<a target="_blank" href="http/www.twitter.com">
+				<a target="_blank" href="http://www.twitter.com">
 					<img class="socialIcon" alt="Twitter" src="images/twitter.png" />
 				</a>
 			</div>
+			<div class="update">Last Updated: <span id="updated"></span></div>
 		</footer>
 		<script src="js/script.js"></script>
-    
-</body>
+	</body>
 </html>

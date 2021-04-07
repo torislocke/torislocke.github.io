@@ -13,10 +13,23 @@
 		<link rel="stylesheet" href="css/large.css" />
 	</head>
 
-	<body>
-		<header>
-			<nav>
-				<button onclick="toggleMenu()">&#9776; Menu</button>
+	<body onload="my_code()">
+		<nav class="navbar">
+			<div class="brand">
+				<figure>
+					<img
+						src="images/duvall_logo_300px.png"
+						alt="Duvall Chamber of Commerce Logo"
+						srcset="
+							images/duvall_logo_small.png  1x,
+							images/duvall_logo_medium.png 2x,
+							images/duvall_logo_large.png  3x
+						"
+					/>
+				</figure>
+			</div>
+			<button class="navButton toggle-button" onclick="toggleMenu()">&#9776; Menu</button>
+			<div class="navbar-links">
 				<ul id="topnav" class="hide">
 					<li class="item"><a href="index.html">Home</a></li>
 					<li class="item"><a href="about.html">About</a></li>
@@ -25,7 +38,10 @@
 					<li class="item"><a href="directory.html">Directory</a></li>
 					<li class="item active"><a href="join.html">Join</a></li>
 				</ul>
-			</nav>
+			</div>
+		</nav>
+
+		<header>
 			<section class="heading">
 				<picture class="hero-img">
 					<source media="(max-width:521px)" srcset="images/duvall_header_522.jpg" />
@@ -33,18 +49,18 @@
 					<source media="(max-width:1600px)" srcset="images/duvall_header_2560.jpg" />
 					<img src="images/duvall_header_2560.jpg" alt="Duvall Mountain View" />
 				</picture>
-
-				<h1 class="headerTitle">Duvall Chamber of Commerce</h1>
-				<div class="moto">Helping Local Business Succeed.</div>
-				<div>Alert: <span id="alert"></span></div>
-				<button class="weatherButton" onclick="weatherFunction()">Current Weather</button>
+				<div class="duvall">
+					<h1 class="headerTitle">Duvall Chamber of Commerce</h1>
+					<div class="moto">Helping Local Business Succeed.</div>
+				</div>
 			</section>
 		</header>
-		<main>
+		<main class="join">
 			<section>
-				<h2>Benefits of Chamber Membership</h2>
-				<h3>Visibility:</h3>
-				<ul>
+				<h1>Become a Chamber Member</h1>
+				<h2>Benefits of Membership</h2>
+
+				<ul class="reasons">
 					<li>
 						Your business or organization is listed in the upcoming printing and online postings of Duvall
 						Chambers Business Directory & Visitor Guide (delivered to over 11,000 area homes and businesses)
@@ -74,74 +90,98 @@
 					</li>
 				</ul>
 			</section>
-			<form class="membership">
+			<form>
 				<fieldset>
 					<legend>Membership Application</legend>
-					<label for="firstName">First name:</label><br />
-					<input required type="text" id="firstName" name="firstName" /><br />
-
-					<label for="lastName">Last name:</label><br />
-					<input required type="text" id="lastName" name="lastName" /><br />
-
-					<label for="jobTitle">Job Title:</label><br />
-					<input type="text" id="jobTitle" name="jobTitle" /><br />
-
-					<label for="email">Email:</label><br />
-					<input required type="email" id="email" name="email" /><br />
-
-					<label for="cellPhone">Cell Phone:</label><br />
-					<input type="tel" id="cellPhone" name="cellPhone" /><br />
-
-					<label for="businessName">Business Name:</label><br />
-					<input required type="text" id="businessName" name="businessName" /><br />
-
-					<label for="businessAddress">Business Address:</label><br />
-					<input type="text" id="businessAddress" name="businessAddress" /><br />
-
-					<label for="businessWebsite">Business Website:</label><br />
-					<input type="url" id="businessWebsite" name="businessWebsite" /><br />
-
-					<label>Business Description:</label><br />
-					<textarea></textarea><br />
-
+					<div class="membership">
+						<p>
+							<label for="firstName">First name:</label><br />
+							<input required type="text" id="firstName" name="firstName" />
+							<br />
+						</p>
+						<p>
+							<label for="lastName">Last name:</label><br />
+							<input required type="text" id="lastName" name="lastName" /><br />
+						</p>
+						<p>
+							<label for="jobTitle">Job Title:</label><br />
+							<input type="text" id="jobTitle" name="jobTitle" />
+							<br />
+						</p>
+						<p>
+							<label for="businessWebsite">Business Website:</label><br />
+							<input type="url" id="businessWebsite" name="businessWebsite" /><br />
+						</p>
+						<p>
+							<label for="email">Email:</label><br />
+							<input required type="email" id="email" name="email" /><br />
+						</p>
+						<p>
+							<label for="cellPhone">Cell Phone:</label><br />
+							<input type="tel" id="cellPhone" name="cellPhone" /><br />
+						</p>
+						<p>
+							<label for="businessName">Business Name:</label><br />
+							<input required type="text" id="businessName" name="businessName" /><br />
+						</p>
+						<p>
+							<label for="businessAddress">Business Address:</label><br />
+							<input type="text" id="businessAddress" name="businessAddress" /><br />
+						</p>
+						<p class="businessDescription">
+							<label>Business Description:</label><br />
+							<textarea></textarea><br />
+						</p>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Membership Level's</legend>
 					<input type="radio" id="nonProfit" name="level" value="nonProfit" />
-					<label for="nonProfit">Non-profit</label><br />
-					<p>
-						Nonprofit membership includes the same as the Bronze Membership but at a discounted Non-Profit
-						rate
-					</p>
+					<label for="nonProfit">Non-profit $100.00 </label>
+					<button class="seeDetails" id="nonBtn">Details</button><br />
+					<div id="nonModal" class="non">
+						<span id="nonCloseBtn">&times; Close Details</span>
+						<p>
+							Nonprofit membership includes the same as the Bronze Membership but at a discounted
+							Non-Profit rate
+						</p>
+					</div>
 
 					<input type="radio" id="bronze" name="level" value="bronze" />
-					<label for="bronze">Bronze</label>
-					<button class="seeDetails" id="bronzeMessage" onclick="seeBronze()">Hide Bronze Details</button
-					><br />
-					<p id="seeBronze">
-						Bronze membership includes: listing in Duvall Chamber Business Directory & Visitor Guide,
-						discounted rates on monthly Chamber meetings, online Business Directory presence, ability to
-						promote your business through Member participation and Chamber sponsorship opportunities, member
-						to member discounts, invites to Chamber functions, meetings and networking opportunities. Take
-						advantage of many opportunities to meet, connect, share and learn from your business peers.
-					</p>
+					<label for="bronze">Bronze $200.00</label> &nbsp; &nbsp; &nbsp;
+					<button class="seeDetails" id="bronzeBtn">Details</button><br />
+					<div id="bronzeModal" class="gold">
+						<span id="bronzeCloseBtn">&times; Close Details</span>
+
+						<p>
+							Bronze membership includes: listing in Duvall Chamber Business Directory & Visitor Guide,
+							discounted rates on monthly Chamber meetings, online Business Directory presence, ability to
+							promote your business through Member participation and Chamber sponsorship opportunities,
+							member to member discounts, invites to Chamber functions, meetings and networking
+							opportunities. Take advantage of many opportunities to meet, connect, share and learn from
+							your business peers.
+						</p>
+					</div>
 
 					<input type="radio" id="silver" name="level" value="silver" />
-					<label for="silver">Silver</label>&nbsp; &nbsp;<button
-						id="silverMessage"
-						class="seeDetails"
-						onclick="seeSilver()"
-					>
-						Hide Silver Details</button
-					><br />
-					<p id="seeSilver" class="hide">
-						Includes the same great benefits as our Bronze Member. Plus - ability to add your photos to our
-						gallery, additional links about your business, deals and coupons and your profile and Business
-						Card (logo or graphic) image added as a Premium Member appearing throughout the entire website
-						providing additional business exposure.
-					</p>
+					<label for="silver">Silver $400.00</label>&nbsp; &nbsp; &nbsp; &nbsp;
+					<button class="seeDetails" id="silverBtn">Details</button><br />
+					<div id="silverModal" class="silver">
+						<span id="silverCloseBtn">&times; Close Details</span>
+						<p>
+							Includes the same great benefits as our Bronze Member. Plus - ability to add your photos to
+							our gallery, additional links about your business, deals and coupons and your profile and
+							Business Card (logo or graphic) image added as a Premium Member appearing throughout the
+							entire website providing additional business exposure.
+						</p>
+					</div>
 
 					<input type="radio" id="gold" name="level" value="gold" />
-					<label for="gold">Gold</label>&nbsp; &nbsp;
-					<button id="goldMessage" class="seeDetails" onclick="seeGold()">Hide Gold Details</button><br />
-					<div id="seeGold" class="hide">
+					<label for="gold">Gold $1,000.00</label>&nbsp; &nbsp; &nbsp;
+					<button class="seeDetails" id="goldBtn">Details</button><br />
+					<div id="goldModal" class="gold">
+						<span id="goldCloseBtn">&times; Close Details</span>
+
 						<p>
 							Includes the same great benefits as our Silver Member. Plus - Whether you have two employees
 							or more than 100, we can help you create a healthcare benefits program that attracts talent
@@ -154,8 +194,7 @@
 						</p>
 					</div>
 				</fieldset>
-
-				<input type="submit" value="Submit" class="submitButton" />
+				<button class="submitButton white" onclick="window.location.href='thankyou.html';">Submit</button>
 			</form>
 		</main>
 		<footer>
@@ -168,15 +207,18 @@
 			</address>
 			<div class="social-wrapper">
 				<h3>Let's Connect</h3>
-				<a target="_blank" href="http/www.facebook.com">
+				<a target="_blank" href="http://www.facebook.com">
 					<img class="socialIcon" alt="Facebook" src="images/fb.png" />
 				</a>
 
-				<a target="_blank" href="http/www.twitter.com">
+				<a target="_blank" href="http://www.twitter.com">
 					<img class="socialIcon" alt="Twitter" src="images/twitter.png" />
 				</a>
 			</div>
+			<div class="update">Last Updated: <span id="updated"></span></div>
 		</footer>
 		<script src="js/script.js"></script>
+		<script src="js/dates.js"></script>
+		<script src="js/directory.js"></script>
 	</body>
 </html>

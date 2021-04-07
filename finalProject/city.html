@@ -5,20 +5,30 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Tori Locke" />
-		<meta
-			name="description"
-			content="Information on the City of Duvall Washington."
-		/>
+		<meta name="description" content="Information on the City of Duvall Washington." />
 		<title>City of Duvall</title>
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/small.css" />
 		<link rel="stylesheet" href="css/medium.css" />
 		<link rel="stylesheet" href="css/large.css" />
 	</head>
-<body>
-<header>
-			<nav>
-				<button onclick="toggleMenu()">&#9776; Menu</button>
+	<body>
+		<nav class="navbar">
+			<div class="brand">
+				<figure>
+					<img
+						src="images/duvall_logo_300px.png"
+						alt="Duvall Chamber of Commerce Logo"
+						srcset="
+							images/duvall_logo_small.png  1x,
+							images/duvall_logo_medium.png 2x,
+							images/duvall_logo_large.png  3x
+						"
+					/>
+				</figure>
+			</div>
+			<button class="navButton toggle-button" onclick="toggleMenu()">&#9776; Menu</button>
+			<div class="navbar-links">
 				<ul id="topnav" class="hide">
 					<li class="item"><a href="index.html">Home</a></li>
 					<li class="item"><a href="about.html">About</a></li>
@@ -27,7 +37,10 @@
 					<li class="item"><a href="directory.html">Directory</a></li>
 					<li class="item"><a href="join.html">Join</a></li>
 				</ul>
-			</nav>
+			</div>
+		</nav>
+
+		<header>
 			<section class="heading">
 				<picture class="hero-img">
 					<source media="(max-width:521px)" srcset="images/duvall_header_522.jpg" />
@@ -35,16 +48,85 @@
 					<source media="(max-width:1600px)" srcset="images/duvall_header_2560.jpg" />
 					<img src="images/duvall_header_2560.jpg" alt="Duvall Mountain View" />
 				</picture>
-
-				<h1 class="headerTitle">Duvall Chamber of Commerce</h1>
-				<div class="moto">Helping Local Business Succeed.</div>
-				<div>Alert: <span id="alert"></span></div>
-				<button class="weatherButton" onclick="weatherFunction()">Current Weather</button>
+				<div class="duvall">
+					<h1 class="headerTitle">Duvall Chamber of Commerce</h1>
+					<div class="moto">Helping Local Business Succeed.</div>
+				</div>
 			</section>
 		</header>
-	<main>
-		<section></section>
-	</main>
+		<main class="city">
+			<article class="historyD">
+				<img src="images/duvall_art_196_311.jpg" alt="Photo Duvall Art" />
+				<h1>Duvall's History</h1>
+
+				<p class="story">
+					Mr. Duvall was a simple man who lived simply. James happened to be the one who sold the property to
+					the Cherry Valley Town Site Company. Thus it was he for whom the town was named, even though his
+					brother arrived in the area 10 or so years before. His idea was to log off the hills of the area and
+					live with his brother. When James arrived, he acquired the land from the riverbank up to the
+					hillside extending 1 mile east of what was known as the Pole Line Road, which is now 275th Avenue
+					NE. James had his logging camp located on the southwest corner of what is now 3rd Avenue and Bruett
+					Road, which is the road to Cedarcrest High School.
+				</p>
+
+				<p>
+					His first job was to clear off enough of the woods in order to setup a skid road for transporting
+					the logs to the river. He managed to buy some black bulls to move the logs out of the woods. In his
+					first years James did not have his family living with him, but once the cabin became habitable, he
+					brought his wife, named Annie, and their several children to live with him. At this time there were
+					no stores or supply firms in town. Postal service was erratic and mail was usually held in Monroe
+					for someone to pickup when he / she went to that little crossroads - which wasn't even named yet.
+				</p>
+				<p>
+					After the Town of Duvall was established, James did return to see what had been done and visit the
+					people he knew. Though he was amazed by the changes, he was never overawed by the fact that the town
+					was named for him. It was his land originally - why not?
+				</p>
+			</article>
+
+			<aside class="cityContact">
+				<h2>City Hall Information</h2>
+				<img class="cityHallimg" src="images/duvall_tall_bldg_599_1007.jpg" alt="Duvall Park" />
+				<ul>
+					<li>15535 Main Street NE PO Box 1300 Duvall, WA 98019</li>
+					<li>City Hall: 425-788-1185</li>
+					<li>Hours:</li>
+
+					<li class="hours">Mon-Thur 8:00 a.m. - 5:00 p.m.</li>
+					<li class="hours">closed 12:00 p.m. - 12:30 p.m.</li>
+
+					<li class="census">
+						<a href="https://www.census.gov/quickfacts/fact/table/duvallcitywashington,US/PST045219"
+							>2010 Census Data</a
+						>
+					</li>
+				</ul>
+			</aside>
+			<section class="cityEvents">
+				<h2>City Events</h2>
+
+				<div class="eventWrapper">
+					<div class="eventContent">
+						<div class="singleEvent">
+							<p>Help us Light Up Duvall in 2021 and 2022 - Fundraiser!</p>
+							<ul>
+								<li class="indent">Fri Apr 9 2021</li>
+							</ul>
+						</div>
+						<br />
+						<div class="singleEvent">
+							<p>Virtual Broadway Trivia hosted by Sno-Valley Senior Center</p>
+							<ul>
+								<li class="indent">Fri Apr 16 2021</li>
+								<li class="indent">7:00pm PDT - 8:00pm PDT</li>
+								<li class="indent">Sno-Valley Senior Center</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
 		<footer>
 			<div class="copyRight">&copy; Copyright <span id="currentYear"></span></div>
 			<address>
@@ -55,16 +137,16 @@
 			</address>
 			<div class="social-wrapper">
 				<h3>Let's Connect</h3>
-				<a target="_blank" href="http/www.facebook.com">
+				<a target="_blank" href="http://www.facebook.com">
 					<img class="socialIcon" alt="Facebook" src="images/fb.png" />
 				</a>
 
-				<a target="_blank" href="http/www.twitter.com">
+				<a target="_blank" href="http://www.twitter.com">
 					<img class="socialIcon" alt="Twitter" src="images/twitter.png" />
 				</a>
 			</div>
+			<div class="update">Last Updated: <span id="updated"></span></div>
 		</footer>
 		<script src="js/script.js"></script>
-    
-</body>
+	</body>
 </html>

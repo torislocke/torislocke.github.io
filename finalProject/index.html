@@ -12,19 +12,24 @@
 		<link rel="stylesheet" href="css/medium.css" />
 		<link rel="stylesheet" href="css/large.css" />
 	</head>
-	<!-- <header> - Defines a header for a document or a section
-    <nav> - Defines a set of navigation links
-    <section> - Defines a section in a document
-    <article> - Defines an independent, self-contained content
-    <aside> - Defines content aside from the content (like a sidebar)
-    <footer> - Defines a footer for a document or a section
-    <details> - Defines additional details that the user can open and close on demand
-    <summary> - Defines a heading for the <details> element -->
 
 	<body>
-		<header>
-			<nav>
-				<button onclick="toggleMenu()">&#9776; Menu</button>
+		<nav class="navbar">
+			<div class="brand">
+				<figure>
+					<img
+						src="images/duvall_logo_300px.png"
+						alt="Duvall Chamber of Commerce Logo"
+						srcset="
+							images/duvall_logo_small.png  1x,
+							images/duvall_logo_medium.png 2x,
+							images/duvall_logo_large.png  3x
+						"
+					/>
+				</figure>
+			</div>
+			<button class="navButton toggle-button" onclick="toggleMenu()">&#9776; Menu</button>
+			<div class="navbar-links">
 				<ul id="topnav" class="hide">
 					<li class="item active"><a href="index.html">Home</a></li>
 					<li class="item"><a href="about.html">About</a></li>
@@ -33,7 +38,10 @@
 					<li class="item"><a href="directory.html">Directory</a></li>
 					<li class="item"><a href="join.html">Join</a></li>
 				</ul>
-			</nav>
+			</div>
+		</nav>
+
+		<header>
 			<section class="heading">
 				<picture class="hero-img">
 					<source media="(max-width:521px)" srcset="images/duvall_header_522.jpg" />
@@ -41,13 +49,20 @@
 					<source media="(max-width:1600px)" srcset="images/duvall_header_2560.jpg" />
 					<img src="images/duvall_header_2560.jpg" alt="Duvall Mountain View" />
 				</picture>
-
-				<h1 class="headerTitle">Duvall Chamber of Commerce</h1>
-				<div class="moto">Helping Local Business Succeed.</div>
-				<div>Alert: <span id="alert"></span></div>
-				<button class="weatherButton" onclick="weatherFunction()">Current Weather</button>
+				<div class="duvall">
+					<h1 class="headerTitle">Duvall Chamber of Commerce</h1>
+					<div class="moto">Helping Local Business Succeed.</div>
+				</div>
 			</section>
 		</header>
+
+		<input type="button" value="Hide Weather Alert" id="alertBtn" onclick="weatherAlert()" />
+
+		<div id="weatherAlert" class="weatherAlert">
+			<span id="alert"></span>
+			<span id="alertDescription"></span>
+		</div>
+
 		<main class="home">
 			<section class="purpose">
 				<h2>Duvall Chamber of Commerce Purpose</h2>
@@ -58,9 +73,11 @@
 					connection, and community events and programs.
 				</p>
 			</section>
+
 			<section class="becomeMember">
 				<h2>
-					How to Become a Member <span>&nbsp; <button class="submitButton">Join Today</button></span>
+					How to Become a Member
+					<button class="submitButton white" onclick="window.location.href='join.html';">Join Today</button>
 				</h2>
 
 				<p>
@@ -73,33 +90,99 @@
 				</p>
 			</section>
 
-			<aside>
-				<div id="weatherSummary">
-					<h3 class="weatherHeader">Weather Summary</h3>
-					<div class="weatherTitle1">Currently:</div>
-					<div><span class="weatherData1" id="descript"></span></div>
-					<div class="weatherTitle2">Temperature:&nbsp;</div>
-					<div><span class="weatherData2" id="current-temp"></span> &#8457;</div>
-					<div class="weatherTitle3">Humidity:&nbsp;</div>
-					<div><span class="weatherData3" id="humidity"></span>&#37;</div>
+			<aside id="weatherSummary">
+				<h3 class="weatherHeader">Weather Summary</h3>
+				<div class="bacon">
+					<hr />
 				</div>
+				<div class="weatherTitle1">Currently:</div>
+				<div><span class="weatherData1" id="descript"></span></div>
+				<div class="weatherTitle2">Temperature:&nbsp;</div>
+				<div><span class="weatherData2" id="current-temp"></span> &#8457;</div>
+				<div class="weatherTitle3">Humidity:&nbsp;</div>
+				<div><span class="weatherData3" id="humidity"></span>&#37;</div>
 			</aside>
 
 			<aside class="events">
 				<h2>Events</h2>
+				<div class="bacon">
+					<hr />
+				</div>
+				<p>Duvall Chamber - Touch Base</p>
 				<ul>
-					<li>1st Event</li>
-					<li>2nd Event</li>
-					<li>3rd Event</li>
-					<li>4th Event</li>
+					<li class="indent">Tue Apr 20 2021</li>
+					<li class="indent">10:00am PST - 11:00am PST Zoom!</li>
 				</ul>
 			</aside>
 			<aside class="businessHighlight">
 				<h2>Local Business</h2>
+				<div class="bacon">
+					<hr />
+				</div>
+				<div class="card">
+					<img class="logo" src="images/zaz_logo.png" alt="Zazynia Restaurant" />
+					<div class="card-container">
+						<h4><b>Zazynia Restaurant</b></h4>
+						<p>Great Family Dining!</p>
+						<address><small>15410 Main St NE, Ste. D., Duvall, WA 98019</small></address>
+					</div>
+				</div>
+				<div class="card">
+					<img class="logo" src="images/coldwell_logo.png" alt="Coldwell Realator" />
+					<div class="card-container">
+						<h4><b>Coldwell Banker Bain</b></h4>
+						<p>Your Real Estate Experts!</p>
+					</div>
+				</div>
+				<div class="card">
+					<img class="logo" src="images/amonos.png" alt="Amonos Restaurant" />
+					<div class="card-container">
+						<h4>Amonos Restaurant</h4>
+						<p>Great Family Dining!</p>
+					</div>
+				</div>
 			</aside>
 
-			<aside>
-				<h3>3 Day Forecast</h3>
+			<aside class="forecast">
+				<h3 class="header">3 Day Forecast</h3>
+				<div class="bacon">
+					<hr />
+				</div>
+				<table>
+					<tr>
+						<th><span id="day1" class="fiveDayName"></span></th>
+						<th><span id="day2" class="fiveDayName"></span></th>
+						<th><span id="day3" class="fiveDayName"></span></th>
+					</tr>
+					<tr class="fivedayIcon">
+						<td>
+							<img
+								id="icon1"
+								src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+								alt="unknown"
+							/>
+						</td>
+						<td>
+							<img
+								id="icon2"
+								src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+								alt="unknown"
+							/>
+						</td>
+						<td>
+							<img
+								id="icon3"
+								src="https://github.com/yuvraaaj/openweathermap-api-icons/blob/master/icons/unknown.png?raw=true"
+								alt="unknown"
+							/>
+						</td>
+					</tr>
+					<tr class="fivedayIcon">
+						<td><span id="forecast1"></span>&#8457;</td>
+						<td><span id="forecast2"></span>&#8457;</td>
+						<td><span id="forecast3"></span>&#8457;</td>
+					</tr>
+				</table>
 			</aside>
 		</main>
 
@@ -113,15 +196,17 @@
 			</address>
 			<div class="social-wrapper">
 				<h3>Let's Connect</h3>
-				<a target="_blank" href="http/www.facebook.com">
+				<a target="_blank" href="http://www.facebook.com">
 					<img class="socialIcon" alt="Facebook" src="images/fb.png" />
 				</a>
 
-				<a target="_blank" href="http/www.twitter.com">
+				<a target="_blank" href="http://www.twitter.com">
 					<img class="socialIcon" alt="Twitter" src="images/twitter.png" />
 				</a>
 			</div>
+			<div class="update">Last Updated: <span id="updated"></span></div>
 		</footer>
 		<script src="js/script.js"></script>
+		<script src="js/weather.js"></script>
 	</body>
 </html>

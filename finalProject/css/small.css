@@ -3,14 +3,18 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-}
-/* Establish global site settings of color and font size/selection */
-body {
 	margin: 0;
 	padding: 0;
+}
+/* Establish global site settings of color and font size/selection */
+
+body {
 	font-size: 16px;
 	line-height: 1.5em;
+	background-color: var(--cornsilk);
+	color: var(--dark-sienna);
 }
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -21,24 +25,29 @@ img {
 	--yale-blue: #304d6dff;
 	--hunter-green: #28502eff;
 	--illuminating-emerald: #53917eff;
-	--gold-crayola: #f2c57cff;
 	--dark-sienna: #280003ff;
-	--cornsilk: #f5eccdff;
+	--cornsilk: rgb(255, 246, 246);
 }
 
 h1 {
 	font-size: 1.5em;
 	font-family: 'Cambria', 'Cochin', Georgia, Times, serif;
+	text-align: center;
+	margin-bottom: 15px;
 }
 
 h2 {
 	font-size: 1.3em;
 	font-family: 'Cambria', 'Cochin', Georgia, Times, serif;
+	text-align: center;
+	margin-bottom: 15px;
 }
 
 h3 {
 	font-size: 1.2em;
 	font-family: 'Cambria', 'Cochin', Georgia, Times, serif;
+	text-align: center;
+	margin-bottom: 15px;
 }
 
 p,
@@ -46,40 +55,102 @@ li {
 	font-size: 1em;
 	font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
 }
-/* --------- Site Top Navigation Styling --------- */
-nav {
+button,
+#alertBtn,
+.button {
+	display: inline-block;
 	background-color: var(--hunter-green);
+	border-radius: 10px;
+	border: 4px double #cccccc;
+	color: #eeeeee;
+	text-align: center;
+	font-size: 16px;
+	padding: 7px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
 }
-
-nav button {
-	margin: 0.2rem 2%;
-	background-color: transparent;
-	border: none;
-	font-size: 1.6rem; /*Apple recomends buttons be set to 44px for accessability */
-	color: white;
-}
-nav ul {
-	list-style: none; /*remove bullets on list */
-	padding: 0;
-	margin: 0;
-}
-nav ul.hide {
-	display: none;
-}
-nav ul li a {
-	display: block;
-	padding: 0.8rem 2%;
-	text-decoration: none;
-	color: white;
-	border-top: 1px solid rgba(245, 236, 205, 0.1);
-}
-nav ul li.active a {
+button:hover,
+.button:hover {
 	background-color: var(--illuminating-emerald);
 }
-nav ul li a:hover {
-	background-color: rgba(245, 236, 205, 0.5);
+.hide {
+	display: none;
 }
-/* --------- Site - Main Baseline Styling ------------ */
+
+/* --------- Site Top Navigation Styling --------- */
+.brand {
+	height: auto;
+	max-width: 300px;
+	background-color: var(--cornsilk);
+	margin-left: 10px;
+	margin-top: 5px;
+}
+.navButton {
+	position: absolute;
+	top: 0.75rem;
+	right: 1rem;
+	font-size: 1.6rem; /*Apple recomends buttons be set to 44px for accessability */
+}
+.navbar {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.navbar-links {
+	display: none;
+	width: 100%;
+}
+.navbar-links ul {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+.navbar-links ul li {
+	list-style: none;
+	text-align: center;
+}
+.navbar-links ul li a {
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	display: block;
+	color: black;
+}
+.navbar-links ul li.active a {
+	background-color: var(--hunter-green);
+	border-radius: 10px;
+	border: 4px double #cccccc;
+	color: #eeeeee;
+}
+.navbar ul li a:hover {
+	background-color: var(--illuminating-emerald);
+	border-radius: 10px;
+	border: 4px double #cccccc;
+	color: #eeeeee;
+}
+.navbar-links.active {
+	display: flex;
+}
+
+.weatherAlert {
+	margin-top: 20px;
+	display: flex;
+	color: red;
+	border: 2px solid black;
+	padding: 7px;
+}
+#alertBtn {
+	margin-top: 50px;
+}
+/* All pages */
+main {
+	margin-top: 50px;
+	width: 100%;
+}
+
+/* --------- Site - Header Styling ------------ */
 .headerTitle {
 	z-index: 1;
 	margin-top: -100px;
@@ -94,14 +165,229 @@ nav ul li a:hover {
 	color: white;
 	text-shadow: black 0.1em 0.1em 0.2em;
 }
+
+/* -------------- Home Page Styling -------------------- */
 .home {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 25px;
+	padding: 15px;
+}
+.white a {
+	color: white;
+	text-decoration: none;
+}
+.businessHighlight {
+	margin: auto;
+	width: 100%;
+	text-align: center;
+}
+
+.card {
+	/* Add shadows to create the "card" effect */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	width: 70%;
+	border-radius: 10px;
+	border: 4px double var(--hunter-green);
+	margin: auto;
+	text-align: center;
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+.card img {
+	width: 100%;
+	border-radius: 5px 5px 0 0;
+	border: 4px double var(--hunter-green);
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.card-container {
+	padding: 7px;
+}
+.card-container h4 {
+	margin-top: -5px;
+}
+.card-container p {
+	margin-top: -15px;
+}
+
+/* ------------  Current Weather section ----------- */
+#weatherSummary {
+	display: grid;
+	gap: 0px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+		'header header'
+		'bacon bacon'
+		'title1 data1'
+		'title2 data2'
+		'title3 data3';
+}
+.weatherHeader {
+	grid-area: header;
+	text-align: center;
+}
+.bacon {
+	width: 70%;
+	grid-area: bacon;
+	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/78779/bacon.svg');
+	background-size: 28px 9px;
+	height: 6px;
+	margin-top: 1px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.weatherTitle1 {
+	grid-area: title1;
+	margin-left: 70px;
+}
+.weatherTitle2 {
+	grid-area: title2;
+	margin-left: 70px;
+}
+.weatherTitle3 {
+	grid-area: title3;
+	margin-left: 70px;
+}
+.weatherData1 {
+	grid-area: data1;
+	margin-left: 15px;
+}
+.weatherData2 {
+	grid-area: data2;
+	margin-left: 15px;
+}
+.weatherData3 {
+	grid-area: data3;
+	margin-left: 15px;
+}
+
+.forecast {
+	width: 100%;
+	margin: auto;
+}
+.forecast table {
+	margin: auto;
+	text-align: center;
+}
+.forecast .header {
+	grid-area: header;
+	text-align: center;
+}
+.events p {
+	text-align: center;
+}
+.events ul {
+	list-style: none;
+}
+.events ul li {
+	text-align: center;
+}
+
+/* ------------- City Page --------------- */
+.city {
+	display: grid;
+}
+.cityHallimg {
+	margin-top: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	width: 196px;
+	box-shadow: 0 0 30px #777;
+	background-color: var(--hunter-green);
+	border-radius: 10px;
+	border: 4px double #cccccc;
+}
+
+.historyD img {
+	margin-top: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	width: 196px;
+	box-shadow: 0 0 30px #777;
+	background-color: var(--hunter-green);
+	border-radius: 10px;
+	border: 4px double #cccccc;
+}
+.indent {
+	margin-left: 25px;
+}
+.historyD p {
+	padding: 20px;
+}
+.cityContact {
+	display: block;
+	padding: 0.8rem;
+}
+.cityContact ul {
+	list-style: none;
+}
+
+.hours {
+	margin-left: 10px;
+}
+.census {
+	margin-top: 10px;
+}
+.cityEvents {
+	padding: 5px;
+	border-radius: 10px;
+	border: 4px double #cccccc;
+}
+
+.cityEvents ul {
+	list-style: none;
+}
+.singleEvent {
+	padding: 5px;
+	border-radius: 10px;
+	border: 4px double #cccccc;
+}
+
+/* ------------------- Join Page Form Styling ------------------ */
+.join {
 	display: grid;
 	grid-template-columns: 1fr;
 	padding: 10px;
 }
 
-/* ------------------- Join Page Form Styling -------------------- */
-input[type='text'] {
+.reasons li {
+	list-style: square;
+	margin-left: 30px;
+	padding: 10px;
+}
+.join form {
+	margin-top: 30px;
+}
+.membership {
+	margin: auto;
+	margin-top: 20px;
+	width: 90%;
+}
+.thanks {
+	height: 60vh;
+}
+
+.thanks p {
+	margin: auto;
+	text-align: center;
+	padding: 20px;
+}
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='url'] {
 	width: 100%;
 	padding: 12px 20px;
 	margin: 8px 0;
@@ -134,64 +420,122 @@ textarea {
 	font-size: var(--base-size);
 	font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
 }
-.submitButton {
-	display: inline-block;
-	background-color: var(--hunter-green);
-	border-radius: 10px;
-	border: 4px double #cccccc;
-	color: #eeeeee;
-	text-align: center;
-	font-size: 18px;
-	padding: 15px;
-	transition: all 0.5s;
-	cursor: pointer;
-	margin: 5px;
-}
 
-.submitButton:hover {
-	background-color: var(--illuminating-emerald);
-}
-
-.seeDetails {
-	display: inline-block;
-	background-color: var(--hunter-green);
-	border-radius: 10px;
-	border: 4px double #cccccc;
-	color: #eeeeee;
-	text-align: center;
-	font-size: 18px;
-	padding: 15px;
-	transition: all 0.5s;
-	cursor: pointer;
-	margin: 5px;
-	width: 180px;
-}
-.seeDetails:hover {
-	background-color: var(--illuminating-emerald);
-}
-#seeBronze,
-#seeSilver,
-#seeGold {
+.gold,
+.silver,
+.bronze,
+.non {
+	display: none;
 	border: 2px solid black;
 	border-radius: 10px;
 	border: 4px double #cccccc;
 	padding: 5px;
-	
+}
+
+#goldCloseBtn,
+#silverCloseBtn,
+#bronzeCloseBtn,
+#nonCloseBtn {
+	display: flex;
+	color: red;
+	justify-content: flex-end;
+	cursor: pointer;
+}
+/* -------------------- Directory Page ------------------- */
+
+#myData h3 {
+	font-style: italic;
+	margin: 2px 0px 0px 10px;
+	text-decoration: underline;
+}
+
+#myData li {
+	list-style-type: none;
+	margin-left: 15px;
+}
+#myData li:last-child {
+	margin-bottom: 15px;
+}
+
+#myData {
+	margin: 30px auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 15px;
+	padding: 5px;
+}
+#myData div {
+	border-radius: 10px;
+	border: 4px double var(--hunter-green);
+	color: #2e2b2b;
+}
+.containerBtn {
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+#gridStyle,
+#blockStyle {
+	text-align: center;
+	width: 190px;
+	margin: 20px auto;
+}
+/* -------------------- About Page ------------------- */
+.about {
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 20px;
+	gap: 15px;
+}
+
+.about p {
+	padding: 20px;
+}
+/* -------------------- Contact Page ------------------- */
+.contact form {
+	width: 80%;
+	margin: auto;
+}
+iframe {
+	display: block;
+	margin: auto;
+	width: 300px;
+	height: 300px;
+	margin-bottom: 15px;
+}
+.boardMembers {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	margin-left: 30px;
+}
+.board h1 {
+	margin-left: 90px;
+	margin-bottom: 30px;
+}
+.board h2 {
+	text-align: left;
+	margin-bottom: 0px;
 }
 
 /* -------------------- Footer Section ------------------- */
-footer small {
+footer {
+	background-color: var(--hunter-green);
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-areas:
 		'copyRight'
 		'address'
-		'social-wrapper';
+		'social-wrapper'
+		'update';
+	gap: 15px;
 	width: 100%;
-	background-color: var(--hunter-green);
 	color: white;
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 .copyRight {
 	grid-area: copyRight;
@@ -212,57 +556,6 @@ address {
 	width: 30px;
 	height: 30px;
 }
-/* ------------- Weather Alert Section --------------- */
-.weatherButton {
-	display: inline-block;
-	background-color: var(--hunter-green);
-	border-radius: 10px;
-	border: 4px double #cccccc;
-	color: #eeeeee;
-	text-align: center;
-	font-size: 16px;
-	padding: 10px;
-	transition: all 0.5s;
-	cursor: pointer;
-	margin: 5px;
-}
-
-.weatherButton:hover {
-	background-color: var(--illuminating-emerald);
-}
-/* ------------  Current Weather section ----------- */
-#weatherSummary {
-	border-radius: 10px;
-	border: 4px double #cccccc;
-	display: grid;
-	gap: 0px;
-	padding: 7px;
-	grid-template-columns: 1fr 1fr;
-	grid-template-areas:
-		'header header'
-		'title1 data1'
-		'title2 data2'
-		'title3 data3';
-}
-.weatherHeader {
-	grid-area: header;
-	text-align: center;
-}
-.weatherTitle1 {
-	grid-area: title1;
-}
-.weatherTitle2 {
-	grid-area: title2;
-}
-.weatherTitle3 {
-	grid-area: title3;
-}
-.weatherData1 {
-	grid-area: data1;
-}
-.weatherData2 {
-	grid-area: data2;
-}
-.weatherData3 {
-	grid-area: data3;
+.update {
+	grid-area: update;
 }
