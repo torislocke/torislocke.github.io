@@ -23,7 +23,7 @@ fetch(apiURL)
 			document.getElementById(`icon${day + 1}`).setAttribute('alt', desc);
 		}
 		if (jsObject.hasOwnProperty('alerts')) {
-			document.querySelector('.weatherAlert').style.display = 'block';
+			document.querySelector('#weatherAlert').style.display = 'block';
 			document.getElementById('alert').innerHTML = jsObject.alerts[0].event;
 			document.getElementById('alertDescription').innerHTML = jsObject.alerts[0].description;
 		} else {

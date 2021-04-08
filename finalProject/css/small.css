@@ -170,7 +170,6 @@ button:hover,
 
 /* -------------- Home Page Styling -------------------- */
 .home {
-	grid-template-columns: 1fr;
 	gap: 25px;
 	padding: 15px;
 }
