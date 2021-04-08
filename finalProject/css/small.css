@@ -31,7 +31,7 @@ h1 {
 	font-size: 1.5em;
 	font-family: 'Cambria', 'Cochin', Georgia, Times, serif;
 	text-align: center;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 }
 
 h2 {
@@ -52,6 +52,16 @@ p,
 li {
 	font-size: 1em;
 	font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+}
+
+main {
+	display: grid;
+	margin-top: 50px;
+	width: 100%;
+	min-height: 70vh;
+}
+p {
+	padding: 15px;
 }
 button,
 #alertBtn,
@@ -132,7 +142,7 @@ button:hover,
 	display: flex;
 }
 
-.weatherAlert {
+#weatherAlert {
 	margin: 20px 15px 0px 15px;
 	color: red;
 	border: 2px solid var(--dark-sienna);
@@ -140,11 +150,6 @@ button:hover,
 }
 #alertBtn {
 	margin-top: 50px;
-}
-/* All pages */
-main {
-	margin-top: 50px;
-	width: 100%;
 }
 
 /* --------- Site - Header Styling ------------ */
@@ -165,7 +170,6 @@ main {
 
 /* -------------- Home Page Styling -------------------- */
 .home {
-	display: grid;
 	grid-template-columns: 1fr;
 	gap: 25px;
 	padding: 15px;
@@ -289,9 +293,7 @@ main {
 }
 
 /* ------------- City Page --------------- */
-.city {
-	display: grid;
-}
+
 .cityHallimg {
 	margin-top: 20px;
 	display: block;
@@ -319,9 +321,6 @@ main {
 }
 .indent {
 	margin-left: 25px;
-}
-.historyD p {
-	padding: 20px;
 }
 .cityContact {
 	display: block;
@@ -354,7 +353,6 @@ main {
 
 /* ------------------- Join Page Form Styling ------------------ */
 .join {
-	display: grid;
 	grid-template-columns: 1fr;
 	padding: 10px;
 }
@@ -376,11 +374,6 @@ main {
 	height: 60vh;
 }
 
-.thanks p {
-	margin: auto;
-	text-align: center;
-	padding: 20px;
-}
 input[type='text'],
 input[type='email'],
 input[type='tel'],
@@ -481,15 +474,11 @@ textarea {
 }
 /* -------------------- About Page ------------------- */
 .about {
-	display: grid;
 	grid-template-columns: 1fr;
 	padding: 20px;
 	gap: 15px;
 }
 
-.about p {
-	padding: 20px;
-}
 /* -------------------- Contact Page ------------------- */
 .contact form {
 	width: 80%;
@@ -510,11 +499,13 @@ iframe {
 }
 .board h1 {
 	margin-left: 90px;
-	margin-bottom: 30px;
 }
 .board h2 {
 	text-align: left;
 	margin-bottom: 0px;
+}
+.board p {
+	padding: 0;
 }
 
 /* -------------------- Footer Section ------------------- */

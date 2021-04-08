@@ -6,7 +6,7 @@ let currentYear = new Date();
 document.getElementById('currentYear').innerHTML = currentYear.getFullYear();
 
 //  Main Navigation Menu function for various screen sizes
-const toggleButton = document.getElementsByClassName('toggle-button')[0];
+const toggleButton = document.getElementsByClassName('navButton')[0];
 const navbarLinks = document.getElementsByClassName('navbar-links')[0];
 
 toggleButton.addEventListener('click', () => {

@@ -5,7 +5,7 @@
 	main {
 		margin-top: 130px;
 	}
-	.weatherAlert {
+	#weatherAlert {
 		margin-top: 20px;
 	}
 	#alertBtn {
